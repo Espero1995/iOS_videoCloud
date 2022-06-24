@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "版本更新"; ObjectID = "6kQ-OY-qL4"; */
+"6kQ-OY-qL4.text" = "版本更新";
+
+/* Class = "UILabel"; text = "新的客户端版本已经上线"; ObjectID = "97m-CS-8l8"; */
+"97m-CS-8l8.text" = "新的客户端版本已经上线";
+
+/* Class = "UIButton"; normalTitle = "退出"; ObjectID = "VdW-Bb-tYc"; */
+"VdW-Bb-tYc.normalTitle" = "退出";
+
+/* Class = "UILabel"; text = "请前往下载使用"; ObjectID = "ZfY-V6-AQA"; */
+"ZfY-V6-AQA.text" = "请前往下载使用";
+
+/* Class = "UIButton"; normalTitle = "马上更新"; ObjectID = "iRA-2E-P6t"; */
+"iRA-2E-P6t.normalTitle" = "马上更新";

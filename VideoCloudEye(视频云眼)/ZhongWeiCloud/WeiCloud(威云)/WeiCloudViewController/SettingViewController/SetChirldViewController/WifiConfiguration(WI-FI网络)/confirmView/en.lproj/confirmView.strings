@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "WiFi名称"; ObjectID = "Pas-Z5-aLp"; */
+"Pas-Z5-aLp.text" = "WiFi Name";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "aqc-gD-N4H"; */
+"aqc-gD-N4H.normalTitle" = "Cancel";
+
+/* Class = "UITextField"; placeholder = "若无密码则无需输入"; ObjectID = "gbK-0R-ZEz"; */
+"gbK-0R-ZEz.placeholder" = "Please enter password";
+
+/* Class = "UIButton"; normalTitle = "加入"; ObjectID = "q0C-bh-uQu"; */
+"q0C-bh-uQu.normalTitle" = "Connect";

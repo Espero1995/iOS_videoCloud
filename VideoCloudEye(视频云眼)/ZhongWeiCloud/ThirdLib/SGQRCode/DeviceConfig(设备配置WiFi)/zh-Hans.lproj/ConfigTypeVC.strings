@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "通过无线传输的方式配置Wi-Fi"; ObjectID = "2Xr-8f-4kw"; */
+"2Xr-8f-4kw.text" = "通过无线传输的方式配置Wi-Fi";
+
+/* Class = "UILabel"; text = "无线智能添加"; ObjectID = "WfP-dg-kBb"; */
+"WfP-dg-kBb.text" = "无线智能添加";
+
+/* Class = "UILabel"; text = "设备扫码添加"; ObjectID = "fWB-fQ-yvj"; */
+"fWB-fQ-yvj.text" = "设备扫码添加";
+
+/* Class = "UILabel"; text = "通过设备扫描手机上的二维码连接Wi-Fi"; ObjectID = "xaw-Uq-e81"; */
+"xaw-Uq-e81.text" = "通过设备扫描手机上的二维码连接Wi-Fi";

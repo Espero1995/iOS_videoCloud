@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "高清"; ObjectID = "6t2-Yp-c02"; */
+"6t2-Yp-c02.normalTitle" = "高清";
+
+/* Class = "UIButton"; normalTitle = "标清"; ObjectID = "XKa-JM-KKI"; */
+"XKa-JM-KKI.normalTitle" = "标清";
+
+/* Class = "UIButton"; normalTitle = "流畅"; ObjectID = "bYw-y0-L2o"; */
+"bYw-y0-L2o.normalTitle" = "流畅";
+
+/* Class = "UIButton"; normalTitle = "标清"; ObjectID = "frT-3P-KgB"; */
+"frT-3P-KgB.normalTitle" = "标清";
+
+/* Class = "UILabel"; text = "来自AAAAAAA的分享"; ObjectID = "qcJ-Jy-Mws"; */
+"qcJ-Jy-Mws.text" = "来自AAAAAAA的分享";
+
+/* Class = "UILabel"; text = "增值服务"; ObjectID = "wbo-O0-5Vd"; */
+"wbo-O0-5Vd.text" = "增值服务";

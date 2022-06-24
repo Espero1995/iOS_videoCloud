@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WifiQRCodeVC">
+            <connections>
+                <outlet property="QRCodeImg" destination="qXA-Xt-M73" id="71b-f8-M7l"/>
+                <outlet property="QRCodeView" destination="efM-a0-Pj3" id="8UF-eo-M5F"/>
+                <outlet property="enlargeQRCodeTipLb" destination="Zxu-wQ-7VP" id="1RL-oN-BSb"/>
+                <outlet property="stepsContentLb" destination="Iza-Tg-zNT" id="aW7-0T-plL"/>
+                <outlet property="stepsContentLb1" destination="bhF-cJ-fo4" id="IQ2-Ce-Djw"/>
+                <outlet property="stepsContentLb2" destination="udO-ah-RCv" id="62A-Zt-6b5"/>
+                <outlet property="stepsContentLb3" destination="ua3-fc-Pe8" id="xhS-Z1-IlQ"/>
+                <outlet property="stepsTipLb" destination="xdP-bF-p1E" id="r6R-sg-7zh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wifiConfigSucBtn" destination="DJV-Aa-Bdw" id="Dg2-CP-0Xv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efM-a0-Pj3">
+                    <rect key="frame" x="28" y="55" width="319" height="319"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-Xt-M73">
+                            <rect key="frame" x="0.0" y="0.0" width="319" height="319"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="qXA-Xt-M73" firstAttribute="top" secondItem="efM-a0-Pj3" secondAttribute="top" id="QuJ-te-TvX"/>
+                        <constraint firstAttribute="bottom" secondItem="qXA-Xt-M73" secondAttribute="bottom" id="WXE-Lc-2q8"/>
+                        <constraint firstAttribute="trailing" secondItem="qXA-Xt-M73" secondAttribute="trailing" id="sLy-Gg-wha"/>
+                        <constraint firstAttribute="width" secondItem="efM-a0-Pj3" secondAttribute="height" id="wtR-0A-gMd"/>
+                        <constraint firstItem="qXA-Xt-M73" firstAttribute="leading" secondItem="efM-a0-Pj3" secondAttribute="leading" id="x5G-V3-bwD"/>
+                    </constraints>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="操作步骤：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdP-bF-p1E">
+                    <rect key="frame" x="28" y="394" width="76.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="①设备通电，听到“请为设备配置无线网络”提示音后，请将二维码对准摄像头；" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iza-Tg-zNT">
+                    <rect key="frame" x="28" y="417" width="319" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="③听到“扫描二维码成功”提示音后移开手机；" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udO-ah-RCv">
+                    <rect key="frame" x="28" y="460.5" width="319" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="④听到“WiFi连接成功”提示音后表示设备Wi-Fi配置已完成。;" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ua3-fc-Pe8">
+                    <rect key="frame" x="28" y="475" width="319" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJV-Aa-Bdw">
+                    <rect key="frame" x="37.5" y="607" width="300" height="40"/>
+                    <color key="backgroundColor" red="0.25938856599999999" green="0.4915907383" blue="0.99866658450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="h0v-Dx-2px"/>
+                    </constraints>
+                    <state key="normal" title="已完成设备Wi-Fi配置">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="wifiConfigSucClick:" destination="-1" eventType="touchUpInside" id="lbJ-gE-D08"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注：二维码可点击放大，增加设备识别成功率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxu-wQ-7VP">
+                    <rect key="frame" x="28" y="508" width="245.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="②保持约20cm的距离，等待扫描;" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhF-cJ-fo4">
+                    <rect key="frame" x="28" y="446" width="319" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="udO-ah-RCv" firstAttribute="trailing" secondItem="bhF-cJ-fo4" secondAttribute="trailing" id="03L-TT-97u"/>
+                <constraint firstItem="udO-ah-RCv" firstAttribute="top" secondItem="bhF-cJ-fo4" secondAttribute="bottom" id="0z8-jx-vaK"/>
+                <constraint firstItem="bhF-cJ-fo4" firstAttribute="top" secondItem="Iza-Tg-zNT" secondAttribute="bottom" id="39x-D0-JWo"/>
+                <constraint firstItem="ua3-fc-Pe8" firstAttribute="trailing" secondItem="udO-ah-RCv" secondAttribute="trailing" id="3Hj-Fk-h7f"/>
+                <constraint firstItem="bhF-cJ-fo4" firstAttribute="leading" secondItem="Iza-Tg-zNT" secondAttribute="leading" id="5sA-8m-DCk"/>
+                <constraint firstItem="xdP-bF-p1E" firstAttribute="top" secondItem="qXA-Xt-M73" secondAttribute="bottom" constant="20" id="Fxg-zd-Xtm"/>
+                <constraint firstItem="Iza-Tg-zNT" firstAttribute="leading" secondItem="xdP-bF-p1E" secondAttribute="leading" id="HXE-wV-uF4"/>
+                <constraint firstItem="ua3-fc-Pe8" firstAttribute="top" secondItem="udO-ah-RCv" secondAttribute="bottom" id="J43-4H-bR0"/>
+                <constraint firstItem="ua3-fc-Pe8" firstAttribute="leading" secondItem="udO-ah-RCv" secondAttribute="leading" id="L2A-QR-9lK"/>
+                <constraint firstItem="Zxu-wQ-7VP" firstAttribute="leading" secondItem="ua3-fc-Pe8" secondAttribute="leading" id="Tg1-iI-HEw"/>
+                <constraint firstItem="DJV-Aa-Bdw" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="VVz-gO-psZ"/>
+                <constraint firstItem="DJV-Aa-Bdw" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="WfK-Hi-rba"/>
+                <constraint firstItem="Iza-Tg-zNT" firstAttribute="top" secondItem="xdP-bF-p1E" secondAttribute="bottom" constant="5" id="WrM-2j-9u6"/>
+                <constraint firstItem="bhF-cJ-fo4" firstAttribute="trailing" secondItem="Iza-Tg-zNT" secondAttribute="trailing" id="cSh-6g-bIX"/>
+                <constraint firstItem="udO-ah-RCv" firstAttribute="leading" secondItem="bhF-cJ-fo4" secondAttribute="leading" id="ca6-Up-ddb"/>
+                <constraint firstItem="xdP-bF-p1E" firstAttribute="leading" secondItem="efM-a0-Pj3" secondAttribute="leading" id="ekV-cO-g4Y"/>
+                <constraint firstItem="efM-a0-Pj3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.85" id="l1Z-Mo-HHy"/>
+                <constraint firstItem="Iza-Tg-zNT" firstAttribute="trailing" secondItem="efM-a0-Pj3" secondAttribute="trailing" id="lfE-33-I11"/>
+                <constraint firstItem="efM-a0-Pj3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pNE-QQ-9sj"/>
+                <constraint firstItem="Zxu-wQ-7VP" firstAttribute="top" secondItem="ua3-fc-Pe8" secondAttribute="bottom" constant="4" id="y6b-Ma-o9t"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="DJV-Aa-Bdw" secondAttribute="bottom" constant="20" id="yFN-QX-iqe"/>
+                <constraint firstItem="efM-a0-Pj3" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="35" id="yvy-7F-XD7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="67.5" y="58.5"/>
+        </view>
+    </objects>
+</document>

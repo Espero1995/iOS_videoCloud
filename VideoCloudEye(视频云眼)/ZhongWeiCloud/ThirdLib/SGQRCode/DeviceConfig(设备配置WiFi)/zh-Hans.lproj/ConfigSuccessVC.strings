@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "您的设备已就绪！"; ObjectID = "6MV-QK-01I"; */
+"6MV-QK-01I.text" = "您的设备已就绪！";
+
+/* Class = "UILabel"; text = "C11(2.6mm)"; ObjectID = "Ll3-2H-kaI"; */
+"Ll3-2H-kaI.text" = "C11(2.6mm)";
+
+/* Class = "UIButton"; normalTitle = "立即添加"; ObjectID = "s0E-LJ-bKB"; */
+"s0E-LJ-bKB.normalTitle" = "立即添加";

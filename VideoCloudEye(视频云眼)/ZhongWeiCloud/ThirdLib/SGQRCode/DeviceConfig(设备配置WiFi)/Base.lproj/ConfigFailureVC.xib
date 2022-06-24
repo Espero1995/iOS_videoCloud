@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfigFailureVC">
+            <connections>
+                <outlet property="backHomeBtn" destination="x9N-eG-ZqO" id="Ybi-00-53S"/>
+                <outlet property="headImg" destination="3DK-ai-RDk" id="K6I-X5-2aa"/>
+                <outlet property="reAddBtn" destination="kbE-hj-YI5" id="GT3-6Q-KAo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config_failure" translatesAutoresizingMaskIntoConstraints="NO" id="3DK-ai-RDk">
+                    <rect key="frame" x="0.0" y="20" width="375" height="255.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="3DK-ai-RDk" secondAttribute="height" multiplier="750:511" id="ss2-9a-fTD"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加过程中出了一些小问题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onG-11-s4L">
+                    <rect key="frame" x="20" y="275.5" width="267.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.请确保Wi-Fi密码输入正确" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTU-iz-RTi">
+                    <rect key="frame" x="20" y="317" width="340" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.请确保Wi-Fi可以正常连接到Internet" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-zk-wno">
+                    <rect key="frame" x="20" y="339.5" width="340" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.请Reset设备，设备启动完成后重新添加" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3O-ZB-yB5">
+                    <rect key="frame" x="20" y="362" width="340" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79g-hO-6Ob" userLabel="网络要求">
+                    <rect key="frame" x="150" y="517" width="75" height="30"/>
+                    <state key="normal" title="常见问题 &gt;"/>
+                    <connections>
+                        <action selector="questionClick:" destination="-1" eventType="touchUpInside" id="sYh-x4-BR9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbE-hj-YI5">
+                    <rect key="frame" x="37.5" y="552" width="300" height="45"/>
+                    <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="oLu-VF-HR9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="重新添加">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="reAddClick:" destination="-1" eventType="touchUpInside" id="lRb-Pq-z4d"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9N-eG-ZqO">
+                    <rect key="frame" x="37.5" y="612" width="300" height="45"/>
+                    <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="2o3-ee-fsk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="返回首页">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="returnBackHomeClick:" destination="-1" eventType="touchUpInside" id="xU7-yT-xVs"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="79g-hO-6Ob" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0Z3-mt-DWD"/>
+                <constraint firstItem="Y3O-ZB-yB5" firstAttribute="top" secondItem="j6a-zk-wno" secondAttribute="bottom" constant="3" id="10g-ET-QJa"/>
+                <constraint firstItem="LTU-iz-RTi" firstAttribute="leading" secondItem="onG-11-s4L" secondAttribute="leading" id="7QC-tq-S1K"/>
+                <constraint firstItem="x9N-eG-ZqO" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="Cwm-1z-jI4"/>
+                <constraint firstItem="onG-11-s4L" firstAttribute="top" secondItem="3DK-ai-RDk" secondAttribute="bottom" id="Duz-h8-BOa"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Y3O-ZB-yB5" secondAttribute="trailing" constant="15" id="E6G-RG-lhF"/>
+                <constraint firstItem="j6a-zk-wno" firstAttribute="top" secondItem="LTU-iz-RTi" secondAttribute="bottom" constant="3" id="KBk-nk-m54"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="j6a-zk-wno" secondAttribute="trailing" constant="15" id="LP8-KY-Ug8"/>
+                <constraint firstItem="LTU-iz-RTi" firstAttribute="top" secondItem="onG-11-s4L" secondAttribute="bottom" constant="15" id="PPw-az-WPZ"/>
+                <constraint firstItem="kbE-hj-YI5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T0U-L8-y6q"/>
+                <constraint firstItem="kbE-hj-YI5" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="T7U-qC-Iev"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="x9N-eG-ZqO" secondAttribute="bottom" constant="10" id="U93-za-IsS"/>
+                <constraint firstItem="3DK-ai-RDk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WaL-VL-oqF"/>
+                <constraint firstItem="kbE-hj-YI5" firstAttribute="top" secondItem="79g-hO-6Ob" secondAttribute="bottom" constant="5" id="X08-6o-nlo"/>
+                <constraint firstItem="x9N-eG-ZqO" firstAttribute="top" secondItem="kbE-hj-YI5" secondAttribute="bottom" constant="15" id="ZhS-7N-7tM"/>
+                <constraint firstItem="x9N-eG-ZqO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="btj-y1-dlh"/>
+                <constraint firstItem="j6a-zk-wno" firstAttribute="leading" secondItem="onG-11-s4L" secondAttribute="leading" id="hbv-e9-idZ"/>
+                <constraint firstItem="Y3O-ZB-yB5" firstAttribute="leading" secondItem="onG-11-s4L" secondAttribute="leading" id="knZ-NW-s1B"/>
+                <constraint firstItem="3DK-ai-RDk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="nw7-ZD-suT"/>
+                <constraint firstItem="3DK-ai-RDk" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="tQc-Hm-LdN"/>
+                <constraint firstItem="onG-11-s4L" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="xyM-2h-XCO"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="LTU-iz-RTi" secondAttribute="trailing" constant="15" id="zMz-3E-xq3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="config_failure" width="375" height="255.5"/>
+    </resources>
+</document>

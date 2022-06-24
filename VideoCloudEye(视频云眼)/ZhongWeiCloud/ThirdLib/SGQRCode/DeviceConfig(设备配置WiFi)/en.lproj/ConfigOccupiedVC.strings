@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "C11(2.6mm)"; ObjectID = "0OX-Yi-rMG"; */
+"0OX-Yi-rMG.text" = "C11(2.6mm)";
+
+/* Class = "UILabel"; text = "如果这是您的设备,可以先删除设备"; ObjectID = "MFF-eW-Lj4"; */
+"MFF-eW-Lj4.text" = "If it's your device, you can delete it first";
+
+/* Class = "UILabel"; text = "此设备已被添加！"; ObjectID = "NWO-9D-9Ws"; */
+"NWO-9D-9Ws.text" = "The device has been added!";
+
+/* Class = "UILabel"; text = "如果这不是您的设备,可以让设备主人分享给您"; ObjectID = "Xp9-Am-mwm"; */
+"Xp9-Am-mwm.text" = "If it's not your device, the device owner can share the device with you";
+
+/* Class = "UIButton"; normalTitle = "返回首页"; ObjectID = "pA7-dX-jXg"; */
+"pA7-dX-jXg.normalTitle" = "Return to the homepage";

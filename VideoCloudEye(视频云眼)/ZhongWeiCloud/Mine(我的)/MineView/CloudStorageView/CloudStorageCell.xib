@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="103" id="KGk-i7-Jjw" customClass="CloudStorageCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallCloudPic" translatesAutoresizingMaskIntoConstraints="NO" id="aRO-uc-72k">
+                        <rect key="frame" x="10" y="15" width="98" height="73"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="aRO-uc-72k" secondAttribute="height" multiplier="4:3" id="ImZ-md-6ib"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="互联网摄像机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpm-nh-llO">
+                        <rect key="frame" x="118" y="18" width="122" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0081145679580000001" green="0.52099776269999998" blue="0.99458700420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前套餐:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-KZ-rDM">
+                        <rect key="frame" x="118" y="51" width="53" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="53" id="fde-V1-8kQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="7天月套餐" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TF-lG-Mf2">
+                        <rect key="frame" x="171" y="51.5" width="69" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.98615294694900513" green="0.41858339309692383" blue="0.015073648653924465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到期时间:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4v-Si-CPr">
+                        <rect key="frame" x="118" y="70.5" width="53" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="53" id="i5v-WM-kua"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="2018-06-18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2K4-HB-A0Z">
+                        <rect key="frame" x="171" y="71" width="69" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.98615294689999999" green="0.41858339309999998" blue="0.01507364865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rc-se-qfU">
+                        <rect key="frame" x="240" y="52.5" width="70" height="30"/>
+                        <color key="backgroundColor" red="0.98615294689999999" green="0.41858339309999998" blue="0.01507364865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="6yK-0f-qKR"/>
+                            <constraint firstAttribute="height" constant="30" id="SRz-0y-RpW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="立即开通">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="openCloudClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0Of-Wy-Vkt"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aRO-uc-72k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0UI-Km-rn0"/>
+                    <constraint firstItem="aRO-uc-72k" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="8bd-1T-A24"/>
+                    <constraint firstItem="lpm-nh-llO" firstAttribute="leading" secondItem="aRO-uc-72k" secondAttribute="trailing" constant="10" id="Eas-L7-qGq"/>
+                    <constraint firstItem="2K4-HB-A0Z" firstAttribute="leading" secondItem="G4v-Si-CPr" secondAttribute="trailing" id="HHp-9p-dVX"/>
+                    <constraint firstItem="G4v-Si-CPr" firstAttribute="bottom" secondItem="aRO-uc-72k" secondAttribute="bottom" constant="-3" id="K8h-RD-mx2"/>
+                    <constraint firstAttribute="trailing" secondItem="0rc-se-qfU" secondAttribute="trailing" constant="10" id="Lz5-d7-RAM"/>
+                    <constraint firstItem="0rc-se-qfU" firstAttribute="leading" secondItem="6TF-lG-Mf2" secondAttribute="trailing" id="T58-MV-fpz"/>
+                    <constraint firstItem="lpm-nh-llO" firstAttribute="top" secondItem="aRO-uc-72k" secondAttribute="top" constant="3" id="TwV-eO-TIF"/>
+                    <constraint firstItem="2K4-HB-A0Z" firstAttribute="centerY" secondItem="G4v-Si-CPr" secondAttribute="centerY" id="Ugg-9M-BdB"/>
+                    <constraint firstItem="G4v-Si-CPr" firstAttribute="top" secondItem="zdf-KZ-rDM" secondAttribute="bottom" constant="5" id="d7O-dw-KoQ"/>
+                    <constraint firstItem="0rc-se-qfU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="15" id="im1-My-9AO"/>
+                    <constraint firstItem="zdf-KZ-rDM" firstAttribute="leading" secondItem="aRO-uc-72k" secondAttribute="trailing" constant="10" id="oka-y1-oCf"/>
+                    <constraint firstItem="0rc-se-qfU" firstAttribute="leading" secondItem="lpm-nh-llO" secondAttribute="trailing" id="otx-As-3FW"/>
+                    <constraint firstItem="G4v-Si-CPr" firstAttribute="leading" secondItem="aRO-uc-72k" secondAttribute="trailing" constant="10" id="qhj-Lw-OUT"/>
+                    <constraint firstItem="aRO-uc-72k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rih-kn-SdL"/>
+                    <constraint firstItem="0rc-se-qfU" firstAttribute="leading" secondItem="2K4-HB-A0Z" secondAttribute="trailing" id="sdA-7m-fTA"/>
+                    <constraint firstItem="6TF-lG-Mf2" firstAttribute="leading" secondItem="zdf-KZ-rDM" secondAttribute="trailing" id="srY-n0-Fla"/>
+                    <constraint firstItem="6TF-lG-Mf2" firstAttribute="centerY" secondItem="zdf-KZ-rDM" secondAttribute="centerY" id="wQ3-f2-4Ct"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="currentStausTip_lb" destination="zdf-KZ-rDM" id="AS2-yH-ksN"/>
+                <outlet property="deviceName_lb" destination="lpm-nh-llO" id="GXh-uB-sF2"/>
+                <outlet property="device_Img" destination="aRO-uc-72k" id="q2B-VJ-YJX"/>
+                <outlet property="mealTime_lb" destination="2K4-HB-A0Z" id="lVD-FC-6Le"/>
+                <outlet property="mealType_lb" destination="6TF-lG-Mf2" id="ncT-ji-gQa"/>
+                <outlet property="openCloud_btn" destination="0rc-se-qfU" id="fwi-y7-gyr"/>
+                <outlet property="toDateTip_lb" destination="G4v-Si-CPr" id="hGN-Cl-IKw"/>
+            </connections>
+            <point key="canvasLocation" x="18" y="103.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="smallCloudPic" width="100" height="75"/>
+    </resources>
+</document>

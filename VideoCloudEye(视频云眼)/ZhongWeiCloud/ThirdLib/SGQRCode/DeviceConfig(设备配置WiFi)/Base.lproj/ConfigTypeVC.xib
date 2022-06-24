@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfigTypeVC">
+            <connections>
+                <outlet property="QRCodeView" destination="k7N-qA-J9F" id="xdq-x1-z9h"/>
+                <outlet property="recommendImg" destination="Jyl-h3-Xeo" id="OfI-xv-kaZ"/>
+                <outlet property="smartConfigView" destination="Aqt-Xa-w2R" id="4iR-IJ-VSl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7N-qA-J9F" userLabel="View1">
+                    <rect key="frame" x="13" y="40" width="349" height="95"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备扫码添加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWB-fQ-yvj" userLabel="Title">
+                            <rect key="frame" x="65" y="24.5" width="104" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config_push" translatesAutoresizingMaskIntoConstraints="NO" id="YzJ-BX-Hm1" userLabel="pushIcon">
+                            <rect key="frame" x="319" y="40" width="10" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="c5K-q9-ZE6"/>
+                                <constraint firstAttribute="height" constant="15" id="p47-cj-AKR"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config_ recommend" translatesAutoresizingMaskIntoConstraints="NO" id="Jyl-h3-Xeo" userLabel="recommendedIcon">
+                            <rect key="frame" x="302" y="4" width="44" height="45"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="w7N-oq-23L" userLabel="Icon">
+                            <rect key="frame" x="15" y="27.5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="9yK-4N-p6J"/>
+                                <constraint firstAttribute="width" secondItem="w7N-oq-23L" secondAttribute="height" id="HdF-rx-01Q"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通过设备扫描手机上的二维码连接Wi-Fi" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaw-Uq-e81" userLabel="subTitle">
+                            <rect key="frame" x="65" y="48.5" width="244" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="fWB-fQ-yvj" firstAttribute="leading" secondItem="w7N-oq-23L" secondAttribute="trailing" constant="10" id="7b0-aK-e1n"/>
+                        <constraint firstItem="YzJ-BX-Hm1" firstAttribute="centerY" secondItem="k7N-qA-J9F" secondAttribute="centerY" id="Ddc-aG-lqf"/>
+                        <constraint firstItem="xaw-Uq-e81" firstAttribute="leading" secondItem="w7N-oq-23L" secondAttribute="trailing" constant="10" id="H9H-mT-79D"/>
+                        <constraint firstItem="xaw-Uq-e81" firstAttribute="top" secondItem="fWB-fQ-yvj" secondAttribute="bottom" constant="3" id="JHa-JO-Dki"/>
+                        <constraint firstItem="Jyl-h3-Xeo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fWB-fQ-yvj" secondAttribute="trailing" constant="8" symbolic="YES" id="KIs-8t-IaY"/>
+                        <constraint firstItem="YzJ-BX-Hm1" firstAttribute="leading" secondItem="xaw-Uq-e81" secondAttribute="trailing" constant="10" id="Krk-VI-xC4"/>
+                        <constraint firstItem="w7N-oq-23L" firstAttribute="centerY" secondItem="k7N-qA-J9F" secondAttribute="centerY" id="LAM-F2-E6F"/>
+                        <constraint firstAttribute="trailing" secondItem="YzJ-BX-Hm1" secondAttribute="trailing" constant="20" id="OWz-89-LaG"/>
+                        <constraint firstItem="fWB-fQ-yvj" firstAttribute="top" secondItem="w7N-oq-23L" secondAttribute="top" constant="-3" id="SwJ-3x-DJA"/>
+                        <constraint firstAttribute="height" constant="95" id="Ym5-mu-REK"/>
+                        <constraint firstAttribute="trailing" secondItem="Jyl-h3-Xeo" secondAttribute="trailing" constant="3" id="ep3-Ee-Dx6"/>
+                        <constraint firstItem="Jyl-h3-Xeo" firstAttribute="top" secondItem="k7N-qA-J9F" secondAttribute="top" constant="4" id="ifG-If-Wkc"/>
+                        <constraint firstItem="w7N-oq-23L" firstAttribute="leading" secondItem="k7N-qA-J9F" secondAttribute="leading" constant="15" id="yny-aX-stI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aqt-Xa-w2R" userLabel="View2">
+                    <rect key="frame" x="13" y="150" width="349" height="85"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无线智能添加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfP-dg-kBb" userLabel="Title">
+                            <rect key="frame" x="63" y="20.5" width="104" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config_push" translatesAutoresizingMaskIntoConstraints="NO" id="RGH-09-qhd" userLabel="pushIcon">
+                            <rect key="frame" x="319" y="35" width="10" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="Nk2-6b-7lJ"/>
+                                <constraint firstAttribute="height" constant="15" id="wYc-mG-4c0"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config_WiFi" translatesAutoresizingMaskIntoConstraints="NO" id="RLt-iM-7tH" userLabel="Icon">
+                            <rect key="frame" x="15" y="23.5" width="38" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="RLt-iM-7tH" secondAttribute="height" id="PQZ-JF-dtZ"/>
+                                <constraint firstAttribute="width" constant="38" id="i2A-cD-04r"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通过无线传输的方式配置Wi-Fi" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xr-8f-4kw" userLabel="subTitle">
+                            <rect key="frame" x="63" y="44.5" width="246" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.50096318493150682" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="RLt-iM-7tH" firstAttribute="centerY" secondItem="Aqt-Xa-w2R" secondAttribute="centerY" id="7rR-1R-eU8"/>
+                        <constraint firstItem="2Xr-8f-4kw" firstAttribute="top" secondItem="WfP-dg-kBb" secondAttribute="bottom" constant="3" id="8K5-eI-0mu"/>
+                        <constraint firstAttribute="trailing" secondItem="RGH-09-qhd" secondAttribute="trailing" constant="20" id="GZk-1H-JRO"/>
+                        <constraint firstItem="WfP-dg-kBb" firstAttribute="leading" secondItem="RLt-iM-7tH" secondAttribute="trailing" constant="10" id="Nke-fg-JuK"/>
+                        <constraint firstItem="RGH-09-qhd" firstAttribute="leading" secondItem="2Xr-8f-4kw" secondAttribute="trailing" constant="10" id="O7i-mb-Yzl"/>
+                        <constraint firstItem="2Xr-8f-4kw" firstAttribute="leading" secondItem="RLt-iM-7tH" secondAttribute="trailing" constant="10" id="dDH-Ce-0d2"/>
+                        <constraint firstAttribute="height" constant="85" id="hPh-Wk-Z4r"/>
+                        <constraint firstItem="RGH-09-qhd" firstAttribute="centerY" secondItem="Aqt-Xa-w2R" secondAttribute="centerY" id="nNY-fk-pzM"/>
+                        <constraint firstItem="WfP-dg-kBb" firstAttribute="top" secondItem="RLt-iM-7tH" secondAttribute="top" constant="-3" id="pt3-rt-35e"/>
+                        <constraint firstItem="RGH-09-qhd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WfP-dg-kBb" secondAttribute="trailing" constant="8" symbolic="YES" id="pyM-uY-FX1"/>
+                        <constraint firstItem="RLt-iM-7tH" firstAttribute="leading" secondItem="Aqt-Xa-w2R" secondAttribute="leading" constant="15" id="usX-lo-iWt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Aqt-Xa-w2R" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.93" id="1Gk-Vd-bou"/>
+                <constraint firstItem="Aqt-Xa-w2R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D7b-GQ-lty"/>
+                <constraint firstItem="k7N-qA-J9F" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Mvb-WA-0ED"/>
+                <constraint firstItem="k7N-qA-J9F" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="amK-gc-hup"/>
+                <constraint firstItem="Aqt-Xa-w2R" firstAttribute="top" secondItem="k7N-qA-J9F" secondAttribute="bottom" constant="15" id="qE3-eS-OGR"/>
+                <constraint firstItem="k7N-qA-J9F" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.93" id="vDs-oJ-kB1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="130.40000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="config_ recommend" width="44.5" height="45"/>
+        <image name="config_WiFi" width="32" height="33"/>
+        <image name="config_push" width="9.5" height="15"/>
+        <image name="config_qrcode" width="37" height="37"/>
+    </resources>
+</document>

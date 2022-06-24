@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "已完成设备Wi-Fi配置"; ObjectID = "DJV-Aa-Bdw"; */
+"DJV-Aa-Bdw.normalTitle" = "Complete";
+
+/* Class = "UILabel"; text = "①设备通电，听到“请为设备配置无线网络”提示音后，请将二维码对准摄像头；"; ObjectID = "Iza-Tg-zNT"; */
+"Iza-Tg-zNT.text" = "①Power on the device. When you hear the “Please configure the device for wireless network” tone, please align the QR code with the camera.";
+
+/* Class = "UILabel"; text = "注：二维码可点击放大，增加设备识别成功率"; ObjectID = "Zxu-wQ-7VP"; */
+"Zxu-wQ-7VP.text" = "Note: QR code can be clicked to enlarge, increasing the success rate of device recognition.";
+
+/* Class = "UILabel"; text = "②保持约20cm的距离，等待扫描;"; ObjectID = "bhF-cJ-fo4"; */
+"bhF-cJ-fo4.text" = "②Keep a distance of about 20cm, waiting for scanning.";
+
+/* Class = "UILabel"; text = "④听到“WiFi连接成功”提示音后表示设备Wi-Fi配置已完成。;"; ObjectID = "ua3-fc-Pe8"; */
+"ua3-fc-Pe8.text" = "④After hearing the “Successful Access to Wireless Network” tone, the device Wi-Fi configuration is complete.";
+
+/* Class = "UILabel"; text = "③听到“扫描二维码成功”提示音后移开手机；"; ObjectID = "udO-ah-RCv"; */
+"udO-ah-RCv.text" = "③After hearing the \"Scan wireless QR code success\" tone, remove the phone.";
+
+/* Class = "UILabel"; text = "操作步骤："; ObjectID = "xdP-bF-p1E"; */
+"xdP-bF-p1E.text" = "Steps:";

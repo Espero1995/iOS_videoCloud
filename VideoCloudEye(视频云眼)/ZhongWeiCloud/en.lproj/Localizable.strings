@@ -1,0 +1,995 @@
+/*
+  Localizable.strings
+  ZhongWeiCloud
+
+  Created by Espero on 2018/12/4.
+  Copyright © 2018 张策. All rights reserved.
+*/
+//  English-Desc:  NSLocalizedString(@"", nil)
+
+//================Third Tool(第三方工具类)================
+//****************ChooseDialog.m
+"取消" = "Cancel";
+
+//****************AdvertiseView
+"跳过" = "Skip";
+
+//****************ApLoginView.m
+"请输入账号密码" = "Username and Password";
+"请输入账号" = "Enter username";
+"请输入AP密码" = "Enter password";
+"开始预览" = "Preview";
+
+//================基础类================
+//****************HDNetworking.m
+"您的账号已在其它设备登录" = "You have signed onto another device";
+"登录过期,请退出当前账号重新登录" = "Session expired, please logout of the current account and login again";
+
+//****************AppDelegate.m
+"支付失败" = "Payment failed";
+"您退出了支付操作" = "Payment operation canceled";
+
+//****************ZCTabBarController.mm
+"设备" = "Device";
+"消息" = "Message";
+"发现" = "Discovery";
+"我的" = "Me";
+
+//================LoginandRegistFile(登录与注册)================
+//****************AccountLoginNewVC.m
+"返回" = " Back";
+"请输入手机号码" = "Enter phone number";
+"请输入登录密码" = "Enter password";
+"注册" = "Sign Up";
+"更多" = "More";
+"忘记密码" = "Unable to Log In?";
+"登录" = "Login";
+"其他登录方式" = "Login to Another Way";
+"AP预览" = "AP Preview";
+"登录中，请稍候..." = "Please wait...";
+"验证码已发送" = "Code Sent";
+"确定" = "OK";
+"温馨提示" = "Tips";
+"请输入正确的手机号" = "Please enter the correct phone number";
+"请输入正确的邮箱" = "Please enter the correct email";
+"当前网络不可用，请检查您的网络" = "The current network is not available, please check your network";
+"请输入正确的手机号或密码" = "Please enter the correct phone number or password";
+"登录失败，请稍候再试" = "Login failed, please try again later";
+"验证码发送过于频繁，请稍候再试" = "Too many operations, please try again later";
+"验证码发送失败，请稍候再试" = "Send failed, please try again later";
+"当前WiFi不是设备热点，请手动连接至设备的热点" = "Please connect to the device WLAN manually";
+"当前没有连接到WiFi，请手动连接至设备的热点" = "Please connect to the device WLAN manually";
+"账号不能为空" = "Please enter username";
+"密码不能为空" = "Please enter password";
+"密码必须在6-20位之间" = "Valid password (length:6-20)";
+"两次输入的密码不一致" = "Inconsistent password";
+"请输入邮箱账号" = "Enter your email";
+"请输入正确的邮箱账号和密码；若已注册请确认是否在邮箱中已激活该账号" = "Please enter the correct email account and password; if you have already registered, please activate in the email";
+"请输入正确的账号或密码" = "Please enter the correct account or password";
+
+//****************RegisterNewVC.m
+"注册账号" = "Sign Up";
+"国家/地区" = "Region";
+"输入密码" = "Password";
+"请输入密码" = "Set a password";
+"确认密码" = "Confirm";
+"请确认密码" = "Confirm password";
+"获取短信验证码" = "Send";
+"我已阅读并同意" = "agree to";
+"拾光云服务协议" = "Service Agreement";
+"手机注册" = "Register by phone";
+"邮箱注册" = "Register by email";
+"邮箱" = "Email";
+"该邮箱已被注册" = "The email has been registered";
+"您已注册，请您在24小时内激活,过期或激活后链接自动失效!" = "You have already registered, please activate within 24 hours, the link will expire automatically after expiration or activation!";
+"注册成功！若登录需激活账号，激活链接已发送到您的注册邮箱,请您在24小时内激活!" = "Register successfully! Login needs to activate your account, the activation link has been sent to your registered email address, please activate within 24 hours!";
+
+//****************ForgetPwdVC.m
+"验证手机号" = "Verify Your Number";
+"邮箱密码重置" = "Reset password by email";
+"手机密码重置" = "Reset password by phone";
+"获取邮箱验证码" = "Send";
+"验证邮箱" = "Verify Your Email";
+
+//****************ResetPwdVC.m
+"重置密码中，请稍候..." = "Please wait...";
+"修改密码成功" = "Reset Successfully!";
+"修改密码失败，请稍候再试" = "Reset failed, please try again later";
+"设置新密码" = "Set a New Password";
+"请输入新的密码" = "Set a new password";
+"请确认新的密码" = "Confirm the new password";
+"完成" = "Submit";
+
+//****************SmsVerifyVC.m
+"重新发送" = "Send";
+"后重新发送" = "Retry after";
+"该手机号已被注册" = "The phone number has been registered";
+"注册失败，请重新注册" = "Register failed, please re-register";
+"请输入正确的验证码" = "Please enter correct code";
+"该操作可能会造成您的验证码失效，您确定退出吗？" = "The operation may invalidate your code, continue?";
+"正在注册中，请稍候..." = "Please wait...";
+"注册成功" = "Registered Successfully!";
+"第一次登录需短信验证" = "First Login by SMS code";
+"输入短信验证码" = "Verification Code";
+"输入邮箱验证码" = "Verification Code";
+"短信验证码发送至" = "verification code is sent to ";
+"验证码邮件已发送至" = "verification code is sent to ";
+"请在10分钟内完成验证" = ", please complete the verification within 10 minutes.";
+"您已发送过验证码，且验证码未失效，请及时到邮箱查收" = "Verification code has already been sent to your email，Please check in time";
+"该邮箱还未被注册" = "The email is not registered";
+
+//****************WeChatVerifyVC.m
+"账号验证" = "Verify Account";
+"第一次使用微信账号登录，需绑定视频云眼账号" = "Please bind your phone to WeChat.";
+"绑定账号" = "Bind Account";
+"注册新账号" = "Sign Up";
+
+//****************BindAccountVC.m
+"正在绑定中，请稍候..." = "Please wait...";
+"绑定成功" = "Bind Successfully!";
+"手机号不能为空" = "Please enter phone number";
+"请输入正确的手机号或验证码" = "Please enter the correct phone number or code";
+"验证码不能为空" = "Please enter code";
+"微信绑定账号失败，请稍候再试" = "WeChat binding failed, please try again later";
+"绑定已有账号" = "Account Binding";
+"请输入视频云眼账号和密码进行绑定" = "Please Bind phone number and password";
+"请输入验证码" = "Please enter code";
+"获取验证码" = "Send";
+"绑定" = "Bind";
+
+//****************FingerPrintLoginVC.m
+"面容 ID 暂时不可用，您可以通过输入账号密码解锁" = "Face ID is temporarily unavailable, you can unlock it by phone number and password";
+"触控 ID 暂时不可用，您可以通过输入账号密码解锁" = "Touch ID is temporarily unavailable, you can unlock it by phone number and password";
+"点击进行面容ID登录" = "Click to enter the Face ID login";
+"点击进行触控ID登录" = "Click to enter the Touch ID login";
+"账号密码登录" = "Phone number and Password Login";
+
+//****************fingerPrintLoginManage.m
+"请按住Home键完成验证" = "Please touch the Home button to complete the verification";
+"面容 ID 无法识别您的面容" = "Face ID does not recognize your face";
+"触控 ID 无法识别您的指纹" = "Touch ID does not recognize your fingerprint";
+
+//================WeiCloud(威云)================
+//****************WeiCloudVC.m
+"组内无设备，无法一键布防" = "Empty group, operation canceled";
+"发现新版本,是否要升级?" = "A New Version, Update?";
+"已为“视频云眼”关闭相机" = "Closed camera for \"Joyware Video Cloud\"";
+"您可以在“设置”中为此应用打开相机" = "You can open camera for the App in Settings";
+"未检测到您的摄像头" = "The camera is not detected";
+
+//****************myDeviceDisplayVC.m && DeviceDisplayVC.m && fourScreenDisplayVC.m
+"暂无设备数据" = "No device data";
+"添加设备" = "Add device";
+"配置设备" = "Config device";
+"您不是该设备的主人，暂时无法分享手机好友" = "You are not the owner of this device, you cannot share your friends";
+"当前设备不在线，无法进行微信视频分享" = "The current device is offline and cannot be used for video sharing by WeChat";
+"该设备不支持云存" = "The device does not support cloud storage";
+"未检测到设备上的SD卡" = "The SD card on device is not detected";
+"未开通云存储功能，请先开通" = "Cloud storage is not enabled, please purchase it first";
+"还没有设备？快去逛逛吧" = "No Device? Go Shopping from";
+"商城" = "Discovery";
+
+//****************DeviceSetPopUpView.m
+"刷新封面" = "Refresh";
+"云存" = "Cloud";
+"时光相册" = "TimeAlbum";
+
+//****************SwitchModeView.m
+"正在关闭布防..." = "Disable guard mode...";
+"正在开启布防..." = "Enable guard mode...";
+"一键布防设置失败，请稍候再试" = "Operation failed, please try again later";
+"一键布防设置失败，请检查您的网络" = "Operation failed, please check your network";
+"已关闭布防" = "Guard mode off";
+"已开启布防" = "Guard mode on";
+
+//****************DeviceSortingVC.m
+"编辑顺序" = "Edit order";
+
+//****************searchVideoVC.m
+"请输入通道名称" = "Please Enter Channel Name";
+"通道列表" = "Channel List";
+"未搜索到任何通道" = "No Channel Found";
+
+//****************AddorDelCell.m
+"删除设备" = "Delete device";
+
+//****************GroupChoosingVC.m
+"移除设备" = "Remove device";
+"你还没有选择任何设备" = "No available device";
+"添加中..." = "Add in...";
+"移除中..." = "Remove out...";
+"删除分组失败，请稍候再试" = "Operation failed, please try again later";
+"删除分组失败，请检查您的网络" = "Operation failed, please check your network";
+"移除成功" = "Remove Successfully!";
+"添加成功" = "Add Successfully!";
+"你还没有设备可选择" = "No available device";
+"下一步" = "Next";
+
+//****************GroupSettingVC.m
+"我的设备" = "Default";
+"正在置顶，请稍候..." = "Being on top, please wait...";
+"正在取消置顶，请稍候..." = "Cancel the top, please wait...";
+"置顶设置失败，请稍候再试" = "Operation failed, please try again later";
+"置顶设置失败，请检查您的网络" = "Operation failed, please check your network";
+"正在删除分组，请稍候..." = "Deleting group, please wait...";
+"删除成功" = "Delete Successfully!";
+"确定要删除该分组？" = "Delete this group, continue?";
+"若该分组下还有设备存在，删除后设备将转移至“我的设备”，确定要删除？" = "If there is another device under the group, the device will be transferred to \"My Device\" after deletion, continue?";
+"分组内无设备\n添加新设备后，设备会默认出现在这里" = "No device in the group\n after adding a new device, the device \nwill appear here by default.";
+"分组名称" = "Group Name";
+"分组置顶" = "Group Top";
+"删除分组" = "Delete Group";
+
+//****************GroupNamedVC.m
+"正在创建分组，请稍候..." = "Please wait...";
+"组名只支持字母、数字和中文" = "Group name only supports letters, numbers, and Chinese";
+"创建成功" = "Create Successfully!";
+"创建组别失败" = "Create group failed";
+"创建组别已达上限" = "Create group has reached the upper limit";
+"该分组名称已被占用" = "The group name is already occupied";
+"创建失败，请检查您的网络" = "Operation failed, please check your network";
+
+//****************ProtectionModeVC.m
+"防护模式设置" = "Protection Mode Setting";
+"在家时的活动检测提醒设置" = "Motion detect reminder settings at home";
+"外出时的活动检测提醒设置" = "Motion detect reminder settings when going out";
+"在家模式" = "Home Mode";
+"外出模式" = "Out Mode";
+"没有支持防护模式的设备" = "No device that supports protection mode";
+
+//****************ModifyGroupNameVC.m
+"组名不得为空" = "Group name cannot be empty";
+"修改中..." = "Modifying...";
+"修改分组名称失败，请稍候再试" = "Operation failed, please try again later";
+"修改分组名称失败，请检查您的网络" = "Operation failed, please check your network";
+"请输入设备组名" = "Please enter device group name";
+"组名只支持字母、数字和中文（10字以内）" = "Group name only supports letters, numbers and Chinese (within 10 characters)";
+
+//****************SwitchShowStyleView.m
+"添加分组" = "Add Group";
+
+//****************GroupNoDevBGView
+"去商城看看" = "Go to Discovery";
+
+//****************TimePhotoAlbumVC.m
+"文件已存在，确定要重新下载？" = "The file already exists. Download it again?";
+"相册下载中，请稍候..." = "Please wait...";
+"已下载到我的文件" = "Downloaded to my file";
+"下载失败" = "Download failed";
+"未查询到相册，请检查您的网络" = "No albums found, please check your network";
+"云存开通后无法立即为您展示时光相册" = "After the cloud storage is purchase, it cannot immediately show you the time album";
+"当前设备不在线" = "The current device is offline";
+"稍后再试" = "Try again later";
+"立即开通" = "Purchase";
+"年" = ".";
+"月" = ".";
+"日" = ".";
+"文件格式" =  "Format";
+"下载时间" = "Time";
+"关联设备通道" = "Device Name";
+
+//****************SharedSheetView.m
+"设备分享" = "Device Share";
+"视频分享" = "Video Share";
+
+//****************FriendsSharedVC.m
+"手机号/邮箱分享" = "Phone number/email sharing";
+"邮箱分享" = "Email sharing";
+"分享配置" = "Sharing configuration";
+"预览" = "Preview";
+"声音" = "Audio";
+"回放" = "Playback";
+"告警" = "Alarm";
+"对讲" = "Talk";
+"云台" = "PTZ";
+"预览、声音" = "Preview,Audio";
+"永久" = "Permanent";
+"1天" = "1day";
+"3天" = "3days";
+"7天" = "7days";
+"第二天" = "tomorrow";
+"分享用户" = "Share user";
+"请输入备注名" = "Please enter remarks";
+"已为“视频云眼”关闭通讯录" = "Closed address book for \"Joyware Video Cloud\"";
+"您可以在“设置”中为此应用打开通讯录" = "You can open address book for the App in Settings";
+"分享成功" = "Share Successfully!";
+"分享失败，您不是设备拥有者" = "Sharing failed, you are not the device owner";
+"当前最多可分享10人" = "Up to 10 people can currently be shared";
+"该用户已分享" = "This user has shared";
+"自己设备无法分享给自己" = "Your device can't share it with yourself";
+"分享权限" = "Permission";
+"分享时段" = "Time slot";
+"分享时限" = "Time limit";
+"输入想分享的人手机号码或邮箱" = "Enter the phone number or email";
+"输入想分享的人的邮箱" = "Enter the email";
+"该设备还未分享给任何人" = "The device is not Shared with anyone";
+"请稍候..." = "Please wait...";
+
+//****************SharePermissionVC.m
+"你确定要放弃修改吗？" = "Are you sure to cancel the changes?";
+"正在设置分享权限，请稍候..." = "Please wait...";
+"设置成功" = "Set successfully!";
+"设置失败，请稍候再试" = "Operation failed, please try again later";
+"设置失败，请检查您的网络" = "Operation failed, please check your network";
+"实时预览" = "Preview";
+"视频对讲" = "Talk";
+"录像回放" = "Playback";
+"云台控制" = "PTZ";
+"报警推送" = "Alarm";
+
+//****************SharetimeLimitVC.m
+"正在设置分享时限，请稍候..." = "Please wait...";
+"时限选择" = "Selection";
+"（到期后权限将自动失效）" = "(Automatically expire after expiration)";
+
+//****************SharePeriodVC.m
+"起始时间不能大于结束时间" = "Start time cannot be greater than end time";
+"起始时间不能大于等于结束时间" = "Start time cannot be greater than or equal to the end time";
+"起始时间不能等于结束时间" = "Start time cannot be equal to end time";
+"正在设置分享时段，请稍候..." = "Please wait...";
+"起始时间" = "Start time";
+"结束时间" = "End time";
+"时段选择" = "Time selection";
+"（权限只在该时间段内有效）" = "(Valid during this time period)";
+
+//****************FriendShareDetailVC.m
+"分享权限设置" = "Permission Settings";
+"加载中，请稍候..." = "Please wait ...";
+"权限获取失败，请稍候再试" = "Operation failed, please try again later";
+"确定取消分享设备给该用户?" = "Cancel the sharing device for this user, continue?";
+"取消分享，请稍候..." = "Please wait...";
+"取消分享失败，请稍候再试" = "Operation failed, please try again later";
+"取消分享失败，请检查您的网络" = "Operation failed, please check your network";
+"取消分享" =  "Cancel sharing";
+"当前网络不可用，无法进行设置" = "The current network is unavailable and cannot be set";
+
+//****************ShareDetailCell.m
+"备注" = "Remarks";
+
+//****************ShareVideoToWeixinVC.m
+"分享至微信" = "Share to WeChat";
+"请输入4-12位数字的密码" = "Valid password (length:4-12)";
+"视频分享到微信失败！" = "Video sharing to WeChat failed!";
+"需要访问密码" = "Enter password";
+
+//****************MyCloudStorageVC.m
+"暂无多余套餐购买记录" = "No extra plan purchase record";
+"个套餐未生效" = "plans unused";
+"无" = "None";
+
+//****************MyCloudStorageMealVC.m
+"我的云存套餐" = "Cloud Storage Plan";
+"暂无可用的套餐" = "No plans available";
+"当前“第一个套餐”已生效" = "The \"first plan\" is effective";
+"已使用" = "Used";
+
+//****************OrderRecordController.h
+"暂无购买记录" = "No purchase record";
+
+//****************PayWayViewController.m
+"支付方式" = "Payment Method";
+"确认支付" = "Pay";
+"您尚未安装微信客户端，可选择其它方式支付" = "You have not installed the WeChat, you can choose another way to pay";
+"支付宝" = "Alipay";
+"微信支付" = "WeChat payment";
+"选择支付方式" = "Payment method selection";
+"支付出错，请重新尝试" = "Payment error, please try again";
+"支付成功" = "Pay Successfully!";
+
+//****************GeneralDeviceSettingVC.m
+"正在查询设备信息" = "Please wait...";
+"查询设备布防信息失败" = "Query device guard info failed";
+"正在设置活动提醒" = "Setting Motion reminder";
+"活动提醒设置失败，请稍候再试" = "Operation failed, please try again later";
+"活动提醒设置失败，请检查您的网络" = "Operation failed, please check your network";
+"获取图像设置失败，请稍候再试" = "Operation failed, please try again later";
+"该设备不支持图像设置" = "The device does not support image settings";
+"红外灯设置失败，请稍候再试" = "Operation failed, please try again later";
+"红外灯设置失败，请检查您的网络" = "Operation failed, please check your network";
+"自动升级设置失败，请稍候再试" = "Operation failed, please try again later";
+"自动升级设置失败，请检查您的网络" = "Operation failed, please check your network";
+"当前版本" = "Current version";
+"获取版本号失败" = "failed to get the version";
+"确定要重启设备吗？发送重启指令后,设备将在几分钟内离线！" = "Restart your device? After sending the restart command, the device will be offline within a few minutes!";
+"正在发送重启指令..." = "Sending restart command...";
+"重启设备成功" = "Restart Successfully!";
+"重启设备失败" = "Restart failed";
+"重启设备失败，请检查您的网络" = "Restarting the device failed, please check your network";
+"确定删除该设备？" = "Delete this device, continue?";
+"删除设备失败" = "Operation failed";
+"删除设备失败，请检查您的网络" = "Operation failed, please check your network";
+"设备名称" = "Device Name";
+"WI-FI网络" = "WLAN";
+"图像设置" = "Image Setting";
+"转移设备" = "Transfer Device";
+"红外自动开启" = "Infrared";
+"设备自动升级" = "Auto Update";
+"设备升级" = "Device Upgrade";
+"重启设备" = "Restart Device";
+"活动检测提醒" = "Motion detect reminder";
+"提醒时间" = "Reminder Time";
+"星期一," = "Mon,";
+"星期二," = "Tue,";
+"星期三," = "Wed,";
+"星期四," = "Thur,";
+"星期五," = "Fri,";
+"星期六," = "Sat,";
+"星期日," = "Sun,";
+"每天" = "Everyday";
+"灵敏度" = "Sensitivity";
+"该设备不在线,无法进行图像配置" = "The device is offline and cannot be configured for images";
+"正在查询图像配置信息" = "Please wait...";
+"设备已为当前最新版本,无需升级" = "The device is currently up to date and does not require an upgrade";
+"请先打开活动检测提醒，再进行提醒时间设置" = "Please turn on the motion detect reminder first, then set the reminder time";
+"请先打开活动检测提醒，再进行灵敏度设置" = "Please turn on the motion detect reminder before setting the sensitivity";
+"您可以将设备转移给他人使用，转移后设备将归属他人" = "Transfer the device to others";
+"根据环境光线强弱，自动开启红外灯" = "Auto-open infrared according to light";
+"画面中出现活动行为,立刻发出提醒" = "Alert if motion detected";
+
+//****************DeviceNameController.m
+"修改名称" = "Modify Name";
+"设备名不能为空" = "Device name cannot be empty";
+"修改设备名称失败，请稍候再试" = "Operation failed, please try again later";
+"修改设备名称失败，请检查您的网络" = "Operation failed, please check your network";
+"设备仅支持中文、数字、字母和符号。(16字以内)" = "Device supports Chinese, numbers, letters and symbols.(within 16 characters)";
+
+//****************RemindTimePlanVC.m
+"活动检测提醒计划" = "Motion Detect Schedule";
+"正在设置提醒时间" = "Set reminder time";
+"提醒时间设置成功" = "Set Successfully!";
+"提醒时间段设置失败，请稍候再试" = "Operation failed, please try again later";
+"提醒时间段设置失败，请检查您的网络" = "Operation failed, please check your network";
+"提醒时间段尚未保存，是否退出编辑？" = "Cancel editing?";
+"否" = "Cancel";
+"是" = "OK";
+"自定义时间段" = "Custom time period";
+"左滑可“编辑”或者“删除”自定义时间段" = "Left slide to \"edit\" or \"delete\" custom time period";
+"08:00 ~ 20:00(工作日)" = "08:00 ~ 20:00(weekday)";
+"23:00 ~ 09:00(周末)" = "23:00 ~ 09:00(weekend)";
+"00:00 ~ 23:59(每天)" = "00:00 ~ 23:59(everyday)";
+
+//****************RemindTimeController.m
+"提醒时间段" = "Reminder Period";
+"正在自定义时间段，请稍候..." = "Please wait...";
+"周期" = "Period";
+
+//****************PeriodTimeController.m
+"重复周期" = "Repeat Period";
+"重复周期至少选择一天" = "Select a repeat period of at least one day";
+"工作日" = "Weekday";
+"周末" = "Weekend";
+"(星期一 ~ 星期天)" = "(Mon.~Sun.)";
+"(星期一 ~ 星期五)" = "(Mon.~Fri.)";
+"(星期六、天)" = "(Sat,Sun)";
+"快捷选择：" = "Quick choice:";
+"时间选择：" = "Time selection:";
+
+//****************AdjustSensitivityController.m
+"移动侦测灵敏度" = "Sensitivity";
+"当前灵敏度" = "Current sensitivity";
+"灵敏度设置成功" = "Set Successfully!";
+"灵敏度设置失败，请稍候再试" = "Operation failed, please try again later";
+"低" = "Low";
+"中" = "Medium";
+"高" = "High";
+"正在设置灵敏度" =  "Setting Sensitivity";
+"网络不畅哦，是否退出？" = "The network is not smooth, whether to cancel?";
+
+//****************WifiConfigurationController.m
+"设备WI-FI" = "Device WLAN";
+"暂无数据" = "No data";
+
+//****************ImageSetTempVC.m
+"正在保存图片设置" = "Setting...";
+"图像设置成功" = "Set Successfully!";
+"图像设置失败,请稍候再试" = "Operation failed, please try again later";
+"图像设置失败,请检查您的网络" = "Operation failed, please check your network";
+"宽动态" = "Wide dynamic";
+"提示: 请先开启宽动态按钮" = "Tip: Please turn on the wide dynamic button first";
+"中心翻转" = "Center flip";
+"是否开启宽动态" = "Whether to turn on wide dynamics";
+
+//****************TimeZoneSetVC.m
+"该设备不在线,无法进行时区设置" = "The device is offline and cannot be configured for time zone";
+"正在查询设备时区" = "Please wait...";
+"获取设备时区失败，请稍候再试" = "Operation failed, please try again later";
+"获取设备时区失败，请检查您的网络" = "Operation failed, please check your network";
+"时区设置" = "Time Zone";
+"时区" = "Time Zone";
+"时令" = "Season";
+"偏移量" = "Offset";
+"开始日期" = "Start Date";
+"结束日期" = "End Date";
+"夏令时" = "Summer Time";
+"冬令时" = "Winter Time";
+"正在保存时区设置" = "Setting...";
+"时区设置成功" = "Set Successfully!";
+"时区设置失败,请稍候再试" = "Operation failed, please try again later";
+"时区设置失败,请检查您的网络" = "Operation failed, please check your network";
+"请选择时间" = "Time Selection";
+"开始日期不合法" = "Start date is not legal";
+"结束日期不合法" = "End date is not legal";
+"请完成时令设置" = "Please complete season set";
+"选择器月" = "";
+"选择器日" = "";
+
+//****************TransferDeviceVC.m
+"服务器连接失败，请稍候再试" = "Operation failed, please try again later";
+"属于自己的设备不能再转移给自己" = "Your own device can no longer be transferred to yourself";
+"转移设备需先关闭设备共享,您可在“我的界面”点击“设备共享”先关闭该设备分享的用户" = "Transfer devices, you need to turn off device sharing first. You can turn off device sharing users by clicking \"Device Share in \"Mine\".";
+"您要分享的用户还未注册" = "The user you want to share has not been registered yet";
+"您正在将此设备转移给其他用户使用，转移后对应的云存储服务也将会被转移。" = "You are transferring the device to others, the corresponding cloud storage will be transferred.";
+"请输入要转移用户的邮箱或手机号" = "Please enter phone number or email";
+"请输入正确的邮箱或手机号" = "Please enter the correct email and phone number";
+"请输入要转移用户的邮箱" = "Please enter the email";
+"手机号或邮箱不能为空" = "Please enter email or phone number";
+"邮箱不能为空" = "Please enter the email";
+
+//****************TransferVerifyVC.m
+"输入验证码" = "Device Code";
+"转移设备成功" = "Transfer Successfully!";
+"转移设备失败" = "Transfer device failed";
+"请输入设备验证码，验证码位于机身标签上(验证码为大写)" = "Enter the device code, the code is on the body label (the code is uppercase)";
+"请输入设备验证码" = "Please enter the device code";
+
+//****************autoUpdateCell.m
+"(0:00~6:00自动升级)" = "(0~6 PM auto upgrade)";
+
+//****************UpdataViewController.m
+"发送升级指令失败" = "Operation failed";
+"发送升级指令失败，请检查您的网络" = "Operation failed, please check your network";
+"设备升级失败，请检查您的网络" = "Operation failed, please check your network";
+"设备正在升级,退出将导致升级失败！导致部分功能无法使用！是否确认退出？" = "The device is being upgraded and the exit will cause the upgrade to fail! Some features are not available! continue?";
+"取消退出" = "Cancel";
+"确定退出" = "OK";
+"升级提醒" = "Upgrade Reminder";
+"升级过程中需要几分钟" = "It takes a few minutes";
+"请勿断开电源，是否现在升级？" = "Upgrade Now?";
+"正在升级..." = "upgrading...";
+"升级成功,正在重启,请等待重新上线(该过程大约需要2分钟)" = "Upgrade successful, restarting, wait a few minutes";
+"设备正在重启中,请稍等..." = "Restarting, please wait...";
+"升级成功" = "Upgrade Successfully!";
+"升级失败" = "Upgrade failed";
+
+//****************SGScanningQRCodeView.m
+"请将设备二维码放入框内, 即可自动扫描" = "Align QR Code within frame to scan";
+
+//****************SGScanningQRCodeVC.m
+"无法识别二维码，您可通过屏幕右上角按钮手动输入" = "The QR code is not recognized, please enter serial number manually";
+
+//****************InputSerialNumVC.m
+"输入设备序列号" = "Serial Number";
+"序列号不能为空" = "Serial number cannot be empty";
+"请输入正确的序列号" = "Please enter the correct serial number";
+"请输入设备的15位序列号" = "Valid serial number(length:15)";
+
+//****************RcodeShowController.m
+"该设备已被用户添加" = "It has been added by others";
+"如果这不是你的设备,可以让设备主人分享设备" = "If it's not your device, the device owner can share the device with you";
+"如果是你的设备,可以先解除绑定" = "If it is your device, you can unbind it first";
+"该设备不支持无线配置" = "The device does not support WLAN configuration";
+"设备型号" = "Model";
+"无效的序列号" = "Invalid serial number";
+"无法连接到网络" = "Unable to connect to the network";
+"连接网络" = "Connect";
+"添加" = "Add";
+"该设备添加失败" = "Operation failed";
+"网络提醒" = "Web Reminder";
+"设备必须在wifi网络环境下才能接入网络，请先确认手机已连入wifi网络。" = "The device must be connected to the WLAN, please confirm the phone is connected to the WLAN";
+"设备序列号" = "Serial Number";
+
+//****************WifiQRConfigVC.m
+"配置方式" = "Configuration Method";
+"设备通电后，听到“设备启动完成，请使用手机客户端软件进行WiFi配置”提示音后，请将二维码对准摄像头" = "After hearing tips, Align QR Code to camera";
+"我知道了" = "OK";
+"①保持约20cm的距离，等待扫描" = "①keep 20cm away to scan";
+"②听到“扫描无线二维码成功”提示音后移开手机" = "②Hearing the \"Scan Successful!\", remove the phone";
+"③听到“WiFi连接成功”提示音后表示设备Wi-Fi配置已完成" = "③Hearing “ Access to Network Successfully”, the device WLAN configuration is complete";
+"④听到“成功接入云平台，配置完成，欢迎使用”提示音后表示设备添加成功" = "④After the prompt tone is heard, the device is successfully added.";
+"是否已听到成功接入云平台？" = "Have you heard access to the cloud platform successfully?";
+"已使用二维码完成Wi-Fi配置" = "Complete";
+
+//****************WiFiSetController.mm
+"正在配置Wi-Fi" = "WLAN Configuration";
+"配置设备时间较长，请耐心等待" = "Configure the device for a long time, please wait...";
+"继续等待" = "Wait";
+"仍然退出" = "Cancel";
+"正在配置Wi-Fi信息,请耐心等待..." = "Sending WLAN info, please wait...";
+
+//****************BindingController.m
+"绑定" = "Binding";
+"配置设备Wi-Fi失败" = "Configuring device WLAN failed";
+"重试" = "Retry";
+
+//****************RegisterController.m
+"注册平台服务器" = "Registered Platform Server";
+"正在注册平台服务器，请耐心等待" = "Registering, please waiting...";
+
+//****************RealTimeVideoVC.m
+"视频" = "Video";
+"监控" = "Monitor";
+"非分享时间段内无法观看" = "Unable to watch during non-share period";
+"视频监控" = "Video Monitor";
+"标清" = "SD";
+"高清" = "HD";
+"流畅" = "Low";
+"通道" = "channel";
+"云台控制开启失败，请稍候再试" = "Operation failed, please try again later";
+"云台控制开启失败，请检查您的网络" = "Operation failed, please check your network";
+"声音:开" = "Sound: on";
+"声音:关" = "Sound: off";
+"请选择您想要的通道列表" = "Please select the channel list you want";
+"视频未播放" = "Video not playing";
+"已保存截图到我的文件" = "Screenshot saved to my file";
+"请先单击选中您想要截图的视频窗口" = "Please click to select the video window you want to capture";
+"录制时间" = "Recording time";
+"截图时间" = "Screenshot time";
+"视频开始录制" = "Video starts recording";
+"视频录制成功，已保存到我的文件" = "The video was recorded successfully and saved to my file";
+"麦克风:开" = "Microphone: On";
+"开启对讲失败，错误码：" = "Open the intercom failed, error code:";
+"请先单击选中您想要对讲的视频窗口" = "Please click to select the video window you want to talk to";
+"按住时间太短" = "Hold down time is too short";
+"正在开启对讲" = "Opening talk";
+"已为“视频云眼”关闭麦克风" = "Closed microphone for \"Joyware Video Cloud\"";
+"您可以在“设置”中为此应用打开麦克风" = "You can turn on the microphone for this App in Settings";
+"该设备不支持对讲功能" = "The device does not support talk function";
+"非分享时间段内无法对讲" = "Unable to talk during non-sharing period";
+"您的好友未将对讲权限分享给您" = "Permission denied";
+"未检测到设备上的SD卡" = "SD card on device is not detected";
+"非分享时间段内无法查看设备录像" = "Unable to view device recording during non-sharing period";
+"您的好友未将设备录像权限分享给您" = "Permission denied";
+"请选择您想要的通道列表(设备)" = "Please select the channel list you want (device)";
+"请先选择您想观看的相机(设备)" = "Please select the camera (device) you want to watch first";
+"您的好友未将录像回放权限分享给您" = "Permission denied";
+"该设备不支持云存功能" = "The device does not support cloud storage";
+"该设备为分享设备无法购买云存" = "The device cannot purchase cloud storage for sharing devices";
+"视频停止" = "Video Stop";
+"滚轮已锁定" = "Locked";
+"滚轮已解锁" = "Unlocked";
+"对讲中" = "In the talk";
+"挂断" = "hang up";
+"的分享" = "'s share";
+"通道列表" = "Channel List";
+"播放" = "Play";
+
+//****************OnlyPlayBackVC.m
+"设备消息" = "Device message";
+"未能查到可播放视频，播放失败！" = "Failed to find playable video, play failed!";
+"查询告警消息失败，请稍候再试" = "Operation failed, Please try again later";
+"录像" = "Video";
+"获取视频失败" = "Failed to get video";
+"暂不支持多倍速视频录制" = "Do not support multi-speed video recording";
+"调节播放速度" = "Adjust playback speed";
+"请设置倍率" = "Please set the ratio";
+"正在查询中，请稍候再试" = "In the query, please try again later";
+"▶▶ 前进10s" = "▶▶ 10s";
+"◀◀ 后退10s" = "◀◀ 10s";
+"请求失败，请检查您的网络" = "Request failed, please check your network";
+"暂无告警消息" = "No alarm message";
+"好友未分享告警权限" = "Friends did not share alarm permissions";
+"播放失败" = "Play failed";
+"视频流中断，请重新播放" = "Video stream interruption, please play again";
+
+//================Message(消息)================
+//****************MessageNewVC.m
+"您有新的消息！" = "new message";
+"暂无事件消息！" = "no message";
+"事件消息" = "Event Message";
+"您有新的消息，请及时处理！" = "new message, handle it in time!";
+"暂无新消息" = "no message";
+"直播消息" = "Live Message";
+"暂无直播消息" = "no message";
+"商城信息" = "Mall Message";
+"暂无商城信息" = "no message";
+"活动提醒" = "Motion Reminder";
+"暂无活动提醒" = "no reminder";
+"系统通知" = "System Message";
+"暂无系统通知" = "no message";
+"有疑问或者建议？点击" = "Questions or suggestions?";
+"我要反馈" = "feedback";
+
+//****************AlarmMsgVC.m
+"事件中心" = "Alarm Center";
+"编辑" = "Edit";
+"筛选" = "Filter";
+"查询告警消息失败，请检查您的网络" = "Querying the alarm message failed ,please check your network";
+"正在删除报警消息..." = "Deleting, please wait...";
+"报警消息删除成功" = "Delete Successfully!";
+"报警消息已设置已读" = "Alarm message has been set to read";
+"警报" = " Alarm";
+"标记已读" = "Mark Read";
+"数据加载中,请稍等..." = "Loading, please wait...";
+"请选择查询某一特定时间" = "Please select a specific time to query!";
+"今天" = "Today";
+"星期日" = "Sun.";
+"星期一" = "Mon.";
+"星期二" = "Tue.";
+"星期三" = "Wed.";
+"星期四" = "Thur.";
+"星期五" = "Fri.";
+"星期六" = "Sat.";
+"查询录像失败，请检查您的网络" = "query video failed, please check your network";
+
+"触发移动侦测报警" = "Motion";
+"运动目标检测报警" = "Moving Target";
+"遗留物检测报警" = "Remnants";
+"物体移除检测报警" = "Object Removal";
+"绊线检测报警" = "Tripwire";
+"入侵检测报警" = "Intrusion";
+"逆行检测报警" = "Retrograde";
+"徘徊检测报警" = "Wandering";
+"流量统计报警" = "Traffic Statistics";
+"密度检测报警" = "Density";
+"视频异常检测报警" = "Abnormal Video";
+"快速移动报警" = "Fast-Moving";
+"体温异常报警" = "Abnormal Temperature";
+"消防通道占用检测报警" = "Fire Passage Occupancy";
+"烟火检测报警" = "Fireworks Detection";
+"异常停车检测报警" = "Abnormal Parking ";
+"详情" = "details";
+
+//****************FilerView.m
+"全部设备" = "All Devices";
+"设备选择" = "Device selection";
+"时间选择" = "Time selection";
+"支持查询最近7天消息" = "(the last 7 days of messages)";
+"重置" = "Reset";
+
+//****************FilerDeviceVC.m
+"选择设备" = "Selection Device";
+"完成了" = "Done";
+"请选择一种设备!" = "Please choose a device!";
+
+//================Shop(发现)================
+//****************WebViewController.m
+"无直播相关参数" = "No live broadcast related parameters!";
+"刷新" = "Refresh";
+"首页" = "Home";
+"分享" = "Share";
+"关闭" = "Close";
+"后退" = "Back";
+"数据已经复制到粘贴板" = "Data has been copied to the pasteboard!";
+"重新加载" = "Reload";
+
+//****************LiveVideoVC.m
+"直播" = "Live";
+"您确定使用移动流量观看视频？" = "Watch videos by mobile traffic, continue?";
+
+//================Mine(我的)================
+//****************MyViewController.m
+"通用" = "General";
+"意见反馈" = "Feedback";
+"关于我们" = "About";
+"增值服务" = "Value-added Services";
+
+//****************UserInfoModifyVC.m
+"个人资料" = "Profile";
+"解绑后，下次无法再使用微信进行登录，确定要解除微信绑定吗？" = "After unbinding, you could not use WeChat to login again, continue?";
+"微信解绑中，请稍候..." = "Please wait...";
+"解绑成功" = "Unbind Successfully!";
+"解绑失败" = "Unbind failed";
+"解绑失败，请检查您的网络" = "Unbind failed, please check your network";
+"退出登录" = "Logout";
+"确定注销登录？" = "Logout, continue?";
+"退出失败，请检查网络" = "Logout failed, please check your network";
+"头像" = "Profile Photo";
+"用户名" = "Username";
+"手机号码" = "Phone";
+"修改密码" = "Change Password";
+"微信绑定解除" = "WeChat Unbind";
+
+//****************ModifyUserNameVC.m
+"修改用户名" = "Username";
+"保存" = "Done";
+"用户名不能为空" = "Please enter your name";
+"请输入用户名" = "Please enter your name";
+"用户名仅支持中文、数字、字母和符号（16字以内）" = "The name supports Chinese, numbers, letters and symbols(within 16 characters)";
+
+//****************ModifyPwdVC.m
+"密码修改" = "Set Password";
+"验证码" = "Enter code";
+"密码需由6-16位数字、字母或符号组成" = "The password supports digits, letters or symbols(length:6-16)";
+
+//****************FileVC.m
+"我的文件" = "File";
+"选择" = "Select";
+"剩余" = "";
+"空间" = " Remaining";
+"全选" = "All-Select";
+"取消全选" = "Deselect";
+"删除后不可恢复，确定要删除吗？" = "Unable to restore，confirm deletion?";
+"删除" = "Delete";
+"已为“视频云眼”关闭照片" = "Closed photo for \"Joyware Video Cloud\"";
+"您可以在“设置”中为此应用打开照片" = "You can open photos for the App in Settings";
+"设置" = "Setting";
+"好" = "OK";
+"保存成功" = "Saved successfully!";
+"保存失败" = "Save failed";
+"iOS11以下无法保存gif图片，只能保存图片" = "Gif images cannot be saved below iOS11, only images can be saved";
+"分享方式" = "Shared";
+"QQ好友" = "QQ";
+"QQ空间" = "Qzone";
+"微信好友" = "Chat";
+"朋友圈" = "Moments";
+"视频云眼" = "Time Video";
+"截图" = "Screenshot";
+"你还没有安装QQ！" = "You have not installed QQ yet!";
+"你还没有安装微信！" = "You have not installed WeChat yet!";
+"暂无相关文件" = "No related documents";
+"文件大小" = "Size";
+"图片分辨率" = "Resolution";
+
+//****************FileShowView.m
+
+//****************ShareViewController.m
+"设备共享" = "Device Share";
+"我的分享" = "Mine Share";
+"他人分享" = "Other Share";
+
+//****************MyShareController.m
+"你还没有分享过任何设备" = "You have not shared any device yet";
+"已分享" = "Shared";
+"人" = "";
+
+//****************OtherShareController.m
+"是否确认取消他人对您分享的设备？" = "Are you sure to cancel the device that others have shared with you?";
+"别人还没对你分享过设备" = "Others have not shared the device with you";
+"触发" = "";
+
+//****************ShareDetailController.m
+"分享人列表" = "List of the Shared";
+"搜索" = "Search";
+"取消分享设备" = "Cancel Sharing";
+"确定取消分享设备给该用户？" = "Are you sure to cancel the sharing device for this user?";
+"未找到相应的联系人" = "No corresponding contact found";
+
+//****************HelpVC.m
+"当前网络不可用" = "The current network is not available";
+
+//****************MyAllCloudStorageVC.m
+"设备云存储" = "Cloud Storage";
+"暂无更多云存储~" = "No more cloud storage";
+"当前状态:" = "status:";
+"未开通" = "unavailable";
+"立即开通" = "purchase";
+"当前套餐:" = "current:";
+"到期时间" = "expire";
+"立即续费" = "renewal";
+"支持云存储设备列表" = "Support cloud storage device list";
+
+//****************CloudStorageNewVC.m
+"云存储" = "Cloud Storage";
+"推荐套餐类型" = "Recommended Type";
+"录像保存(循环)" = "Video Storage(Cycle)";
+"套餐类型" = "Type";
+"价格" = "Price";
+"提交订单" = "Submit";
+"天" = "days";
+"请选择一种服务套餐" = "Please choose a service plan";
+"云存储[1] 是在云计算(cloud computing)概念上延伸和发展出来的一个新的概念，是一种新兴的网络存储技术，共同对外提供数据存储和业务访问功能的系统。" = "Cloud storage is a new concept extended and developed in the concept of cloud computing that provides a system for data storage and service access.";
+"当前套餐" = "Current plan";
+"生效时间" = "begin";
+
+//****************GeneralSettingVC.m
+"通用设置" = "General Settings";
+"面容ID开启" = "Face ID is on";
+"触控ID开启" = "Touch ID is on";
+"该手机不支持面容ID或还未开启面容ID功能" = "The phone does not support the Face ID or has not opened the Face ID function";
+"该手机不支持触控ID或还未开启触控ID功能" = "The phone does not support the Touch ID or has not opened the Touch ID function";
+"面容ID关闭" = "Face ID is off";
+"触控ID关闭" = "Touch ID is off";
+"面容ID登录" = "Login on Face ID";
+"触控ID登录" = "Login on Touch ID";
+"未检测到WiFi网络，请先连接WiFi" = "WLAN is not detected, please connect WLAN first";
+"Wi-Fi二维码生成" = "WLAN QR Code";
+"告警查询方式" = "Alarm Query Mode";
+"短视频" = "Short Video";
+"云端录像" = "Cloud Record";
+"SD卡录像" = "SD Card Record";
+
+//****************WifiQRCodeVC.m
+"请输入" = "";
+"的密码" = " 's password";
+"①请将二维码朝向摄像头镜头" = "①Align QR Code to camera";
+"①设备通电，听到“请为设备配置无线网络”提示音后，请将二维码对准摄像头" = "①After hearing tips, Align QR Code to camera";
+"②保持约20cm的距离，等待扫描" = "②keep 20cm away to scan";
+"③听到“扫描二维码成功”提示音后移开手机" = "③Hearing the \"Scan Successful!\", remove the phone";
+"④听到“WiFi连接成功”提示音后表示设备Wi-Fi配置已完成" = "④Hearing “Access to Network Successfully”, the device WLAN configuration is complete";
+
+//****************SubmitFeebackViewController.m
+"发送" = "Done";
+"客官！给点意见吧~" = "Enter your suggestions and comments.";
+"超出限制字数啦~" = "Exceeded limit character count!";
+"您没有写上您的问题哦~\n如果有什么问题，反馈给我们吧~" = "You have not written your question yet, If you have any questions, please let us know.";
+"反馈成功" = "Feed back Successfully!";
+"反馈失败，请检查您的网络" = "Feed back failed, please check your network";
+"客服电话:" = "Service Tel:";
+
+//****************AboutUsVC.m
+//=====供开发人员使用无需翻译 bengin=====
+"当前app运行环境：生产环境" = "当前app运行环境：生产环境";
+"当前app运行环境：测试环境" = "当前app运行环境：测试环境";
+"已经切换成【生产环境】,请杀死app重新启动！" = "已经切换成【生产环境】,请杀死app重新启动！";
+"已经切换成【测试环境】,请杀死app重新启动！" = "已经切换成【测试环境】,请杀死app重新启动！";
+"生产环境" = "生产环境";
+"测试环境" = "测试环境";
+"当前app运行环境：生产环境（默认）" = "当前app运行环境：生产环境（默认）";
+//=====end=====
+"拾光云介绍" = "Introduction";
+"股票代码:300270" = "";
+"版本更新" = "Version Update";
+"去评分" = "Score";
+"已复制" = "Copied";
+"已复制公众号，去关注" = "The Official Account has been copied, go to Follow?";
+"继续" = "Next";
+"joywarevcloud中威视云" = "joywarevcloud中威视云";//此为公众号名称无需翻译
+"扫码分享下载客户端" = "Share App";
+"扫码下载APP" = "Scan QR Code Download App";
+"邀请好友扫一扫分享给TA" = "Share App to friends";
+"重播" = "Replay";
+"视频播放失败,重试" = "Video play failed, Retry";
+"视频播放超时,重试" = "Video play timeout, Retry";
+
+//****************Other
+"扫描结果如下" = "Scan results";
+
+//****************新的配网流程
+"扫描失败，请检查您的网络" = "Scan failed, please check your network";
+"该设备不支持无线网络" = "The device does not support WLAN";
+"该设备不支持\"设备扫码添加\"" = "The device does not support \"Scanning code\"";
+"步骤(1/3)" = "Step (1/3)";
+"步骤(2/3)" = "Step (2/3)";
+"步骤(3/3)" = "Step (3/3)";
+"设备必须在Wi-Fi网络环境中才能接入网络" = "The device must be connected to the WLAN";
+"正在为您添加设备，您确定要退出\"添加设备\"操作吗？" = "Adding, are you sure to quit?";
+"请输入Wi-Fi名称" = "Enter WLAN Name";
+"确认该Wi-Fi是否未设置密码？" = "The WLAN network is unsafe, still continue?";
+"Wi-Fi连接" = "WLAN Connection";
+"没有听到任何声音？" = "Didn't hear anything?";
+"1.请确保您已经接通设备电源\n2.请确保二维码和设备之间的距离在10-20cm" = "1. Please ensure connected power \n2. Please ensure distance between Code and device is 10-20cm.";
+"二维码正在生成中…" = "Generating...";
+"1. 路由器、手机和摄像头尽量靠近" = "1. As close as possible";
+"2. 不要切断设备电源" = "2. Do not cut off the power";
+"3. 请尽量让App处于当前界面" = "3. Keep app in the current interface";
+"4. 耐心等待，正在配置中..." = "4. Wait patiently, configurating...";
+"添加失败，请检查您的网络" = "Add failed, please check your network";
+
+//****************新增内容
+"云平台配置" = "Cloud Platform Configuration";
+"请先进行云平台配置" = "Please configure the cloud platform first";
+"请输入IP地址" = "Please enter IP address";
+"请输入端口" = "Please enter the port";
+"请输入账号" = "Please enter account";
+"请输入合法的域名" = "Please enter a valid domain name";
+"视频云眼介绍" = "Introduction";
+"设置旧密码" = "Enter the old password";
+"旧密码错误" = "old password error";
+"该设备不支持清晰度切换" = "The device does‘t support definition switching";
+"已开通云存储，无需再次开通" = "Cloud storage has been activated, do not activate again";
+"小屏模式" = "Small Screen Mode";
+"大屏模式" = "Large Screen Mode";
+"四分屏模式" = "Four-Split Screen Mode";
+"缩放" = "Zoom";
+"通道消息" = "Channel Message";
+"暂无更多通道" = "No more channels";
+"查询通道失败，请稍后再试" = "Failed to query channel. Please try again later";
+"查询通道失败，请检查您的网络" = "Query channel failed, please check your network";
+"当前已经是第一页" = "It's already the first page";
+"请输入数字" = "please enter the number";
+"页码" = "Page No";
+
+//****************图片
+"banner1" = "Ebanner1";
+"banner2" = "Ebanner2";
+"banner3" = "Ebanner3";
+"realTime_fd" = "ErealTime_fd";
+"realTime_sd" = "ErealTime_sd";
+"realTime_hd" = "ErealTime_hd";
+"config_banner1" = "Econfig_banner1";
+"config_banner2" = "Econfig_banner2";
+"config_banner3" = "Econfig_banner3";
+"recommendImg" = "ErecommendImg";
+"config_failure" = "Econfig_failure";
+"config_success" = "Econfig_success";
+"config_occupid" = "Econfig_occupid";

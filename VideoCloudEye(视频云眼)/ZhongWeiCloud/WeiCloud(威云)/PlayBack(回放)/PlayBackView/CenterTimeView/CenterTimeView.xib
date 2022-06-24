@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="SUP-2E-s7B" customClass="CenterTimeView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfd-DF-L8g" userLabel="UpView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="63k-jG-Lnq"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHJ-br-KRJ" userLabel="DownView">
+                    <rect key="frame" x="0.0" y="5" width="375" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="lf1-Hg-Tg1"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0K-6Q-RCR">
+                    <rect key="frame" x="100" y="15" width="175" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="175" id="ZXF-Mv-mPj"/>
+                        <constraint firstAttribute="height" constant="26" id="ii9-zV-GRC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="6" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                    <state key="normal" title="2018-01-02" image="calendarIcon">
+                        <color key="titleColor" red="0.74501591920852661" green="0.74514538049697876" blue="0.74500775337219238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTimeClick:" destination="SUP-2E-s7B" eventType="touchUpInside" id="Xxp-fu-nHv"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDr-aM-YEs">
+                    <rect key="frame" x="59" y="17" width="40" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="2Is-P4-NK1"/>
+                        <constraint firstAttribute="width" constant="40" id="bI8-eT-uTK"/>
+                    </constraints>
+                    <state key="normal" image="playback_down"/>
+                    <connections>
+                        <action selector="btnLeftClick:" destination="SUP-2E-s7B" eventType="touchUpInside" id="I4A-jK-9Sy"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngy-W9-hMI">
+                    <rect key="frame" x="277" y="17" width="40" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="n9M-Pg-0ek"/>
+                        <constraint firstAttribute="height" constant="22" id="qrH-zh-mgf"/>
+                    </constraints>
+                    <state key="normal" image="playback_go"/>
+                    <connections>
+                        <action selector="btnRightClick:" destination="SUP-2E-s7B" eventType="touchUpInside" id="ZlM-yA-HDS"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaO-aG-ReX">
+                    <rect key="frame" x="187.5" y="53" width="78" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="buttonFront_n">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btn_frontClick:" destination="SUP-2E-s7B" eventType="touchUpInside" id="6Tv-8s-tZR"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNh-ln-6sN">
+                    <rect key="frame" x="109.5" y="53" width="78" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="buttonCenter_h">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btn_centerClick:" destination="SUP-2E-s7B" eventType="touchUpInside" id="fjS-lr-wxo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBl-RF-rWv">
+                    <rect key="frame" x="20" y="17" width="20" height="22"/>
+                    <state key="normal" image="switchRulerMode"/>
+                    <state key="selected" image="switchRulerMode"/>
+                    <state key="highlighted" image="switchRulerMode"/>
+                    <connections>
+                        <action selector="switchRulerModeClick:" destination="SUP-2E-s7B" eventType="touchUpInside" id="ylo-4q-fQp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="k0K-6Q-RCR" firstAttribute="centerX" secondItem="SUP-2E-s7B" secondAttribute="centerX" id="9cq-hQ-Duc"/>
+                <constraint firstItem="eaO-aG-ReX" firstAttribute="centerX" secondItem="k0K-6Q-RCR" secondAttribute="centerX" constant="39" id="BsM-nO-nxk"/>
+                <constraint firstItem="VNh-ln-6sN" firstAttribute="centerX" secondItem="k0K-6Q-RCR" secondAttribute="centerX" constant="-39" id="C9A-cF-1qg"/>
+                <constraint firstItem="LDr-aM-YEs" firstAttribute="centerY" secondItem="k0K-6Q-RCR" secondAttribute="centerY" id="E1C-i8-p74"/>
+                <constraint firstItem="UBl-RF-rWv" firstAttribute="centerY" secondItem="k0K-6Q-RCR" secondAttribute="centerY" id="HsY-BY-3XX"/>
+                <constraint firstItem="k0K-6Q-RCR" firstAttribute="leading" secondItem="LDr-aM-YEs" secondAttribute="trailing" constant="1" id="NDh-LB-ZJA"/>
+                <constraint firstItem="Qfd-DF-L8g" firstAttribute="leading" secondItem="SUP-2E-s7B" secondAttribute="leading" id="OVA-zk-Ulv"/>
+                <constraint firstItem="Qfd-DF-L8g" firstAttribute="top" secondItem="SUP-2E-s7B" secondAttribute="top" id="T30-6R-cub"/>
+                <constraint firstItem="AHJ-br-KRJ" firstAttribute="top" secondItem="Qfd-DF-L8g" secondAttribute="bottom" constant="4" id="V4V-Qb-0fY"/>
+                <constraint firstAttribute="trailing" secondItem="Qfd-DF-L8g" secondAttribute="trailing" id="XOo-in-L71"/>
+                <constraint firstAttribute="trailing" secondItem="AHJ-br-KRJ" secondAttribute="trailing" id="bfx-tt-2aY"/>
+                <constraint firstItem="VNh-ln-6sN" firstAttribute="top" secondItem="k0K-6Q-RCR" secondAttribute="bottom" constant="12" id="bzL-ap-rjn"/>
+                <constraint firstItem="UBl-RF-rWv" firstAttribute="leading" secondItem="SUP-2E-s7B" secondAttribute="leading" constant="20" id="e9a-kT-dnW"/>
+                <constraint firstItem="ngy-W9-hMI" firstAttribute="leading" secondItem="k0K-6Q-RCR" secondAttribute="trailing" constant="2" id="f9u-lU-xOG"/>
+                <constraint firstItem="eaO-aG-ReX" firstAttribute="top" secondItem="k0K-6Q-RCR" secondAttribute="bottom" constant="12" id="frZ-gn-Tu3"/>
+                <constraint firstItem="ngy-W9-hMI" firstAttribute="centerY" secondItem="k0K-6Q-RCR" secondAttribute="centerY" id="jQ5-4G-yvA"/>
+                <constraint firstItem="AHJ-br-KRJ" firstAttribute="leading" secondItem="SUP-2E-s7B" secondAttribute="leading" id="nzP-rN-7Bc"/>
+                <constraint firstItem="k0K-6Q-RCR" firstAttribute="top" secondItem="SUP-2E-s7B" secondAttribute="top" constant="15" id="pGq-H1-0oL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btn_center" destination="VNh-ln-6sN" id="Rne-6K-4ys"/>
+                <outlet property="btn_front" destination="eaO-aG-ReX" id="qCu-GW-tEw"/>
+                <outlet property="btn_left" destination="LDr-aM-YEs" id="R2f-p7-sxX"/>
+                <outlet property="btn_right" destination="ngy-W9-hMI" id="0OS-R2-2Vk"/>
+                <outlet property="btn_time" destination="k0K-6Q-RCR" id="cJb-sY-62u"/>
+                <outlet property="switchRulerBtn" destination="UBl-RF-rWv" id="psF-Z7-vO3"/>
+            </connections>
+            <point key="canvasLocation" x="32.799999999999997" y="59.820089955022496"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="buttonCenter_h" width="78" height="25"/>
+        <image name="buttonFront_n" width="78" height="25"/>
+        <image name="calendarIcon" width="14" height="13"/>
+        <image name="playback_down" width="9" height="15"/>
+        <image name="playback_go" width="9" height="15"/>
+        <image name="switchRulerMode" width="20" height="20"/>
+    </resources>
+</document>

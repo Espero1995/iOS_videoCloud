@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "杭州中威电子股份有限公司"; ObjectID = "1JB-vh-T6M"; */
+"1JB-vh-T6M.text" = "Hangzhou Zhongwei Electronics Co., Ltd.";
+
+/* Class = "UIButton"; normalTitle = "热线:400-826-5826"; ObjectID = "2pZ-T4-0mI"; */
+"2pZ-T4-0mI.normalTitle" = "Tel:400-826-5826";
+
+/* Class = "UIButton"; normalTitle = "微信服务"; ObjectID = "4Mb-G0-dIx"; */
+"4Mb-G0-dIx.normalTitle" = "WeChat";
+
+/* Class = "UIButton"; normalTitle = "官网"; ObjectID = "7DN-IJ-YGp"; */
+"7DN-IJ-YGp.normalTitle" = "Web";
+
+/* Class = "UILabel"; text = "Copyright©2017Joyware.All Rights Reserved."; ObjectID = "7sZ-EB-8GP"; */
+"7sZ-EB-8GP.text" = "Copyright©2017Joyware.All Rights Reserved.";
+
+/* Class = "UIButton"; normalTitle = "服务协议"; ObjectID = "oVh-94-NbP"; */
+"oVh-94-NbP.normalTitle" = "Protocol";

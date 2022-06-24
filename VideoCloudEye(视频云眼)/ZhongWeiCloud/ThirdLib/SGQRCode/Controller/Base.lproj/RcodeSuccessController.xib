@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RcodeSuccessController">
+            <connections>
+                <outlet property="deviceSuc_Img" destination="pLf-a8-7Ft" id="Iaj-ud-hMv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pLf-a8-7Ft">
+                    <rect key="frame" x="123.5" y="144" width="128" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="V6J-vL-Pht"/>
+                        <constraint firstAttribute="width" constant="128" id="bE3-Cw-vbS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜你添加成功!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brg-g0-u4v">
+                    <rect key="frame" x="131.5" y="340" width="112" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0078431372549019607" green="0.0078431372549019607" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3r-tt-1zU">
+                    <rect key="frame" x="67.5" y="384" width="240" height="35"/>
+                    <color key="backgroundColor" red="0.25938856599999999" green="0.4915907383" blue="0.99866658450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="FdA-HM-eIG"/>
+                        <constraint firstAttribute="width" constant="240" id="zXs-9N-hXh"/>
+                    </constraints>
+                    <state key="normal" title="完成">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="17"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnDoneClick:" destination="-1" eventType="touchUpInside" id="NTb-vu-sZW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pLf-a8-7Ft" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="144" id="1Z2-8z-tfO"/>
+                <constraint firstItem="Brg-g0-u4v" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="427-Cc-gFy"/>
+                <constraint firstItem="K3r-tt-1zU" firstAttribute="top" secondItem="Brg-g0-u4v" secondAttribute="bottom" constant="26" id="L5t-k6-r6p"/>
+                <constraint firstItem="K3r-tt-1zU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Lhn-pG-z2S"/>
+                <constraint firstItem="Brg-g0-u4v" firstAttribute="top" secondItem="pLf-a8-7Ft" secondAttribute="bottom" constant="68" id="TLq-ju-w0X"/>
+                <constraint firstItem="pLf-a8-7Ft" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kYn-EE-QNQ"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

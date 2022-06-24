@@ -1,0 +1,6 @@
+
+/* Class = "UILabel"; text = "摄像机正在连接网络"; ObjectID = "ftx-qd-GBy"; */
+"ftx-qd-GBy.text" = "The camera is connecting to the network";
+
+/* Class = "UILabel"; text = "连接过程大约需要1~2分钟，请您稍等片刻..."; ObjectID = "nv5-jU-9ga"; */
+"nv5-jU-9ga.text" = "The connection will take about 1~2 minutes, please wait a monent...";

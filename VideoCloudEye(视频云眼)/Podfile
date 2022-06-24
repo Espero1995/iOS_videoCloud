@@ -1,0 +1,14 @@
+platform :ios, '8.0'
+target 'ZhongWeiCloud' do
+pod 'AFNetworking'
+pod 'SDWebImage', '~> 3.7.5'
+pod 'Masonry'
+pod 'MBProgressHUD', '~> 1.0.0'
+pod 'IQKeyboardManager'
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'HUPhotoBrowser', '~> 1.2.0'
+pod 'Bugly'
+pod 'LookinServer', :configurations => ['Debug']#使用Lookin软件查看App视图，且实时渲染
+pod 'ACActionSheet' #仿微信ActionSheet
+end

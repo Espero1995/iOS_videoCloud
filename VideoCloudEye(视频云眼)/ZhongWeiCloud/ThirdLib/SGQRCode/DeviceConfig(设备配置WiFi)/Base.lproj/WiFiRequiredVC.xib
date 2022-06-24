@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WiFiRequiredVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备对Wi-Fi有什么要求？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19A-AT-J8H">
+                    <rect key="frame" x="20" y="50" width="336.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.目前支持802.11b/g/n协议的2.4G Wi-Fi，不支持5G Wi-Fi。请确保摄像机连接的无线路由器的Wi-Fi信号在覆盖范围之内。" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4l-Zd-imm" userLabel="step1">
+                    <rect key="frame" x="19" y="115" width="337.5" height="54"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.配置摄像机时，建议距离路由器不要太远。" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J57-iC-rdW" userLabel="step3">
+                    <rect key="frame" x="19" y="194" width="337.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.25586599111557007" green="0.25587284564971924" blue="0.25586915016174316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.如果配置一直失败，请检查Wi-Fi网络是否有效，也可选择其他配置设备方式进行配置。" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q16-0w-3GY" userLabel="step4">
+                    <rect key="frame" x="19" y="237" width="337.5" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.25586599111557007" green="0.25587284564971924" blue="0.25586915016174316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKo-ch-60D" userLabel="line">
+                    <rect key="frame" x="20" y="84" width="336.5" height="1"/>
+                    <color key="backgroundColor" red="0.86028754709999999" green="0.86030775309999996" blue="0.860296905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="oiX-01-agb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="J57-iC-rdW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0cS-jb-wFq"/>
+                <constraint firstItem="g4l-Zd-imm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4UR-OI-rWQ"/>
+                <constraint firstItem="g4l-Zd-imm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="I9i-ki-TcG"/>
+                <constraint firstItem="J57-iC-rdW" firstAttribute="width" secondItem="g4l-Zd-imm" secondAttribute="width" id="IXV-36-GpD"/>
+                <constraint firstItem="kKo-ch-60D" firstAttribute="trailing" secondItem="g4l-Zd-imm" secondAttribute="trailing" id="Ix9-jv-kQd"/>
+                <constraint firstItem="g4l-Zd-imm" firstAttribute="top" secondItem="kKo-ch-60D" secondAttribute="bottom" constant="30" id="JFt-pG-XUN"/>
+                <constraint firstItem="J57-iC-rdW" firstAttribute="top" secondItem="g4l-Zd-imm" secondAttribute="bottom" constant="25" id="L0D-kj-9o2"/>
+                <constraint firstItem="Q16-0w-3GY" firstAttribute="top" secondItem="J57-iC-rdW" secondAttribute="bottom" constant="25" id="PVv-5W-bH5"/>
+                <constraint firstItem="19A-AT-J8H" firstAttribute="trailing" secondItem="kKo-ch-60D" secondAttribute="trailing" id="ZSp-uF-KbQ"/>
+                <constraint firstItem="kKo-ch-60D" firstAttribute="leading" secondItem="19A-AT-J8H" secondAttribute="leading" id="itc-ow-tNj"/>
+                <constraint firstItem="19A-AT-J8H" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="jAJ-Wo-JA4"/>
+                <constraint firstItem="19A-AT-J8H" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="liT-3r-huc"/>
+                <constraint firstItem="Q16-0w-3GY" firstAttribute="width" secondItem="g4l-Zd-imm" secondAttribute="width" id="ozA-6Y-gwu"/>
+                <constraint firstItem="Q16-0w-3GY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rW2-Lf-5ln"/>
+                <constraint firstItem="kKo-ch-60D" firstAttribute="top" secondItem="19A-AT-J8H" secondAttribute="bottom" constant="10" id="rbg-Un-jPl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+</document>

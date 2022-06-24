@@ -1,0 +1,14 @@
+/* 
+  InfoPlist.strings
+  ZhongWeiCloud
+
+  Created by Espero on 2018/12/4.
+  Copyright © 2018 张策. All rights reserved.
+*/
+CFBundleDisplayName = "视频云眼";
+NSCameraUsageDescription = "此App需要扫描二维码进行添加设备，您是否允许打开相机？";
+NSContactsUsageDescription = "此App需要分享设备给您好友，您是否允许获取通讯录权限？";
+NSFaceIDUsageDescription = "允许设备访问Face ID";
+NSMicrophoneUsageDescription = "此App需要进行对讲，您是否允许打开麦克风？";
+NSPhotoLibraryAddUsageDescription = "此App需要保存照片到相册中，您是否允许？";
+NSPhotoLibraryUsageDescription = "此App需要存储图片，您是否允许打开相册？";

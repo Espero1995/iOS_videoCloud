@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DeviceCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C11ddffdffddfdfdfdffdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSk-5J-s4m">
+                        <rect key="frame" x="10.5" y="5" width="149.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="hWv-VK-JXb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dp-05-kAC">
+                        <rect key="frame" x="160" y="-5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="H8a-Ri-re8"/>
+                            <constraint firstAttribute="width" constant="40" id="MmL-Ae-rrX"/>
+                        </constraints>
+                        <state key="normal" image="moreChoose"/>
+                        <connections>
+                            <action selector="btnSettingClick:forEvent:" destination="gTV-IL-0wX" eventType="touchUpInside" id="EDE-mO-tjC"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QmY-Oe-PNg" userLabel="Ima photo">
+                        <rect key="frame" x="0.5" y="30" width="199" height="112.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="QmY-Oe-PNg" secondAttribute="height" multiplier="23:13" id="pnW-Gp-ORs"/>
+                        </constraints>
+                    </imageView>
+                    <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suB-Gp-bej" userLabel="backView">
+                        <rect key="frame" x="0.5" y="30" width="199" height="112.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sn5-00-MoU">
+                                <rect key="frame" x="74.5" y="45.5" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mMJ-5h-ZjU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="rde-n4-h8U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sn5-00-MoU" firstAttribute="centerY" secondItem="suB-Gp-bej" secondAttribute="centerY" id="Geq-Kh-Mja"/>
+                            <constraint firstItem="sn5-00-MoU" firstAttribute="centerX" secondItem="suB-Gp-bej" secondAttribute="centerX" id="tDc-yB-qsC"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person_2-1" translatesAutoresizingMaskIntoConstraints="NO" id="9f5-hJ-7a2" userLabel="Is Online img">
+                        <rect key="frame" x="158.5" y="40" width="41" height="40"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hk1-xD-kvG">
+                        <rect key="frame" x="70.5" y="107.5" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="m7o-ud-zvf"/>
+                            <constraint firstAttribute="width" constant="35" id="zTw-yS-BSg"/>
+                        </constraints>
+                        <state key="normal" image="alarmVideoScreen"/>
+                        <connections>
+                            <action selector="alarmVideoClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="mUL-k1-rRx"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VZ-te-OAy" userLabel="sdBtn">
+                        <rect key="frame" x="0.5" y="107.5" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="cca-BH-NpG"/>
+                            <constraint firstAttribute="width" constant="35" id="sdQ-Qu-onE"/>
+                        </constraints>
+                        <state key="normal" image="SDVideoScreen"/>
+                        <connections>
+                            <action selector="sdVideoClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ASl-We-9Pb"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2W-cA-RIl" userLabel="cloudBtn">
+                        <rect key="frame" x="35.5" y="107.5" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="B4y-yx-pPJ"/>
+                            <constraint firstAttribute="height" constant="35" id="BA0-Ie-ZNJ"/>
+                        </constraints>
+                        <state key="normal" image="cloudVideoScreen"/>
+                        <connections>
+                            <action selector="cloudVideoClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="aMC-S9-4Up"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5dp-05-kAC" firstAttribute="centerY" secondItem="BSk-5J-s4m" secondAttribute="centerY" id="2hN-jo-qPd"/>
+                <constraint firstItem="d2W-cA-RIl" firstAttribute="centerY" secondItem="6VZ-te-OAy" secondAttribute="centerY" id="E8e-89-SlD"/>
+                <constraint firstItem="suB-Gp-bej" firstAttribute="top" secondItem="QmY-Oe-PNg" secondAttribute="top" id="GSV-MQ-TWe"/>
+                <constraint firstItem="d2W-cA-RIl" firstAttribute="leading" secondItem="6VZ-te-OAy" secondAttribute="trailing" id="Gfd-e8-6cR"/>
+                <constraint firstItem="5dp-05-kAC" firstAttribute="leading" secondItem="BSk-5J-s4m" secondAttribute="trailing" id="M6W-2E-bZB"/>
+                <constraint firstItem="suB-Gp-bej" firstAttribute="bottom" secondItem="QmY-Oe-PNg" secondAttribute="bottom" id="Tp1-rO-p30"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="5dp-05-kAC" secondAttribute="trailing" id="WbA-FW-ugE"/>
+                <constraint firstItem="BSk-5J-s4m" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="5" id="XV1-Cn-0Lc"/>
+                <constraint firstItem="6VZ-te-OAy" firstAttribute="bottom" secondItem="QmY-Oe-PNg" secondAttribute="bottom" id="XzZ-zA-E6D"/>
+                <constraint firstItem="6VZ-te-OAy" firstAttribute="leading" secondItem="QmY-Oe-PNg" secondAttribute="leading" id="ZcK-a1-Ocg"/>
+                <constraint firstItem="QmY-Oe-PNg" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" constant="-1" id="bo0-5G-5f2"/>
+                <constraint firstItem="suB-Gp-bej" firstAttribute="leading" secondItem="QmY-Oe-PNg" secondAttribute="leading" id="ceF-Ba-qXt"/>
+                <constraint firstItem="Hk1-xD-kvG" firstAttribute="leading" secondItem="d2W-cA-RIl" secondAttribute="trailing" id="fSG-Sp-7qK"/>
+                <constraint firstItem="9f5-hJ-7a2" firstAttribute="top" secondItem="suB-Gp-bej" secondAttribute="top" constant="10" id="fp1-Z9-3vQ"/>
+                <constraint firstItem="suB-Gp-bej" firstAttribute="trailing" secondItem="QmY-Oe-PNg" secondAttribute="trailing" id="gzG-RT-lV7"/>
+                <constraint firstItem="QmY-Oe-PNg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="jWX-qe-fhe"/>
+                <constraint firstItem="Hk1-xD-kvG" firstAttribute="centerY" secondItem="d2W-cA-RIl" secondAttribute="centerY" id="kiH-oB-bG0"/>
+                <constraint firstItem="9f5-hJ-7a2" firstAttribute="trailing" secondItem="suB-Gp-bej" secondAttribute="trailing" id="mkV-uT-om5"/>
+                <constraint firstItem="QmY-Oe-PNg" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="30" id="vIp-nw-XSX"/>
+                <constraint firstItem="BSk-5J-s4m" firstAttribute="leading" secondItem="QmY-Oe-PNg" secondAttribute="leading" constant="10" id="wK9-Ef-6vl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="228" height="169"/>
+            <connections>
+                <outlet property="alarmBtn" destination="Hk1-xD-kvG" id="D3e-VA-yP2"/>
+                <outlet property="backView" destination="suB-Gp-bej" id="ouG-ud-jNm"/>
+                <outlet property="btn_setting" destination="5dp-05-kAC" id="JYD-ei-vaO"/>
+                <outlet property="cloudBtn" destination="d2W-cA-RIl" id="P0K-6P-ReI"/>
+                <outlet property="deviceName_Lb" destination="BSk-5J-s4m" id="OY1-HN-Aej"/>
+                <outlet property="ima_photo" destination="QmY-Oe-PNg" id="bap-cf-iCn"/>
+                <outlet property="isOnline_img" destination="9f5-hJ-7a2" id="Wgj-oV-PhZ"/>
+                <outlet property="lab_unLine" destination="sn5-00-MoU" id="Yow-BQ-hml"/>
+                <outlet property="sdBtn" destination="6VZ-te-OAy" id="80p-96-lxo"/>
+            </connections>
+            <point key="canvasLocation" x="4" y="75.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="SDVideoScreen" width="24.5" height="24"/>
+        <image name="alarmVideoScreen" width="23.5" height="23"/>
+        <image name="cloudVideoScreen" width="24.5" height="24"/>
+        <image name="img1" width="345" height="180"/>
+        <image name="moreChoose" width="23" height="23"/>
+        <image name="person_2-1" width="20.5" height="20"/>
+    </resources>
+</document>

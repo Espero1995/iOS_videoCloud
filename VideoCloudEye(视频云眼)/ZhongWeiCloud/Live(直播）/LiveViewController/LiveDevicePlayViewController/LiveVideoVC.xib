@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiveVideoVC">
+            <connections>
+                <outlet property="VideoViewBackLayout" destination="o4G-3c-0R8" id="65S-Zs-muy"/>
+                <outlet property="VideoViewBank" destination="8ji-Jw-tjI" id="KnD-k2-VNG"/>
+                <outlet property="btn_back" destination="1l1-wh-zd3" id="1BB-Fc-4mh"/>
+                <outlet property="btn_exit" destination="MFY-7D-fTo" id="Q3E-Am-5Rs"/>
+                <outlet property="btn_full" destination="j61-0S-uE6" id="UK0-Sa-1YG"/>
+                <outlet property="btn_sound" destination="Z7D-ys-iKz" id="38a-hu-p4M"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ji-Jw-tjI" userLabel="VideoViewBack">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="244"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1l1-wh-zd3" userLabel="btnBack">
+                            <rect key="frame" x="0.0" y="200" width="375" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j61-0S-uE6">
+                                    <rect key="frame" x="321.5" y="-5" width="53.5" height="54"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="j61-0S-uE6" secondAttribute="height" multiplier="1:1" id="eTK-Mf-PxG"/>
+                                    </constraints>
+                                    <state key="normal" image="liveFull">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnFullClick:" destination="-1" eventType="touchUpInside" id="YC7-rk-sLX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7D-ys-iKz">
+                                    <rect key="frame" x="268" y="-5" width="53.5" height="54"/>
+                                    <state key="normal" image="liveVoiceOpen_n">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnSoundClick:" destination="-1" eventType="touchUpInside" id="75o-bX-qjd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="j61-0S-uE6" secondAttribute="trailing" id="BKT-Mt-SrS"/>
+                                <constraint firstItem="j61-0S-uE6" firstAttribute="leading" secondItem="Z7D-ys-iKz" secondAttribute="trailing" id="EdG-gK-scy"/>
+                                <constraint firstItem="j61-0S-uE6" firstAttribute="centerY" secondItem="1l1-wh-zd3" secondAttribute="centerY" id="Pd8-7H-PpP"/>
+                                <constraint firstItem="Z7D-ys-iKz" firstAttribute="centerY" secondItem="j61-0S-uE6" secondAttribute="centerY" id="Uu4-hY-Ww5"/>
+                                <constraint firstItem="Z7D-ys-iKz" firstAttribute="height" secondItem="j61-0S-uE6" secondAttribute="height" id="agH-Pj-SZS"/>
+                                <constraint firstAttribute="height" constant="44" id="fQP-SF-XoW"/>
+                                <constraint firstItem="j61-0S-uE6" firstAttribute="width" secondItem="1l1-wh-zd3" secondAttribute="width" multiplier="1/7" id="wbG-Bb-jIX"/>
+                                <constraint firstItem="Z7D-ys-iKz" firstAttribute="width" secondItem="j61-0S-uE6" secondAttribute="width" id="zCC-GS-Wdd"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFY-7D-fTo">
+                            <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="RpM-17-Jrl"/>
+                                <constraint firstAttribute="height" constant="50" id="ckJ-hs-Pb7"/>
+                            </constraints>
+                            <state key="normal" image="realTimeBack"/>
+                            <connections>
+                                <action selector="returnBackClick:" destination="-1" eventType="touchUpInside" id="ijN-di-COL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="1l1-wh-zd3" secondAttribute="bottom" id="1a1-V6-XX2"/>
+                        <constraint firstItem="1l1-wh-zd3" firstAttribute="leading" secondItem="8ji-Jw-tjI" secondAttribute="leading" id="CDQ-dF-0cY"/>
+                        <constraint firstItem="MFY-7D-fTo" firstAttribute="leading" secondItem="8ji-Jw-tjI" secondAttribute="leading" id="io6-IR-M8x"/>
+                        <constraint firstAttribute="trailing" secondItem="1l1-wh-zd3" secondAttribute="trailing" id="jW2-NL-arY"/>
+                        <constraint firstAttribute="width" secondItem="8ji-Jw-tjI" secondAttribute="height" multiplier="375:244" id="o4G-3c-0R8"/>
+                        <constraint firstItem="MFY-7D-fTo" firstAttribute="top" secondItem="8ji-Jw-tjI" secondAttribute="top" constant="10" id="r7m-hg-cFz"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCb-Uy-1W2" userLabel="ButtonSound">
+                    <rect key="frame" x="170.5" y="288" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="cCb-Uy-1W2" secondAttribute="height" multiplier="1:1" id="CLl-t9-nS0"/>
+                    </constraints>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="cCb-Uy-1W2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="414-2N-oU7"/>
+                <constraint firstItem="8ji-Jw-tjI" firstAttribute="centerX" secondItem="cCb-Uy-1W2" secondAttribute="centerX" id="Dy2-i3-LA7"/>
+                <constraint firstItem="cCb-Uy-1W2" firstAttribute="top" secondItem="8ji-Jw-tjI" secondAttribute="bottom" constant="44" id="OOy-4W-TZJ"/>
+                <constraint firstItem="8ji-Jw-tjI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rdm-oS-Sup"/>
+                <constraint firstItem="8ji-Jw-tjI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t46-g5-qkR"/>
+            </constraints>
+            <point key="canvasLocation" x="-6" y="-75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="liveFull" width="15.5" height="16"/>
+        <image name="liveVoiceOpen_n" width="20" height="17.5"/>
+        <image name="realTimeBack" width="30" height="30"/>
+    </resources>
+</document>

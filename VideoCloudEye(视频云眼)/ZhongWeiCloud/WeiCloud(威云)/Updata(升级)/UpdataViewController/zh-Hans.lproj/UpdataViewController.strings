@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "设备名称:"; ObjectID = "J6V-ZV-F2I"; */
+"J6V-ZV-F2I.text" = "设备名称:";
+
+/* Class = "UILabel"; text = "无"; ObjectID = "PSI-Sg-yRH"; */
+"PSI-Sg-yRH.text" = "无";
+
+/* Class = "UILabel"; text = "最新版本"; ObjectID = "SFw-UW-eLd"; */
+"SFw-UW-eLd.text" = "最新版本";
+
+/* Class = "UIButton"; normalTitle = "升级"; ObjectID = "c0V-9X-p9v"; */
+"c0V-9X-p9v.normalTitle" = "升级";
+
+/* Class = "UILabel"; text = "当前版本"; ObjectID = "pSC-Di-fig"; */
+"pSC-Di-fig.text" = "当前版本";

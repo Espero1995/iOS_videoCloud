@@ -1,0 +1,21 @@
+
+/* Class = "UITextField"; placeholder = "若无密码则无需输入"; ObjectID = "EKN-b8-flg"; */
+"EKN-b8-flg.placeholder" = "Please enter password";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "N1b-J3-TAH"; */
+"N1b-J3-TAH.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "请输入网络信息"; ObjectID = "XU6-Ng-rdY"; */
+"XU6-Ng-rdY.text" = "Network Info";
+
+/* Class = "UILabel"; text = "密码："; ObjectID = "Xm1-vt-MTZ"; */
+"Xm1-vt-MTZ.text" = "Password：";
+
+/* Class = "UIButton"; normalTitle = "加入"; ObjectID = "cRx-jz-abx"; */
+"cRx-jz-abx.normalTitle" = "Connect";
+
+/* Class = "UILabel"; text = "Wi-Fi名称:"; ObjectID = "hXl-XL-hCg"; */
+"hXl-XL-hCg.text" = "Wi-Fi:";
+
+/* Class = "UILabel"; text = "当前设备仅支持2.4GHz无线网络"; ObjectID = "z3P-2B-iGa"; */
+"z3P-2B-iGa.text" = "Only supports 2.4GHz network";

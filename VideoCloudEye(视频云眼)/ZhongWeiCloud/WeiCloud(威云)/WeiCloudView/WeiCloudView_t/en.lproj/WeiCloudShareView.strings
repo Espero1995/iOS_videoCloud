@@ -1,0 +1,12 @@
+
+/* Class = "UITextField"; placeholder = "请输入手机号"; ObjectID = "RZn-Kj-zla"; */
+"RZn-Kj-zla.placeholder" = "Mobile Number";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "TTc-KA-Qx5"; */
+"TTc-KA-Qx5.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "分享给好友"; ObjectID = "aIC-ZY-ewx"; */
+"aIC-ZY-ewx.text" = "Share for Friends";
+
+/* Class = "UIButton"; normalTitle = "分享"; ObjectID = "la2-O3-YDq"; */
+"la2-O3-YDq.normalTitle" = "Share";

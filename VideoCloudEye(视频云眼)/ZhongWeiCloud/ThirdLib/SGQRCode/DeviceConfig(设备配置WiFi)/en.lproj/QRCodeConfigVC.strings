@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "没有听到任何声音？"; ObjectID = "NE2-yk-b5A"; */
+"NE2-yk-b5A.normalTitle" = "No voice is heard?";
+
+/* Class = "UIButton"; normalTitle = "我听到“扫描二维码成功”"; ObjectID = "nKa-p5-FN2"; */
+"nKa-p5-FN2.normalTitle" = "I heard the ”Scan successfully”";
+
+/* Class = "UILabel"; text = "请将二维码对准摄像机镜头"; ObjectID = "ssW-ss-KOv"; */
+"ssW-ss-KOv.text" = "Align the QR code to the camera lens";

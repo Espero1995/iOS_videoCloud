@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "180元/半年"; ObjectID = "0ye-hF-nMJ"; */
+"0ye-hF-nMJ.text" = "180元/半年";
+
+/* Class = "UILabel"; text = "互联网摄像机"; ObjectID = "3MA-5p-2aQ"; */
+"3MA-5p-2aQ.text" = "互联网摄像机";
+
+/* Class = "UILabel"; text = "下一个生效套餐:"; ObjectID = "3yJ-5U-dZw"; */
+"3yJ-5U-dZw.text" = "下一个生效套餐:";
+
+/* Class = "UIButton"; normalTitle = "立即续费"; ObjectID = "6Oe-dO-EHE"; */
+"6Oe-dO-EHE.normalTitle" = "立即续费";
+
+/* Class = "UILabel"; text = "2018年12月30日"; ObjectID = "TQG-8p-5ec"; */
+"TQG-8p-5ec.text" = "2018年12月30日";
+
+/* Class = "UILabel"; text = "一个套餐未生效"; ObjectID = "fP9-3L-OGI"; */
+"fP9-3L-OGI.text" = "一个套餐未生效";
+
+/* Class = "UILabel"; text = "30元/月"; ObjectID = "l0K-Gf-tDr"; */
+"l0K-Gf-tDr.text" = "30元/月";
+
+/* Class = "UILabel"; text = "到期时间:"; ObjectID = "sLm-2S-Dgh"; */
+"sLm-2S-Dgh.text" = "到期时间:";
+
+/* Class = "UILabel"; text = "当前状态:"; ObjectID = "uk7-bC-EQM"; */
+"uk7-bC-EQM.text" = "当前状态:";

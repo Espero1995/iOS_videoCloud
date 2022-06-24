@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "常见问题 >"; ObjectID = "79g-hO-6Ob"; */
+"79g-hO-6Ob.normalTitle" = "FAQ >";
+
+/* Class = "UILabel"; text = "1.请确保Wi-Fi密码输入正确"; ObjectID = "LTU-iz-RTi"; */
+"LTU-iz-RTi.text" = "1.Ensure that the password input is correct";
+
+/* Class = "UILabel"; text = "3.请Reset设备，设备启动完成后重新添加"; ObjectID = "Y3O-ZB-yB5"; */
+"Y3O-ZB-yB5.text" = "3.Reset the device and carry out the addition again";
+
+/* Class = "UILabel"; text = "2.请确保Wi-Fi可以正常连接到Internet"; ObjectID = "j6a-zk-wno"; */
+"j6a-zk-wno.text" = "2.Ensure that the WLAN can be normally connected with the Internet";
+
+/* Class = "UIButton"; normalTitle = "重新添加"; ObjectID = "kbE-hj-YI5"; */
+"kbE-hj-YI5.normalTitle" = "Add it again";
+
+/* Class = "UILabel"; text = "添加过程中出了一些小问题"; ObjectID = "onG-11-s4L"; */
+"onG-11-s4L.text" = "Some problems in the addition";
+
+/* Class = "UIButton"; normalTitle = "返回首页"; ObjectID = "x9N-eG-ZqO"; */
+"x9N-eG-ZqO.normalTitle" = "Return to the homepage";

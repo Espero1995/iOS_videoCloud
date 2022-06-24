@@ -1,0 +1,14 @@
+/* 
+  InfoPlist.strings
+  ZhongWeiCloud
+
+  Created by Espero on 2018/12/4.
+  Copyright © 2018 张策. All rights reserved.
+*/
+CFBundleDisplayName = "Joyware Video Cloud";
+NSCameraUsageDescription = "The App would like to scan the QRCode?";
+NSContactsUsageDescription = "The App would like to access to your contacts?";
+NSFaceIDUsageDescription = "Device access Face ID";
+NSMicrophoneUsageDescription = "The App would like to talk?";
+NSPhotoLibraryAddUsageDescription = "The App would like to save photos to album?";
+NSPhotoLibraryUsageDescription = "The App would like to save photos to album?";

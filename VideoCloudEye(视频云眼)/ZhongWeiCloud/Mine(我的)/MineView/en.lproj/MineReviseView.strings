@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "KJy-MI-KxY"; */
+"KJy-MI-KxY.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "X1p-cw-ImH"; */
+"X1p-cw-ImH.normalTitle" = "OK";
+
+/* Class = "UITextField"; placeholder = "请输入用户名"; ObjectID = "tK1-Oc-bnc"; */
+"tK1-Oc-bnc.placeholder" = "Please enter your username";
+
+/* Class = "UILabel"; text = "修改用户名"; ObjectID = "vmD-49-Tow"; */
+"vmD-49-Tow.text" = "Modify the Username";

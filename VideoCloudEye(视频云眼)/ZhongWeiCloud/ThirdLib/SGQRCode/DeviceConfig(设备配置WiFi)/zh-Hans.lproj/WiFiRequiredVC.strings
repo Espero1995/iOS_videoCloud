@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "设备对Wi-Fi有什么要求？"; ObjectID = "19A-AT-J8H"; */
+"19A-AT-J8H.text" = "设备对Wi-Fi有什么要求？";
+
+/* Class = "UILabel"; text = "2.配置摄像机时，建议距离路由器不要太远。"; ObjectID = "J57-iC-rdW"; */
+"J57-iC-rdW.text" = "2.配置摄像机时，建议距离路由器不要太远。";
+
+/* Class = "UILabel"; text = "3.如果配置一直失败，请检查Wi-Fi网络是否有效，也可选择其他配置设备方式进行配置。"; ObjectID = "Q16-0w-3GY"; */
+"Q16-0w-3GY.text" = "3.如果配置一直失败，请检查Wi-Fi网络是否有效，也可选择其他配置设备方式进行配置。";
+
+/* Class = "UILabel"; text = "1.目前支持802.11b/g/n协议的2.4G Wi-Fi，不支持5G Wi-Fi。请确保摄像机连接的无线路由器的Wi-Fi信号在覆盖范围之内。"; ObjectID = "g4l-Zd-imm"; */
+"g4l-Zd-imm.text" = "1.目前支持802.11b/g/n协议的2.4G Wi-Fi，不支持5G Wi-Fi。请确保摄像机连接的无线路由器的Wi-Fi信号在覆盖范围之内。";

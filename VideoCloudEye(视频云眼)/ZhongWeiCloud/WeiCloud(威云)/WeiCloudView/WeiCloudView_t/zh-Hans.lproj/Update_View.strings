@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "Kli-Bw-o95"; */
+"Kli-Bw-o95.normalTitle" = "确定";
+
+/* Class = "UIButton"; normalTitle = "退出"; ObjectID = "j5V-QR-bSx"; */
+"j5V-QR-bSx.normalTitle" = "退出";
+
+/* Class = "UILabel"; text = "发现新版本，请更新后使用！"; ObjectID = "vUa-bv-wbm"; */
+"vUa-bv-wbm.text" = "发现新版本，请更新后使用！";

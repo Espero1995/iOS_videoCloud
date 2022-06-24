@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "已完成设备Wi-Fi配置"; ObjectID = "DJV-Aa-Bdw"; */
+"DJV-Aa-Bdw.normalTitle" = "已完成设备Wi-Fi配置";
+
+/* Class = "UILabel"; text = "①设备通电，听到“请为设备配置无线网络”提示音后，请将二维码对准摄像头；"; ObjectID = "Iza-Tg-zNT"; */
+"Iza-Tg-zNT.text" = "①设备通电，听到“请为设备配置无线网络”提示音后，请将二维码对准摄像头；";
+
+/* Class = "UILabel"; text = "注：二维码可点击放大，增加设备识别成功率"; ObjectID = "Zxu-wQ-7VP"; */
+"Zxu-wQ-7VP.text" = "注：二维码可点击放大，增加设备识别成功率";
+
+/* Class = "UILabel"; text = "②保持约20cm的距离，等待扫描;"; ObjectID = "bhF-cJ-fo4"; */
+"bhF-cJ-fo4.text" = "②保持约20cm的距离，等待扫描;";
+
+/* Class = "UILabel"; text = "④听到“WiFi连接成功”提示音后表示设备Wi-Fi配置已完成。;"; ObjectID = "ua3-fc-Pe8"; */
+"ua3-fc-Pe8.text" = "④听到“WiFi连接成功”提示音后表示设备Wi-Fi配置已完成。";
+
+/* Class = "UILabel"; text = "③听到“扫描二维码成功”提示音后移开手机；"; ObjectID = "udO-ah-RCv"; */
+"udO-ah-RCv.text" = "③听到“扫描二维码成功”提示音后移开手机；";
+
+/* Class = "UILabel"; text = "操作步骤："; ObjectID = "xdP-bF-p1E"; */
+"xdP-bF-p1E.text" = "操作步骤：";

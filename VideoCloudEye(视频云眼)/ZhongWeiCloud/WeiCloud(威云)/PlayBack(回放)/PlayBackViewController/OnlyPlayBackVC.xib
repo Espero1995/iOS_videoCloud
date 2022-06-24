@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnlyPlayBackVC">
+            <connections>
+                <outlet property="VideoViewBank" destination="8ji-Jw-tjI" id="KnD-k2-VNG"/>
+                <outlet property="btn_back" destination="1l1-wh-zd3" id="1BB-Fc-4mh"/>
+                <outlet property="btn_cam" destination="u6y-kW-ktG" id="ghi-CF-s1r"/>
+                <outlet property="btn_full" destination="j61-0S-uE6" id="UK0-Sa-1YG"/>
+                <outlet property="btn_hd" destination="RmJ-HX-rI5" id="228-6x-flt"/>
+                <outlet property="btn_sound" destination="Z7D-ys-iKz" id="38a-hu-p4M"/>
+                <outlet property="btn_start" destination="kqC-1v-c1n" id="SzZ-tf-YCV"/>
+                <outlet property="btn_stop" destination="qnS-sZ-exD" id="RQL-oh-Rdl"/>
+                <outlet property="btn_video" destination="OJk-0r-zHf" id="VyA-zs-JtS"/>
+                <outlet property="onlyPlayBackBtn" destination="CIy-Jj-3Kr" id="it6-mi-bb8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ji-Jw-tjI" userLabel="VideoViewBack">
+                    <rect key="frame" x="0.0" y="12" width="414" height="268.33333333333331"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1l1-wh-zd3" userLabel="btnBack">
+                            <rect key="frame" x="0.0" y="224.33333333333334" width="414" height="44.000000000000028"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqC-1v-c1n">
+                                    <rect key="frame" x="0.0" y="0.0" width="59" height="44"/>
+                                    <state key="normal" image="播放_h">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="播放_h"/>
+                                    <connections>
+                                        <action selector="btnStartClick:" destination="-1" eventType="touchUpInside" id="7ZH-M5-k3s"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnS-sZ-exD">
+                                    <rect key="frame" x="59" y="0.0" width="59.333333333333343" height="44"/>
+                                    <state key="normal" image="停止_h">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="停止_h"/>
+                                    <connections>
+                                        <action selector="btnStopClick:" destination="-1" eventType="touchUpInside" id="tFk-bH-17z"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7D-ys-iKz">
+                                    <rect key="frame" x="118.33333333333331" y="0.0" width="59" height="44"/>
+                                    <state key="normal" image="声音关闭_h">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="声音_h"/>
+                                    <connections>
+                                        <action selector="btnSoundClick:" destination="-1" eventType="touchUpInside" id="FqT-qf-rkq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmJ-HX-rI5">
+                                    <rect key="frame" x="177.33333333333334" y="0.0" width="59.333333333333343" height="44"/>
+                                    <state key="normal" image="倍速1x_h">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="倍速1x_h"/>
+                                    <connections>
+                                        <action selector="btnRatioClick:" destination="-1" eventType="touchUpInside" id="0lb-7a-ikK"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6y-kW-ktG" userLabel="ButtonCam">
+                                    <rect key="frame" x="236.66666666666663" y="0.0" width="59" height="44"/>
+                                    <state key="normal" image="拍照_h">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="拍照_h"/>
+                                    <connections>
+                                        <action selector="btnCamClick:" destination="-1" eventType="touchUpInside" id="J96-oV-9np"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j61-0S-uE6">
+                                    <rect key="frame" x="355" y="0.0" width="59" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="eOg-oo-5vh"/>
+                                    </constraints>
+                                    <state key="normal" image="全屏_h">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnFullClick:" destination="-1" eventType="touchUpInside" id="YC7-rk-sLX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJk-0r-zHf" userLabel="ButtonVideo">
+                                    <rect key="frame" x="295.66666666666669" y="0.0" width="59.333333333333314" height="44"/>
+                                    <state key="normal" image="摄像_h">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="摄像_h"/>
+                                    <connections>
+                                        <action selector="btnVideoClick:" destination="-1" eventType="touchUpInside" id="OAt-g6-jbL"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Z7D-ys-iKz" secondAttribute="bottom" id="0ju-aX-jXf"/>
+                                <constraint firstItem="j61-0S-uE6" firstAttribute="width" secondItem="OJk-0r-zHf" secondAttribute="width" id="2oK-CO-fpI"/>
+                                <constraint firstItem="kqC-1v-c1n" firstAttribute="leading" secondItem="1l1-wh-zd3" secondAttribute="leading" id="7FC-IS-inW"/>
+                                <constraint firstItem="OJk-0r-zHf" firstAttribute="height" secondItem="u6y-kW-ktG" secondAttribute="height" id="E7W-1L-2eB"/>
+                                <constraint firstItem="Z7D-ys-iKz" firstAttribute="height" secondItem="qnS-sZ-exD" secondAttribute="height" id="IVS-Bh-pym"/>
+                                <constraint firstItem="u6y-kW-ktG" firstAttribute="leading" secondItem="RmJ-HX-rI5" secondAttribute="trailing" id="Is8-hm-5xJ"/>
+                                <constraint firstItem="Z7D-ys-iKz" firstAttribute="leading" secondItem="qnS-sZ-exD" secondAttribute="trailing" id="KB1-3a-3aF"/>
+                                <constraint firstAttribute="bottom" secondItem="j61-0S-uE6" secondAttribute="bottom" id="M68-vR-csr"/>
+                                <constraint firstItem="u6y-kW-ktG" firstAttribute="width" secondItem="RmJ-HX-rI5" secondAttribute="width" id="OWZ-Jz-YoS"/>
+                                <constraint firstItem="Z7D-ys-iKz" firstAttribute="width" secondItem="qnS-sZ-exD" secondAttribute="width" id="Qae-Xe-5JA"/>
+                                <constraint firstItem="u6y-kW-ktG" firstAttribute="top" secondItem="1l1-wh-zd3" secondAttribute="top" id="Tac-wi-xIi"/>
+                                <constraint firstItem="OJk-0r-zHf" firstAttribute="top" secondItem="1l1-wh-zd3" secondAttribute="top" id="YuU-YX-KYz"/>
+                                <constraint firstItem="qnS-sZ-exD" firstAttribute="width" secondItem="kqC-1v-c1n" secondAttribute="width" id="cYo-AE-L4f"/>
+                                <constraint firstItem="RmJ-HX-rI5" firstAttribute="width" secondItem="Z7D-ys-iKz" secondAttribute="width" id="dO2-ka-lPv"/>
+                                <constraint firstItem="u6y-kW-ktG" firstAttribute="height" secondItem="RmJ-HX-rI5" secondAttribute="height" id="dew-64-6KY"/>
+                                <constraint firstItem="j61-0S-uE6" firstAttribute="height" secondItem="OJk-0r-zHf" secondAttribute="height" id="e3A-Li-tei"/>
+                                <constraint firstAttribute="bottom" secondItem="qnS-sZ-exD" secondAttribute="bottom" id="e5J-2L-GNm"/>
+                                <constraint firstAttribute="height" constant="44" id="fQP-SF-XoW"/>
+                                <constraint firstItem="RmJ-HX-rI5" firstAttribute="height" secondItem="Z7D-ys-iKz" secondAttribute="height" id="gPN-Mu-sQm"/>
+                                <constraint firstAttribute="trailing" secondItem="j61-0S-uE6" secondAttribute="trailing" id="gay-Dg-SgV"/>
+                                <constraint firstAttribute="bottom" secondItem="RmJ-HX-rI5" secondAttribute="bottom" id="mHM-Nd-TtM"/>
+                                <constraint firstItem="RmJ-HX-rI5" firstAttribute="leading" secondItem="Z7D-ys-iKz" secondAttribute="trailing" id="ny7-be-L4f"/>
+                                <constraint firstAttribute="bottom" secondItem="OJk-0r-zHf" secondAttribute="bottom" id="owM-yE-T2g"/>
+                                <constraint firstItem="qnS-sZ-exD" firstAttribute="top" secondItem="1l1-wh-zd3" secondAttribute="top" id="pQc-ne-45l"/>
+                                <constraint firstItem="j61-0S-uE6" firstAttribute="leading" secondItem="OJk-0r-zHf" secondAttribute="trailing" id="pUu-kx-ReR"/>
+                                <constraint firstItem="OJk-0r-zHf" firstAttribute="width" secondItem="u6y-kW-ktG" secondAttribute="width" id="qHo-7D-L8z"/>
+                                <constraint firstItem="kqC-1v-c1n" firstAttribute="top" secondItem="1l1-wh-zd3" secondAttribute="top" id="qOT-Co-0KV"/>
+                                <constraint firstItem="qnS-sZ-exD" firstAttribute="leading" secondItem="kqC-1v-c1n" secondAttribute="trailing" id="rZV-Bc-nJp"/>
+                                <constraint firstItem="OJk-0r-zHf" firstAttribute="leading" secondItem="u6y-kW-ktG" secondAttribute="trailing" id="rdx-vT-Va0"/>
+                                <constraint firstItem="Z7D-ys-iKz" firstAttribute="top" secondItem="1l1-wh-zd3" secondAttribute="top" id="uTU-nS-gsM"/>
+                                <constraint firstItem="qnS-sZ-exD" firstAttribute="height" secondItem="kqC-1v-c1n" secondAttribute="height" id="v6L-JY-6h0"/>
+                                <constraint firstItem="j61-0S-uE6" firstAttribute="top" secondItem="1l1-wh-zd3" secondAttribute="top" id="wPJ-Eb-HyJ"/>
+                                <constraint firstAttribute="bottom" secondItem="u6y-kW-ktG" secondAttribute="bottom" id="yd7-Uz-qxS"/>
+                                <constraint firstItem="RmJ-HX-rI5" firstAttribute="top" secondItem="1l1-wh-zd3" secondAttribute="top" id="z0b-kv-vcW"/>
+                                <constraint firstAttribute="bottom" secondItem="kqC-1v-c1n" secondAttribute="bottom" id="zH2-G4-g2o"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIy-Jj-3Kr">
+                            <rect key="frame" x="20" y="20" width="30" height="30"/>
+                            <state key="normal" image="realTimeBack"/>
+                            <connections>
+                                <action selector="onlyPlayBackBtnClick:" destination="-1" eventType="touchUpInside" id="Hc6-HF-A1f"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="1l1-wh-zd3" secondAttribute="bottom" id="1a1-V6-XX2"/>
+                        <constraint firstItem="CIy-Jj-3Kr" firstAttribute="leading" secondItem="8ji-Jw-tjI" secondAttribute="leading" constant="20" id="7Qx-yO-XF5"/>
+                        <constraint firstItem="1l1-wh-zd3" firstAttribute="leading" secondItem="8ji-Jw-tjI" secondAttribute="leading" id="CDQ-dF-0cY"/>
+                        <constraint firstAttribute="width" secondItem="8ji-Jw-tjI" secondAttribute="height" multiplier="414:268.33" id="Z6c-5i-BhV"/>
+                        <constraint firstAttribute="trailing" secondItem="1l1-wh-zd3" secondAttribute="trailing" id="jW2-NL-arY"/>
+                        <constraint firstItem="CIy-Jj-3Kr" firstAttribute="top" secondItem="8ji-Jw-tjI" secondAttribute="top" constant="20" id="ykp-H0-9M8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="8ji-Jw-tjI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0ya-UT-18t"/>
+                <constraint firstItem="8ji-Jw-tjI" firstAttribute="topMargin" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="70I-kj-RDe"/>
+                <constraint firstAttribute="trailing" secondItem="8ji-Jw-tjI" secondAttribute="trailing" id="yBf-un-4oM"/>
+            </constraints>
+            <point key="canvasLocation" x="100" y="157"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="realTimeBack" width="30" height="30"/>
+        <image name="倍速1x_h" width="23.666666030883789" height="23.666666030883789"/>
+        <image name="停止_h" width="23.666666030883789" height="23.666666030883789"/>
+        <image name="全屏_h" width="13" height="13"/>
+        <image name="声音_h" width="23.666666030883789" height="23.666666030883789"/>
+        <image name="声音关闭_h" width="23.666666030883789" height="23.666666030883789"/>
+        <image name="拍照_h" width="23.666666030883789" height="23.666666030883789"/>
+        <image name="摄像_h" width="23.666666030883789" height="23.666666030883789"/>
+        <image name="播放_h" width="23.666666030883789" height="23.666666030883789"/>
+    </resources>
+</document>

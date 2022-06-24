@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="MyFunctionCell">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="104.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw1-LO-1A8" userLabel="myFileView" customClass="ViewClickEffect">
+                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="104.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myfile" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-U2-aYw" userLabel="myFile_img">
+                                <rect key="frame" x="33.5" y="33.5" width="22" height="18"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的文件" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJm-Tn-V6U" userLabel="myFile_lb">
+                                <rect key="frame" x="18" y="59.5" width="53.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="K1b-U2-aYw" firstAttribute="centerX" secondItem="Xw1-LO-1A8" secondAttribute="centerX" id="BgU-65-bW5"/>
+                            <constraint firstItem="pJm-Tn-V6U" firstAttribute="centerX" secondItem="Xw1-LO-1A8" secondAttribute="centerX" id="JVn-qB-rue"/>
+                            <constraint firstItem="K1b-U2-aYw" firstAttribute="centerY" secondItem="Xw1-LO-1A8" secondAttribute="centerY" constant="-10" id="dVE-pw-kh9"/>
+                            <constraint firstItem="pJm-Tn-V6U" firstAttribute="top" secondItem="K1b-U2-aYw" secondAttribute="bottom" constant="8" id="fmy-aE-4YZ"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCs-Ze-j7F" userLabel="myFriendsView" customClass="ViewClickEffect">
+                        <rect key="frame" x="178.5" y="0.0" width="89.5" height="104.5"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="常见问题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fai-dG-RJn" userLabel="myFriends_lb">
+                                <rect key="frame" x="18" y="59.5" width="53.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myhelp" translatesAutoresizingMaskIntoConstraints="NO" id="Oly-Dy-yYb" userLabel="myFriends_img">
+                                <rect key="frame" x="33.5" y="31.5" width="22" height="22"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Oly-Dy-yYb" firstAttribute="centerX" secondItem="LCs-Ze-j7F" secondAttribute="centerX" id="lDX-zl-3QB"/>
+                            <constraint firstItem="fai-dG-RJn" firstAttribute="centerX" secondItem="LCs-Ze-j7F" secondAttribute="centerX" id="qMA-1j-HPq"/>
+                            <constraint firstItem="Oly-Dy-yYb" firstAttribute="centerY" secondItem="LCs-Ze-j7F" secondAttribute="centerY" constant="-10" id="r9p-rh-C8I"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYB-Gm-Gu4" userLabel="myServiceView" customClass="ViewClickEffect">
+                        <rect key="frame" x="268" y="0.0" width="89" height="104.5"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myservice" translatesAutoresizingMaskIntoConstraints="NO" id="kTm-EL-qMC" userLabel="myService_img">
+                                <rect key="frame" x="34.5" y="32.5" width="20" height="20"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客服中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tv-Y1-YMa" userLabel="myService_lb">
+                                <rect key="frame" x="17.5" y="60.5" width="53.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="kTm-EL-qMC" firstAttribute="centerY" secondItem="cYB-Gm-Gu4" secondAttribute="centerY" constant="-10" id="KHY-Vh-ufa"/>
+                            <constraint firstItem="2Tv-Y1-YMa" firstAttribute="centerX" secondItem="cYB-Gm-Gu4" secondAttribute="centerX" id="hg4-XO-p4N"/>
+                            <constraint firstItem="kTm-EL-qMC" firstAttribute="centerX" secondItem="cYB-Gm-Gu4" secondAttribute="centerX" id="lf5-Bh-MoI"/>
+                            <constraint firstItem="2Tv-Y1-YMa" firstAttribute="top" secondItem="kTm-EL-qMC" secondAttribute="bottom" constant="8" id="vaQ-M8-5Aj"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yS1-38-Pl1" userLabel="myShareView" customClass="ViewClickEffect">
+                        <rect key="frame" x="89.5" y="0.0" width="89" height="104.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备共享" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g2-ap-9ad" userLabel="myShare_lb">
+                                <rect key="frame" x="17.5" y="59.5" width="53.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myshare" translatesAutoresizingMaskIntoConstraints="NO" id="Yem-dO-Ve5" userLabel="myShare_img">
+                                <rect key="frame" x="34.5" y="32.5" width="20" height="20"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Yem-dO-Ve5" firstAttribute="centerY" secondItem="yS1-38-Pl1" secondAttribute="centerY" constant="-10" id="Nln-Nz-R10"/>
+                            <constraint firstItem="Yem-dO-Ve5" firstAttribute="centerX" secondItem="yS1-38-Pl1" secondAttribute="centerX" id="Ytg-5p-RWo"/>
+                            <constraint firstItem="1g2-ap-9ad" firstAttribute="centerX" secondItem="yS1-38-Pl1" secondAttribute="centerX" id="c8S-Pg-Eiw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LCs-Ze-j7F" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/4" id="2ff-B6-SAM"/>
+                    <constraint firstItem="Xw1-LO-1A8" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/4" id="L1k-7D-gWS"/>
+                    <constraint firstItem="cYB-Gm-Gu4" firstAttribute="leading" secondItem="LCs-Ze-j7F" secondAttribute="trailing" id="XkT-4K-Bv6"/>
+                    <constraint firstItem="yS1-38-Pl1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Z1b-Hr-CVB"/>
+                    <constraint firstItem="LCs-Ze-j7F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zes-s1-3nM"/>
+                    <constraint firstItem="cYB-Gm-Gu4" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="aj5-NH-Vk0"/>
+                    <constraint firstItem="yS1-38-Pl1" firstAttribute="leading" secondItem="Xw1-LO-1A8" secondAttribute="trailing" id="bzX-Io-bGs"/>
+                    <constraint firstItem="Xw1-LO-1A8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jzu-Fv-ycN"/>
+                    <constraint firstItem="cYB-Gm-Gu4" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/4" id="mMl-YP-GnP"/>
+                    <constraint firstItem="Xw1-LO-1A8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mgN-Kl-dtG"/>
+                    <constraint firstItem="Xw1-LO-1A8" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="okf-in-nUf"/>
+                    <constraint firstItem="fai-dG-RJn" firstAttribute="centerY" secondItem="1g2-ap-9ad" secondAttribute="centerY" id="rLl-w8-gZt"/>
+                    <constraint firstItem="LCs-Ze-j7F" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="rfN-Ew-e6Z"/>
+                    <constraint firstItem="yS1-38-Pl1" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/4" id="u3i-e7-RUN"/>
+                    <constraint firstItem="yS1-38-Pl1" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="uLX-e0-0vW"/>
+                    <constraint firstItem="LCs-Ze-j7F" firstAttribute="leading" secondItem="yS1-38-Pl1" secondAttribute="trailing" id="uQq-Mv-IJR"/>
+                    <constraint firstItem="cYB-Gm-Gu4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vK3-Lb-btS"/>
+                    <constraint firstItem="1g2-ap-9ad" firstAttribute="centerY" secondItem="pJm-Tn-V6U" secondAttribute="centerY" id="ydf-Mf-Qy3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="myFileView" destination="Xw1-LO-1A8" id="qIe-P7-qkw"/>
+                <outlet property="myHelpView" destination="LCs-Ze-j7F" id="6gN-D8-1IW"/>
+                <outlet property="myServiceView" destination="cYB-Gm-Gu4" id="udD-Pn-skW"/>
+                <outlet property="myShareView" destination="yS1-38-Pl1" id="SNu-lV-jNX"/>
+            </connections>
+            <point key="canvasLocation" x="87.200000000000003" y="84.107946026986511"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="myfile" width="22.5" height="18"/>
+        <image name="myhelp" width="22" height="22"/>
+        <image name="myservice" width="20" height="20"/>
+        <image name="myshare" width="20.5" height="20"/>
+    </resources>
+</document>

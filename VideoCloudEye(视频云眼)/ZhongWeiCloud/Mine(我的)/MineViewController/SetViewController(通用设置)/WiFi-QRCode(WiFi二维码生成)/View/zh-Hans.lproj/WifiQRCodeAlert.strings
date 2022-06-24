@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "WiFi名称"; ObjectID = "Pas-Z5-aLp"; */
+"Pas-Z5-aLp.text" = "WiFi名称";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "aqc-gD-N4H"; */
+"aqc-gD-N4H.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "若无密码则无需输入"; ObjectID = "gbK-0R-ZEz"; */
+"gbK-0R-ZEz.placeholder" = "若无密码则无需输入";
+
+/* Class = "UIButton"; normalTitle = "生成二维码"; ObjectID = "q0C-bh-uQu"; */
+"q0C-bh-uQu.normalTitle" = "生成二维码";

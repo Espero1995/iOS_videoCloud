@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfigOccupiedVC">
+            <connections>
+                <outlet property="cameraImg" destination="oLa-tn-4u0" id="HeN-r0-Ymp"/>
+                <outlet property="cameraLb" destination="0OX-Yi-rMG" id="67k-G4-U39"/>
+                <outlet property="headImg" destination="lrp-tK-jtS" id="Wnu-Ln-lGv"/>
+                <outlet property="submitBtn" destination="pA7-dX-jXg" id="wtl-zu-LqA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="此设备已被添加！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWO-9D-9Ws">
+                    <rect key="frame" x="20" y="275.5" width="179" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config_occupid" translatesAutoresizingMaskIntoConstraints="NO" id="lrp-tK-jtS">
+                    <rect key="frame" x="0.0" y="20" width="375" height="255.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lrp-tK-jtS" secondAttribute="height" multiplier="750:511" id="6dl-rn-gv8"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如果这不是您的设备,可以让设备主人分享给您" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp9-Am-mwm">
+                    <rect key="frame" x="20" y="307.5" width="335" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C11(2.6mm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OX-Yi-rMG">
+                    <rect key="frame" x="143.5" y="478" width="88" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CloudPic" translatesAutoresizingMaskIntoConstraints="NO" id="oLa-tn-4u0">
+                    <rect key="frame" x="122" y="346.5" width="131" height="131.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="oLa-tn-4u0" secondAttribute="height" multiplier="1:1" id="ics-NJ-eSB"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pA7-dX-jXg">
+                    <rect key="frame" x="37.5" y="602" width="300" height="45"/>
+                    <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="U3L-vu-IUI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="返回首页">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="submitClick:" destination="-1" eventType="touchUpInside" id="ZVB-LF-Elq"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如果这是您的设备,可以先删除设备" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFF-eW-Lj4">
+                    <rect key="frame" x="20" y="327" width="249.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="pA7-dX-jXg" secondAttribute="bottom" constant="20" id="1Jd-Ea-CLM"/>
+                <constraint firstItem="MFF-eW-Lj4" firstAttribute="leading" secondItem="Xp9-Am-mwm" secondAttribute="leading" id="1SE-Dh-I7S"/>
+                <constraint firstItem="NWO-9D-9Ws" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="2Y1-DS-gWd"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Xp9-Am-mwm" secondAttribute="trailing" constant="20" id="3c7-mY-yQE"/>
+                <constraint firstItem="pA7-dX-jXg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BbL-64-6Z3"/>
+                <constraint firstItem="0OX-Yi-rMG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="C8T-Jf-Kj6"/>
+                <constraint firstItem="Xp9-Am-mwm" firstAttribute="leading" secondItem="NWO-9D-9Ws" secondAttribute="leading" id="OJv-xf-wWd"/>
+                <constraint firstItem="lrp-tK-jtS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="R4w-kA-HFx"/>
+                <constraint firstItem="0OX-Yi-rMG" firstAttribute="top" secondItem="oLa-tn-4u0" secondAttribute="bottom" id="STg-Am-hqB"/>
+                <constraint firstItem="NWO-9D-9Ws" firstAttribute="top" secondItem="lrp-tK-jtS" secondAttribute="bottom" id="TJG-GW-Iet"/>
+                <constraint firstItem="oLa-tn-4u0" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.35" id="TSe-ND-Xce"/>
+                <constraint firstItem="lrp-tK-jtS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ybl-sJ-fb6"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="top" secondItem="lrp-tK-jtS" secondAttribute="top" id="Yjj-mM-gsP"/>
+                <constraint firstItem="oLa-tn-4u0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b8I-6h-mrU"/>
+                <constraint firstItem="oLa-tn-4u0" firstAttribute="top" secondItem="MFF-eW-Lj4" secondAttribute="bottom" id="lpo-29-FX0"/>
+                <constraint firstItem="pA7-dX-jXg" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="rJp-UC-zs6"/>
+                <constraint firstItem="MFF-eW-Lj4" firstAttribute="top" secondItem="Xp9-Am-mwm" secondAttribute="bottom" id="tGM-eH-TBk"/>
+                <constraint firstItem="Xp9-Am-mwm" firstAttribute="top" secondItem="NWO-9D-9Ws" secondAttribute="bottom" constant="5" id="w8r-dl-Gr1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CloudPic" width="150" height="150"/>
+        <image name="config_occupid" width="375" height="255.5"/>
+    </resources>
+</document>

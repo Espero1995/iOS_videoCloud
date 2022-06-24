@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "设备共享"; ObjectID = "1g2-ap-9ad"; */
+"1g2-ap-9ad.text" = "Share";
+
+/* Class = "UILabel"; text = "客服中心"; ObjectID = "2Tv-Y1-YMa"; */
+"2Tv-Y1-YMa.text" = "Service";
+
+/* Class = "UILabel"; text = "常见问题"; ObjectID = "fai-dG-RJn"; */
+"fai-dG-RJn.text" = "Help";
+
+/* Class = "UILabel"; text = "我的文件"; ObjectID = "pJm-Tn-V6U"; */
+"pJm-Tn-V6U.text" = "File";

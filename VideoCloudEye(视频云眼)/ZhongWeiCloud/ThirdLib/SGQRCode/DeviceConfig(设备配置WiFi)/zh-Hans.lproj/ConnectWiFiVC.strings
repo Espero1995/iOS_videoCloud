@@ -1,0 +1,21 @@
+
+/* Class = "UITextField"; placeholder = "请输入Wi-Fi密码"; ObjectID = "JYw-QP-DBL"; */
+"JYw-QP-DBL.placeholder" = "请输入Wi-Fi密码";
+
+/* Class = "UILabel"; text = "当前设备仅支持2.4GHz无线网络"; ObjectID = "PpS-YQ-Xhv"; */
+"PpS-YQ-Xhv.text" = "当前设备仅支持2.4GHz无线网络";
+
+/* Class = "UIButton"; normalTitle = "设备对Wi-Fi有什么要求 >"; ObjectID = "VWl-3o-PYq"; */
+"VWl-3o-PYq.normalTitle" = "设备对Wi-Fi有什么要求 >";
+
+/* Class = "UIButton"; normalTitle = "切换网络"; ObjectID = "epg-UU-9nV"; */
+"epg-UU-9nV.normalTitle" = "切换网络";
+
+/* Class = "UIButton"; normalTitle = "已听到“请进行Wi-Fi配置”语音\n"; ObjectID = "iQy-Kx-HKv"; */
+"iQy-Kx-HKv.normalTitle" = "已听到“请进行Wi-Fi配置”语音\n";
+
+/* Class = "UITextField"; placeholder = "请输入Wi-Fi名称"; ObjectID = "nFw-KG-xbq"; */
+"nFw-KG-xbq.placeholder" = "请输入Wi-Fi名称";
+
+/* Class = "UILabel"; text = "连接Wi-Fi"; ObjectID = "vgs-tZ-DAu"; */
+"vgs-tZ-DAu.text" = "连接Wi-Fi";

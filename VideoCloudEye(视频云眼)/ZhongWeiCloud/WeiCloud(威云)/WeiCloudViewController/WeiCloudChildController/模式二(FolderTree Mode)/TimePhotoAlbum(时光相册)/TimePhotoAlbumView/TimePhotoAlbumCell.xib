@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="153" id="KGk-i7-Jjw" customClass="TimePhotoAlbumCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TimeAlbumLoadFail" translatesAutoresizingMaskIntoConstraints="NO" id="F4L-F2-fqR">
+                        <rect key="frame" x="19" y="25" width="337.5" height="194.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10月10日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llp-FE-1hD">
+                        <rect key="frame" x="29" y="35" width="106.5" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ey-dY-gAG">
+                        <rect key="frame" x="306.5" y="169.5" width="40" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="3s9-pa-XTf"/>
+                            <constraint firstAttribute="height" constant="50" id="kMz-57-5EY"/>
+                        </constraints>
+                        <state key="normal" image="TimeAlbumDownload"/>
+                        <connections>
+                            <action selector="albumDownloadClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fNW-1T-i9r"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOC-ao-woQ">
+                        <rect key="frame" x="266.5" y="169.5" width="40" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="J5m-1N-wT6"/>
+                            <constraint firstAttribute="height" constant="50" id="rBs-4H-ay2"/>
+                        </constraints>
+                        <state key="normal" image="TimeAlbumShared"/>
+                        <connections>
+                            <action selector="albumShareClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="A4c-0N-cOf"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TimeAlbumPlay" translatesAutoresizingMaskIntoConstraints="NO" id="em5-5c-gQz">
+                        <rect key="frame" x="165.5" y="100.5" width="44" height="44"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7Ey-dY-gAG" firstAttribute="trailing" secondItem="F4L-F2-fqR" secondAttribute="trailing" constant="-10" id="AK8-hR-7ac"/>
+                    <constraint firstItem="F4L-F2-fqR" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="DSh-X9-MbR"/>
+                    <constraint firstItem="mOC-ao-woQ" firstAttribute="centerY" secondItem="7Ey-dY-gAG" secondAttribute="centerY" id="EWn-IU-g2J"/>
+                    <constraint firstItem="7Ey-dY-gAG" firstAttribute="bottom" secondItem="F4L-F2-fqR" secondAttribute="bottom" id="FSx-3T-98L"/>
+                    <constraint firstItem="7Ey-dY-gAG" firstAttribute="leading" secondItem="mOC-ao-woQ" secondAttribute="trailing" id="JCJ-mw-mtC"/>
+                    <constraint firstItem="llp-FE-1hD" firstAttribute="leading" secondItem="F4L-F2-fqR" secondAttribute="leading" constant="10" id="K18-zF-hf4"/>
+                    <constraint firstItem="em5-5c-gQz" firstAttribute="centerY" secondItem="F4L-F2-fqR" secondAttribute="centerY" id="KNL-ky-WKz"/>
+                    <constraint firstItem="em5-5c-gQz" firstAttribute="centerX" secondItem="F4L-F2-fqR" secondAttribute="centerX" id="SA1-d6-sRt"/>
+                    <constraint firstItem="F4L-F2-fqR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="X4D-N5-dGC"/>
+                    <constraint firstItem="F4L-F2-fqR" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="kEH-xz-OYl"/>
+                    <constraint firstAttribute="bottom" secondItem="F4L-F2-fqR" secondAttribute="bottom" id="qsY-CU-LvJ"/>
+                    <constraint firstItem="llp-FE-1hD" firstAttribute="top" secondItem="F4L-F2-fqR" secondAttribute="top" constant="10" id="rvt-qh-Z3P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="albumImgView" destination="F4L-F2-fqR" id="TJN-f3-4Rb"/>
+                <outlet property="albumTimeLb" destination="llp-FE-1hD" id="nDA-W6-AEg"/>
+                <outlet property="albunTimePlayImg" destination="em5-5c-gQz" id="8jp-di-kJQ"/>
+                <outlet property="downloadBtn" destination="7Ey-dY-gAG" id="taF-ta-uex"/>
+                <outlet property="shareBtn" destination="mOC-ao-woQ" id="M01-84-0qx"/>
+            </connections>
+            <point key="canvasLocation" x="-29.600000000000001" y="120.53973013493254"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="TimeAlbumDownload" width="25" height="25"/>
+        <image name="TimeAlbumLoadFail" width="340" height="225"/>
+        <image name="TimeAlbumPlay" width="44" height="44"/>
+        <image name="TimeAlbumShared" width="25" height="25"/>
+    </resources>
+</document>

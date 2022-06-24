@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="MyCloudMealCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30元/月（套餐）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaH-mH-A2H">
+                        <rect key="frame" x="20" y="13" width="130" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待生效日期：2018-2-18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jO-lG-vbs">
+                        <rect key="frame" x="20" y="39.5" width="154.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.65875023603439331" green="0.65886574983596802" blue="0.65874296426773071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXx-jS-iHg">
+                        <rect key="frame" x="225" y="21.5" width="80" height="27"/>
+                        <state key="normal" backgroundImage="ImmediateUse"/>
+                        <connections>
+                            <action selector="ImmediateUserClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Lkb-Mk-SFz"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mXx-jS-iHg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GKr-PS-p1p"/>
+                    <constraint firstItem="AaH-mH-A2H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="IfX-QK-7jP"/>
+                    <constraint firstItem="6jO-lG-vbs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="N3c-AX-OtN"/>
+                    <constraint firstAttribute="trailing" secondItem="mXx-jS-iHg" secondAttribute="trailing" constant="15" id="XSa-0k-dQw"/>
+                    <constraint firstItem="AaH-mH-A2H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="eI9-3P-V7B"/>
+                    <constraint firstAttribute="bottom" secondItem="6jO-lG-vbs" secondAttribute="bottom" constant="13" id="jJp-IL-wE7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="effectiveDate_lb" destination="6jO-lG-vbs" id="Gka-hd-esT"/>
+                <outlet property="extendedUserBtn" destination="mXx-jS-iHg" id="Lds-Ya-Nay"/>
+                <outlet property="mealPlan_lb" destination="AaH-mH-A2H" id="Lc8-mr-TC7"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="72.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ImmediateUse" width="80" height="27"/>
+    </resources>
+</document>

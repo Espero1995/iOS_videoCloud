@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="wifiOwnCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wifi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAT-5y-G7c">
+                        <rect key="frame" x="16" y="11" width="204" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi_image_unlock" translatesAutoresizingMaskIntoConstraints="NO" id="Ys2-uR-vtP">
+                        <rect key="frame" x="283" y="16" width="16" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="4uC-ra-Gmu"/>
+                            <constraint firstAttribute="height" constant="11" id="fYQ-jQ-Ixq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前连接" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szY-87-IHp">
+                        <rect key="frame" x="227.5" y="14.5" width="49.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ys2-uR-vtP" firstAttribute="leading" secondItem="szY-87-IHp" secondAttribute="trailing" constant="6" id="4rt-od-r6m"/>
+                    <constraint firstItem="Ys2-uR-vtP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bnC-IF-2ps"/>
+                    <constraint firstItem="SAT-5y-G7c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cOH-bE-fAx"/>
+                    <constraint firstItem="szY-87-IHp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gV6-1P-43e"/>
+                    <constraint firstAttribute="trailing" secondItem="SAT-5y-G7c" secondAttribute="trailing" constant="100" id="nJP-0t-ziJ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ys2-uR-vtP" secondAttribute="trailing" constant="5" id="qco-DW-YPU"/>
+                    <constraint firstItem="SAT-5y-G7c" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xSl-sx-dFU"/>
+                    <constraint firstItem="Ys2-uR-vtP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zLI-1P-79Y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="currentLink" destination="szY-87-IHp" id="SUF-AX-YPz"/>
+                <outlet property="wifiImage" destination="Ys2-uR-vtP" id="kxH-5S-vNg"/>
+                <outlet property="wifiName" destination="SAT-5y-G7c" id="8yd-kw-NOS"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="wifi_image_unlock" width="16" height="11"/>
+    </resources>
+</document>

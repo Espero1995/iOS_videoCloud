@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCodeConfigVC">
+            <connections>
+                <outlet property="QRCodeImageView" destination="KoC-eR-Wnv" id="lUT-dZ-NQ4"/>
+                <outlet property="submitBtn" destination="nKa-p5-FN2" id="QPD-1A-KxJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请将二维码对准摄像机镜头" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssW-ss-KOv">
+                    <rect key="frame" x="84.5" y="111" width="171" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.99568027260000003" green="0.53336936239999999" blue="0.2120385766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config_scanShow" translatesAutoresizingMaskIntoConstraints="NO" id="cyw-iN-8yf">
+                    <rect key="frame" x="72" y="34" width="176" height="67"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="cyw-iN-8yf" secondAttribute="height" multiplier="513:196" id="FLN-Fi-iQX"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config_warn" translatesAutoresizingMaskIntoConstraints="NO" id="tTr-fs-X7B">
+                    <rect key="frame" x="64.5" y="112" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="4DV-jy-qnj"/>
+                        <constraint firstAttribute="height" constant="15" id="yhG-DA-AUD"/>
+                    </constraints>
+                </imageView>
+                <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InvalidQRCode" translatesAutoresizingMaskIntoConstraints="NO" id="KoC-eR-Wnv">
+                    <rect key="frame" x="21" y="145" width="278" height="278"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="KoC-eR-Wnv" secondAttribute="height" multiplier="1:1" id="DZ0-Ez-lf8"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NE2-yk-b5A">
+                    <rect key="frame" x="91" y="444.5" width="138" height="30"/>
+                    <state key="normal" title="没有听到任何声音？"/>
+                    <connections>
+                        <action selector="noSoundClick:" destination="-1" eventType="touchUpInside" id="9hx-98-J2p"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKa-p5-FN2">
+                    <rect key="frame" x="32" y="479.5" width="256" height="45"/>
+                    <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="dKM-Nf-VZn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="我听到“扫描二维码成功”">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="submitClick:" destination="-1" eventType="touchUpInside" id="RWd-7g-vSK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KoC-eR-Wnv" firstAttribute="top" secondItem="ssW-ss-KOv" secondAttribute="bottom" multiplier="1.13" id="0Eo-O1-0dc"/>
+                <constraint firstItem="nKa-p5-FN2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CmX-ji-6pF"/>
+                <constraint firstItem="ssW-ss-KOv" firstAttribute="leading" secondItem="tTr-fs-X7B" secondAttribute="trailing" constant="5" id="Dmo-za-y2d"/>
+                <constraint firstItem="ssW-ss-KOv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="10" id="GTw-sE-Z9s"/>
+                <constraint firstItem="tTr-fs-X7B" firstAttribute="centerY" secondItem="ssW-ss-KOv" secondAttribute="centerY" id="LBJ-AO-P6n"/>
+                <constraint firstItem="cyw-iN-8yf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PLd-vT-ZMA"/>
+                <constraint firstItem="NE2-yk-b5A" firstAttribute="top" secondItem="KoC-eR-Wnv" secondAttribute="bottom" multiplier="1.05" id="PU9-dw-dMc"/>
+                <constraint firstItem="KoC-eR-Wnv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Z8V-8O-eFX"/>
+                <constraint firstItem="KoC-eR-Wnv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hCy-7N-l7R"/>
+                <constraint firstItem="cyw-iN-8yf" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.55" id="mF4-ib-ugP"/>
+                <constraint firstItem="KoC-eR-Wnv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.87" id="nhq-6d-YFa"/>
+                <constraint firstItem="nKa-p5-FN2" firstAttribute="top" secondItem="NE2-yk-b5A" secondAttribute="bottom" constant="5" id="oUD-qq-4FI"/>
+                <constraint firstItem="ssW-ss-KOv" firstAttribute="top" secondItem="cyw-iN-8yf" secondAttribute="bottom" constant="10" id="p75-0V-QWz"/>
+                <constraint firstItem="NE2-yk-b5A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rDK-xi-1pH"/>
+                <constraint firstItem="nKa-p5-FN2" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="rrh-6L-00f"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="130.40000000000001" y="153.37331334332833"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="InvalidQRCode" width="283.5" height="282"/>
+        <image name="config_scanShow" width="256.5" height="98"/>
+        <image name="config_warn" width="16" height="16"/>
+    </resources>
+</document>
