@@ -49,37 +49,50 @@
 
 - (void)commonInit
 {
-    [self setRockerStyle:RockStyleOpaque];
+    _handleImageView = [[UIImageView alloc]init];
+    [self addSubview:_handleImageView];
+    
+    [self setStyle:RockStyleOpaque];
     
     _direction = RockDirectionCenter;
     
-    if (!_handleImageView) {
-        UIImage *handleImage = [UIImage imageNamed:@"InnerBaseRocker"];//handlePressed
-        
-        _handleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width*0.5f-handleImage.size.width*0.5f,
-                                                                         self.bounds.size.height*0.5f-handleImage.size.height*0.5f,
-                                                                         handleImage.size.width,
-                                                                         handleImage.size.height)];
-        _handleImageView.image = handleImage;
-
-        [self addSubview:_handleImageView];
-    }
+//    if (!_handleImageView) {
+//        UIImage *handleImage = [UIImage imageNamed:(self.style==RockStyleBig)?@"InnerBig":@"InnerBaseRocker"];//handlePressed
+//
+//        _handleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width*0.5f-handleImage.size.width*0.5f,
+//                                                                         self.bounds.size.height*0.5f-handleImage.size.height*0.5f,
+//                                                                         handleImage.size.width,
+//                                                                         handleImage.size.height)];
+//        _handleImageView.image = handleImage;
+//
+//        [self addSubview:_handleImageView];
+//    }
     
     _x = 0;
     _y = 0;
 
 }
-- (void)setRockerStyle:(RockStyle)style
-{
-    NSArray *imageNames = @[@"rockerOpaqueBg1",@"rockerTranslucentBg"];
+
+- (void)setStyle:(RockStyle)style {
+    _style = style;
+    NSArray *imageNames = @[@"rockerOpaqueBg1",@"rockerTranslucentBg",@"rockerBigBg"];
    // NSArray *imageNames = @[@"rockerbgview",@"rockerbgview"];
 
     [self setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:imageNames[style]]]];
+    
+    
+    UIImage *handleImage = [UIImage imageNamed:(self.style==RockStyleBig)?@"InnerBig":@"InnerBaseRocker"];//handlePressed
+    
+    _handleImageView.frame = CGRectMake(self.bounds.size.width*0.5f-handleImage.size.width*0.5f,
+                                                                     self.bounds.size.height*0.5f-handleImage.size.height*0.5f,
+                                                                     handleImage.size.width,
+                                                                     handleImage.size.height);
+    _handleImageView.image = handleImage;
 }
 
 - (void)resetHandle
 {
-    _handleImageView.image = [UIImage imageNamed:@"InnerBaseRocker"];//handlePressed//TODO
+    _handleImageView.image = [UIImage imageNamed:(self.style==RockStyleBig)?@"InnerBig": @"InnerBaseRocker"];//handlePressed//TODO
 
     _x = 0.0;
     _y = 0.0;

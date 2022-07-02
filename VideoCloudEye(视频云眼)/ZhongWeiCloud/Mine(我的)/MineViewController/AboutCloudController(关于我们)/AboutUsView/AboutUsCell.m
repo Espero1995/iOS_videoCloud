@@ -9,6 +9,7 @@
 #import "AboutUsCell.h"
 @interface AboutUsCell()
 @property (nonatomic,strong) UIImageView *pushImg;
+@property (nonatomic,strong) UIStackView *stackView;
 @end
 @implementation AboutUsCell
 
@@ -34,19 +35,49 @@
         make.centerY.equalTo(self.contentView.mas_centerY);
         make.left.equalTo(self.contentView.mas_left).offset(15);
     }];
-    [self.contentView addSubview:self.pushImg];
+    [self.contentView addSubview:self.stackView];
+    [self.stackView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.equalTo(self.contentView);
+        make.right.equalTo(self.contentView.mas_right).offset(-10);
+        make.left.greaterThanOrEqualTo(self.titleLb.mas_right).offset(10.f);
+    }];
+    [self.redDot setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisVertical];
+    [self.pushImg setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisVertical];
+    [self.stackView addArrangedSubview:self.detailLb];
+    [self.stackView addArrangedSubview:self.redDot];
+    [self.stackView addArrangedSubview:self.pushImg];
+    [self.redDot mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(6, 6));
+    }];
     [self.pushImg mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.contentView.mas_centerY);
-        make.right.equalTo(self.contentView.mas_right).offset(-15);
         make.height.equalTo(@11.5);
         make.width.equalTo(@6.5);
     }];
-    [self.contentView addSubview:self.detailLb];
-    [self.detailLb mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.pushImg.mas_left).offset(-7);
-        make.centerY.equalTo(self.contentView.mas_centerY);
-        make.left.equalTo(self.titleLb.mas_right).offset(10);
-    }];
+    
+//    [self.contentView addSubview:self.pushImg];
+//    [self.pushImg mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerY.equalTo(self.contentView.mas_centerY);
+//        make.right.equalTo(self.contentView.mas_right).offset(-15);
+//        make.height.equalTo(@11.5);
+//        make.width.equalTo(@6.5);
+//    }];
+//    [self.contentView addSubview:self.detailLb];
+//    [self.detailLb mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.equalTo(self.pushImg.mas_left).offset(-7);
+//        make.centerY.equalTo(self.contentView.mas_centerY);
+//        make.left.equalTo(self.titleLb.mas_right).offset(10);
+//    }];
+//    [self.contentView addSubview:self.redDot];
+//    [self.redDot mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.equalTo(self.pushImg.mas_left).offset(-1);
+//        make.centerY.equalTo(self.contentView.mas_centerY);
+//        make.size.mas_equalTo(CGSizeMake(6, 6));
+//    }];
+}
+
+// 红点显示设置
+- (void)configRedDotShow:(BOOL)show {
+    self.redDot.hidden = !show;
 }
 
 #pragma mark - getter&&setter
@@ -77,4 +108,25 @@
     }
     return _pushImg;
 }
+
+- (UIView *)redDot {
+    if (!_redDot) {
+        _redDot = [UIView new];
+        _redDot.backgroundColor = [UIColor redColor];
+        _redDot.layer.masksToBounds = YES;
+        _redDot.layer.cornerRadius = 3;
+    }
+    return _redDot;
+}
+
+- (UIStackView *)stackView {
+    if (!_stackView) {
+        _stackView = [UIStackView new];
+        _stackView.axis = UILayoutConstraintAxisHorizontal;
+        _stackView.alignment = UIStackViewAlignmentCenter;
+        _stackView.spacing = 4;
+    }
+    return _stackView;
+}
+
 @end

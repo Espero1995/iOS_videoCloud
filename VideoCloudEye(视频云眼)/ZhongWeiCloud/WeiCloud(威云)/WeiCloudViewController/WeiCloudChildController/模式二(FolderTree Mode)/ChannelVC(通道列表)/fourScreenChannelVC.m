@@ -361,6 +361,7 @@ static NSString *const footerId = @"footerId";
         //        }else{
         //            realTimeVC.isMultiChannel = YES;
         //        }
+        realTimeVC.postDataSources = self.dataArr;
         [unitl saveDataWithKey:SCREENSTATUS Data:SHU_PING];
         [self.navigationController pushViewController:realTimeVC animated:YES];
     }

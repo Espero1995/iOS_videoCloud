@@ -18,6 +18,9 @@
 //========VC========
 #import "ZCTabBarController.h"
 #import "AboutUsAgreementVC.h"
+#import "NSStringEX.h"
+#import "AppUpdateManager.h"
+
 @interface AboutUsVC ()
 <
     UITableViewDelegate,
@@ -35,12 +38,15 @@
 @property (nonatomic,strong) UITableView *tv_list;
 @property (nonatomic,strong) AboutUsRelatedView *relatedBottomView;
 @property (nonatomic,strong) AboutUsShareView *shareShowView;//分享弹出框
+@property (nonatomic,assign) BOOL updateFlag;
+
 @end
 
 @implementation AboutUsVC
 //==========================system==========================
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self checkAppUpdate];
     [self setUpUI];
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -95,6 +101,14 @@
 
 
 //==========================method==========================
+- (void)checkAppUpdate {
+    // check当前app版本是否要升级
+    [AppUpdateManager checkAppUpdateComplete:^{
+        self.updateFlag = YES;
+        [self.tv_list reloadData];
+    }];
+}
+
 - (void)copytext:(NSString *)contentStr
 {
     UIPasteboard *pboard = [UIPasteboard generalPasteboard];
@@ -164,6 +178,7 @@
     [XHToast showCenterWithText:NSLocalizedString(@"已经切换成【测试环境】,请杀死app重新启动！", nil)];
 }
 
+
 //==========================delegate==========================
 //组
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -212,10 +227,16 @@
             cell.titleLb.text = NSLocalizedString(@"视频云眼介绍", nil);
             cell.detailLb.text = NSLocalizedString(@"股票代码:300270", nil);
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            [cell configRedDotShow:NO];
         }else if (row == 1){
             cell.titleLb.text = NSLocalizedString(@"版本更新", nil);
+            if (self.updateFlag) {
+                cell.detailLb.text = NSLocalizedString(@"发现新版本", nil);
+            }
+            [cell configRedDotShow:self.updateFlag];
         }else{
             cell.titleLb.text = NSLocalizedString(@"去评分", nil);
+            [cell configRedDotShow:NO];
         }
         return cell;
     }else{

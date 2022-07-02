@@ -16,6 +16,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.sdBtn.hidden = self.cloudBtn.hidden = YES;
     self.layer.cornerRadius = 3.f;
     self.ima_photo.layer.masksToBounds = YES;
     self.ima_photo.layer.cornerRadius = 3.0f;

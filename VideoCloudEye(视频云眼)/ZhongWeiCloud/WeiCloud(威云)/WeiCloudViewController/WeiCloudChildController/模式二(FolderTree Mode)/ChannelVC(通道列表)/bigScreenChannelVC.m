@@ -297,6 +297,7 @@
         RealTimeChannelVC *realTimeVC = [[RealTimeChannelVC alloc]init];
         realTimeVC.channelModel = channelModel;
         realTimeVC.selectedIndex = indexPath;
+        realTimeVC.postDataSources = self.dataArr;
         [unitl saveDataWithKey:SCREENSTATUS Data:SHU_PING];
         [self.navigationController pushViewController:realTimeVC animated:YES];
     }else{

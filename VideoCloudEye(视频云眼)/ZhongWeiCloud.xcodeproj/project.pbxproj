@@ -577,6 +577,13 @@
 		30EFF0E221DF7E0700E66FA8 /* customAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EFF0DF21DF7E0600E66FA8 /* customAlertView.m */; };
 		30F080041FD67D5400B480F0 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F080031FD67D5400B480F0 /* Toast.m */; };
 		30FF6BF824E3F50200B938D6 /* tempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF6BF724E3F50200B938D6 /* tempVC.m */; };
+		3782CF91286DD2FF00F4D8A9 /* DeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3782CF90286DD2FF00F4D8A9 /* DeviceListViewController.m */; };
+		3782CF94286DF33100F4D8A9 /* rockerBigBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3782CF92286DF33100F4D8A9 /* rockerBigBg@2x.png */; };
+		3782CF95286DF33100F4D8A9 /* rockerBigBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3782CF93286DF33100F4D8A9 /* rockerBigBg.png */; };
+		3782CF98286DF45800F4D8A9 /* InnerBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3782CF96286DF45800F4D8A9 /* InnerBig@2x.png */; };
+		3782CF99286DF45800F4D8A9 /* InnerBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 3782CF97286DF45800F4D8A9 /* InnerBig.png */; };
+		3782CF9C286DFA2300F4D8A9 /* RealTimeCloudControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3782CF9B286DFA2300F4D8A9 /* RealTimeCloudControlView.m */; };
+		3782CFA028706B7B00F4D8A9 /* AppUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3782CF9F28706B7B00F4D8A9 /* AppUpdateManager.m */; };
 		391943AA1F26040B00A116DD /* SettingCellOne_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 391943A51F26040B00A116DD /* SettingCellOne_t.m */; };
 		391943AB1F26040B00A116DD /* SettingCellThree_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 391943A71F26040B00A116DD /* SettingCellThree_t.m */; };
 		391943AC1F26040B00A116DD /* SettingCellTwo_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 391943A91F26040B00A116DD /* SettingCellTwo_t.m */; };
@@ -1919,6 +1926,16 @@
 		30FF6BF624E3F50200B938D6 /* tempVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tempVC.h; sourceTree = "<group>"; };
 		30FF6BF724E3F50200B938D6 /* tempVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tempVC.m; sourceTree = "<group>"; };
 		33E16F54A80106B101A0F485 /* Pods-ZhongWeiCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWeiCloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWeiCloud/Pods-ZhongWeiCloud.debug.xcconfig"; sourceTree = "<group>"; };
+		3782CF8F286DD2FF00F4D8A9 /* DeviceListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceListViewController.h; sourceTree = "<group>"; };
+		3782CF90286DD2FF00F4D8A9 /* DeviceListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceListViewController.m; sourceTree = "<group>"; };
+		3782CF92286DF33100F4D8A9 /* rockerBigBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rockerBigBg@2x.png"; sourceTree = "<group>"; };
+		3782CF93286DF33100F4D8A9 /* rockerBigBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rockerBigBg.png; sourceTree = "<group>"; };
+		3782CF96286DF45800F4D8A9 /* InnerBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InnerBig@2x.png"; sourceTree = "<group>"; };
+		3782CF97286DF45800F4D8A9 /* InnerBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InnerBig.png; sourceTree = "<group>"; };
+		3782CF9A286DFA2300F4D8A9 /* RealTimeCloudControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealTimeCloudControlView.h; sourceTree = "<group>"; };
+		3782CF9B286DFA2300F4D8A9 /* RealTimeCloudControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealTimeCloudControlView.m; sourceTree = "<group>"; };
+		3782CF9E28706B7B00F4D8A9 /* AppUpdateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUpdateManager.h; sourceTree = "<group>"; };
+		3782CF9F28706B7B00F4D8A9 /* AppUpdateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppUpdateManager.m; sourceTree = "<group>"; };
 		391943A41F26040B00A116DD /* SettingCellOne_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCellOne_t.h; sourceTree = "<group>"; };
 		391943A51F26040B00A116DD /* SettingCellOne_t.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCellOne_t.m; sourceTree = "<group>"; };
 		391943A61F26040B00A116DD /* SettingCellThree_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCellThree_t.h; sourceTree = "<group>"; };
@@ -3287,6 +3304,7 @@
 				1A2C4F101E4C0C15000A0AAC /* Singleton */,
 				1A9445861E2E0FAD0094A671 /* Category */,
 				1AB1DBD81E24766200F303DB /* BlurredImageTool */,
+				3782CF9D28706B4400F4D8A9 /* AppUpdateManager */,
 				1AB1DBDD1E24766200F303DB /* cag */,
 			);
 			path = Tool;
@@ -4022,6 +4040,10 @@
 		30346F4724E7C47A0020A40B /* ChannelPlayerVC(通道相关视频) */ = {
 			isa = PBXGroup;
 			children = (
+				3782CF8F286DD2FF00F4D8A9 /* DeviceListViewController.h */,
+				3782CF90286DD2FF00F4D8A9 /* DeviceListViewController.m */,
+				3782CF9A286DFA2300F4D8A9 /* RealTimeCloudControlView.h */,
+				3782CF9B286DFA2300F4D8A9 /* RealTimeCloudControlView.m */,
 				3075C66624EB79D70045F5F0 /* ChannelPlayBackVC.h */,
 				3075C66424EB79D70045F5F0 /* ChannelPlayBackVC.m */,
 				3075C66524EB79D70045F5F0 /* ChannelPlayBackVC.xib */,
@@ -5119,6 +5141,15 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		3782CF9D28706B4400F4D8A9 /* AppUpdateManager */ = {
+			isa = PBXGroup;
+			children = (
+				3782CF9E28706B7B00F4D8A9 /* AppUpdateManager.h */,
+				3782CF9F28706B7B00F4D8A9 /* AppUpdateManager.m */,
+			);
+			path = AppUpdateManager;
+			sourceTree = "<group>";
+		};
 		391943851F26030D00A116DD /* WeiCloudModel_t */ = {
 			isa = PBXGroup;
 			children = (
@@ -5790,11 +5821,15 @@
 				90502E812015BAB300A4D16B /* handlePressed@2x.png */,
 				90502E822015BAB300A4D16B /* rockerOpaqueBg.png */,
 				301FC6542019B92C00A1C4CE /* InnerBaseRocker.png */,
+				3782CF97286DF45800F4D8A9 /* InnerBig.png */,
+				3782CF96286DF45800F4D8A9 /* InnerBig@2x.png */,
 				301FC6522019714900A1C4CE /* rockerOpaqueBg1.png */,
 				301FC6562019B9D400A1C4CE /* InnerBaseRocker@2x.png */,
 				90502E832015BAB300A4D16B /* rockerOpaqueBg@2x.png */,
 				90502E842015BAB300A4D16B /* rockerTranslucentBg.png */,
 				90502E852015BAB300A4D16B /* rockerTranslucentBg@2x.png */,
+				3782CF93286DF33100F4D8A9 /* rockerBigBg.png */,
+				3782CF92286DF33100F4D8A9 /* rockerBigBg@2x.png */,
 				90502E862015BAB300A4D16B /* ZMRocker.h */,
 				90502E872015BAB300A4D16B /* ZMRocker.m */,
 			);
@@ -6161,8 +6196,10 @@
 				1A3E0A751E63CA2300524A2E /* ControlView.xib in Resources */,
 				1AAF88711E5E70BB003D301E /* reimbursement_delete@2x.png in Resources */,
 				90502E8E2015BAB300A4D16B /* rockerTranslucentBg.png in Resources */,
+				3782CF99286DF45800F4D8A9 /* InnerBig.png in Resources */,
 				1A9445CC1E2F14CF0094A671 /* icn_1.png in Resources */,
 				3075C66824EB79D80045F5F0 /* ChannelPlayBackVC.xib in Resources */,
+				3782CF94286DF33100F4D8A9 /* rockerBigBg@2x.png in Resources */,
 				39D715B11F46F37A007F8125 /* OneTableViewCell.xib in Resources */,
 				302664B921B7D0B3002DE137 /* logoutCell.xib in Resources */,
 				900257B120313F7B005EB360 /* Security.framework in Resources */,
@@ -6172,6 +6209,7 @@
 				1A9445D81E2F14CF0094A671 /* sky.png in Resources */,
 				30210BCE2248CEAE009EBF99 /* ConfigTypeVC.xib in Resources */,
 				90502E8B2015BAB300A4D16B /* handlePressed@2x.png in Resources */,
+				3782CF95286DF33100F4D8A9 /* rockerBigBg.png in Resources */,
 				1A9445D91E2F14CF0094A671 /* sky@2x.png in Resources */,
 				30892D8721C1052E008EE598 /* RealTimeVideoVC.xib in Resources */,
 				300DF40B227698C600BDAE79 /* LaunchScreen.storyboard in Resources */,
@@ -6185,6 +6223,7 @@
 				309E471821B8B681002438D6 /* MineOutCell_t.xib in Resources */,
 				3025D0E92005E48900D45177 /* myGeneralCell.xib in Resources */,
 				305C41EB24FCDCFD00C76F5F /* bigScreenChannelCell.xib in Resources */,
+				3782CF98286DF45800F4D8A9 /* InnerBig@2x.png in Resources */,
 				1A9445E01E2F14CF0094A671 /* YALSunnyRefreshControl.xib in Resources */,
 				303C9AA8208824AB009686A8 /* GeneralSettingVC.xib in Resources */,
 				3094CF7E21BA72E000C2163A /* ActivityMessageVC.xib in Resources */,
@@ -6405,6 +6444,7 @@
 				1AB1DCA21E25CC1D00F303DB /* ZCTabBarController.mm in Sources */,
 				3018067C223F8F620051C740 /* QRCodeConfigVC.m in Sources */,
 				308C8C5B24E6612100597CA3 /* smallScreenChannelVC.m in Sources */,
+				3782CFA028706B7B00F4D8A9 /* AppUpdateManager.m in Sources */,
 				30D1A3532105F36D0039B8E1 /* ModifyPwdVC.m in Sources */,
 				30B705D322410A460031E0A2 /* ProgressView.m in Sources */,
 				301FC65F2019DB4800A1C4CE /* NoDataCell.m in Sources */,
@@ -6579,6 +6619,7 @@
 				308C8C5224E6601800597CA3 /* smallScreenFolderVC.m in Sources */,
 				1AAF88971E5E7102003D301E /* InvestigateTimeCell.m in Sources */,
 				30C712F9216AF18E00A03A56 /* YCXMenu.m in Sources */,
+				3782CF9C286DFA2300F4D8A9 /* RealTimeCloudControlView.m in Sources */,
 				3023EB54200F17EE00385715 /* LiveSearchHistoryCell.m in Sources */,
 				1ABF073B1EB2E77200333462 /* WCLRecordEncoder.m in Sources */,
 				3070A128204A3FAC0032F550 /* LewPopupBackgroundView.m in Sources */,
@@ -6628,6 +6669,7 @@
 				39F14FB81E665770009F03AD /* DeviceNameController.m in Sources */,
 				30879A7E23FF6C63001705A1 /* UIColor+Expanded.m in Sources */,
 				902A35822029A72F00002E80 /* PinYinForObjc.m in Sources */,
+				3782CF91286DD2FF00F4D8A9 /* DeviceListViewController.m in Sources */,
 				90162B212085E1FB0023A832 /* UIControl+JPBtnClickDelay.m in Sources */,
 				90229B7120E5D7FB0050D0C7 /* UICollectionView+XY.m in Sources */,
 				306978DA20C556CE0060927D /* uploadHeadCell.m in Sources */,
@@ -7571,7 +7613,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = ZhongWeiCloud/ZhongWeiCloud.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3.5;
@@ -7621,8 +7663,8 @@
 					"$(PROJECT_DIR)/ZhongWeiCloud/ThirdLib/SDK",
 					"$(PROJECT_DIR)/ZhongWeiCloud/ThirdLib/SDK/NewSDK/rtmp/lib",
 					"$(PROJECT_DIR)/ZhongWeiCloud/ThirdLib/SDK/newP2pSDK",
-					/Users/wangxiao/Desktop,
-					/Users/wangxiao/Desktop/ff,
+					/Users/wangpandeng/Desktop,
+					"$(PROJECT_DIR)/../ff",
 					"$(PROJECT_DIR)/ZhongWeiCloud/ThirdLib/SDK/NewSDK/JWStream",
 				);
 				MARKETING_VERSION = 1.3.2;
@@ -7678,7 +7720,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = ZhongWeiCloud/ZhongWeiCloud.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3.5;
@@ -7730,8 +7772,8 @@
 					"$(PROJECT_DIR)/ZhongWeiCloud/ThirdLib/SDK",
 					"$(PROJECT_DIR)/ZhongWeiCloud/ThirdLib/SDK/NewSDK/rtmp/lib",
 					"$(PROJECT_DIR)/ZhongWeiCloud/ThirdLib/SDK/newP2pSDK",
-					/Users/wangxiao/Desktop,
-					/Users/wangxiao/Desktop/ff,
+					/Users/wangpandeng/Desktop,
+					"$(PROJECT_DIR)/../ff",
 					"$(PROJECT_DIR)/ZhongWeiCloud/ThirdLib/SDK/NewSDK/JWStream",
 				);
 				MARKETING_VERSION = 1.3.2;

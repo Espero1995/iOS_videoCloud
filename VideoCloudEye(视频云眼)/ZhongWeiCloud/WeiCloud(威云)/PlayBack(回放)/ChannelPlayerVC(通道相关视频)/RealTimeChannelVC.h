@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, VideoMode) {
 @property (nonatomic,assign) NSIndexPath *selectedIndex;
 
 @property (nonatomic, assign) VideoMode videoMode;/**< 播放的视频模式的类型 */
-
+@property (nonatomic, copy) NSArray *postDataSources;//传过来的设备列表数据源
 
 
 

@@ -34,10 +34,14 @@
 #import "ChannelPlayBackVC.h"
 /*文件*/
 #import "FileVC.h"
+#import "DeviceListViewController.h"
+#import "RealTimeCloudControlView.h"
 
 static const CGFloat MinimumPressDuration = 0.3;
 #define InitScreenNum_4 4
 #define InitScreenNum_1 1
+#define SCREEN_WIDTH                [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT               [[UIScreen mainScreen] bounds].size.height
 
 @interface RealTimeChannelVC ()
 <
@@ -111,7 +115,12 @@ static const CGFloat MinimumPressDuration = 0.3;
 /*返回按钮视图*/
 @property (nonatomic,strong) BackBtnView *BackBtnView1;
 
+@property (nonatomic,strong) UIScrollView *scrollView;
+@property (nonatomic,strong) RealTimeCloudControlView *cloudContrlView;//竖屏下的控制view
+@property (nonatomic,strong) UIPageControl *pageControl;//控制view里的分页control
+
 /*滚轮按钮显示*/
+@property (nonatomic,strong) ZMRocker *normalZMRocker;//竖屏下的滚动控制
 @property (nonatomic,strong) ZMRocker *ZMRocker1;
 /*工具条显示*/
 @property (nonatomic,strong) controlViewInFullScreen *controlFunctionView;
@@ -422,7 +431,77 @@ static const CGFloat MinimumPressDuration = 0.3;
     UILongPressGestureRecognizer * longGestture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(talkWithLongPress:)];
     longGestture.minimumPressDuration = 0.5f;
     [self.talkBtn addGestureRecognizer:longGestture];
+    
+    // 云台控制和设备列表view
+    self.scrollView = [UIScrollView new];
+    self.scrollView.backgroundColor = UIColor.whiteColor;
+    self.scrollView.delegate = self;
+    [self.view addSubview:self.scrollView];
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.talkBtn.mas_bottom).offset(30.f);
+    }];
+    // 云台控制
+    self.cloudContrlView = [[RealTimeCloudControlView alloc] initWithTargetVC:self];
+    [self.scrollView addSubview:self.cloudContrlView];
+    __weak typeof(self) weakSelf = self;
+    // 解决遥控按钮操作时和scrollview手势冲突问题
+    self.cloudContrlView.hitTestPostBlock = ^(BOOL enable) {
+        weakSelf.scrollView.scrollEnabled = enable;
+    };
+    [self.cloudContrlView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.offset(0);
+        make.width.equalTo(self.scrollView.mas_width);
+        make.height.equalTo(self.scrollView.mas_height);
+    }];
+    // 设备列表
+    DeviceListViewController *deviceListVC = [DeviceListViewController new];
+    deviceListVC.dataArray = self.postDataSources;
+    deviceListVC.selectIndex = self.selectedIndex;
+    [self addChildViewController:deviceListVC];
+    [self.scrollView addSubview:deviceListVC.view];
+    [deviceListVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.offset(0);
+        make.left.offset(SCREEN_WIDTH);
+        make.width.equalTo(self.scrollView.mas_width);
+        make.height.equalTo(self.scrollView.mas_height);
+    }];
+    // 切换设备
+    deviceListVC.changeDeviceBlock = ^(ChannelCodeListModel * _Nonnull model, NSIndexPath *indexPath) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        [strongSelf btnStopClick:strongSelf.btn_stop];
+        strongSelf.channelModel = model;
+        strongSelf.selectedIndex = indexPath;
+        strongSelf.title = [NSString isNull:strongSelf.channelModel.chanName]?NSLocalizedString(@"视频监控", nil):strongSelf.channelModel.chanName;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [strongSelf automaticPlayStart];
+        });
+    };
+    // 分页指示器
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2, 0);
+    self.scrollView.showsHorizontalScrollIndicator= NO;
+    self.pageControl = [[UIPageControl alloc] init];
+    [self.view addSubview:self.pageControl];
+    self.pageControl.numberOfPages = 2;
+    self.pageControl.currentPage = 0;
+    self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithHexString:@"#2773f2"];
+    self.pageControl.pageIndicatorTintColor = [UIColor colorWithHexString:@"#e4e4e4"];
+    CGFloat safeAreaHeight = 0.0f;
+    if (@available(iOS 11.0, *)) {
+        safeAreaHeight = [UIApplication sharedApplication].keyWindow.safeAreaInsets.bottom;
+    }
+    [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-(safeAreaHeight));
+        make.height.mas_equalTo(10);
+    }];
 }
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    self.pageControl.currentPage = scrollView.contentOffset.x/SCREEN_WIDTH;
+}
+
 
 #pragma mark ------通知进入后台停止播放
 -(void)stopAllVideo:(NSNotification *)noit

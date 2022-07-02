@@ -11,4 +11,6 @@ pod 'HUPhotoBrowser', '~> 1.2.0'
 pod 'Bugly'
 pod 'LookinServer', :configurations => ['Debug']#使用Lookin软件查看App视图，且实时渲染
 pod 'ACActionSheet' #仿微信ActionSheet
+pod 'LookinServer', :configurations => ['Debug']#调试工具
+
 end

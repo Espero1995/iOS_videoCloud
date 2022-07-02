@@ -25,6 +25,7 @@
 //=========================init=========================
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.sdBtn.hidden = self.cloudBtn.hidden = YES;
     self.bgView.layer.cornerRadius = 5.f;
     self.bgView.layer.shadowColor = [[UIColor grayColor] CGColor];
     self.bgView.layer.shadowOffset = CGSizeMake(0.f, 0.f);

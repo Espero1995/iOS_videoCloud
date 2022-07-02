@@ -31,6 +31,7 @@
 #import "userDefine_bg_view.h"
 /*文件树列表*/
 #import "FolderTreeView.h"
+#import "AppUpdateManager.h"
 
 @interface FolderTreeVC ()
 <
@@ -51,6 +52,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setUpUI];
+    [self checkAppUpdate];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,6 +80,31 @@
 {
     [self.view addSubview:self.nav_view];
     [self.view addSubview:self.treeView];
+}
+
+// 检查APP版本更新
+- (void)checkAppUpdate {
+    [AppUpdateManager checkAppUpdateComplete:^{
+        [self showUpdateAlert];
+    }];
+}
+
+// 升级框提示
+- (void)showUpdateAlert {
+    NSString *message = @"检测到新版本";
+    UIAlertController *alertCtrl = [UIAlertController alertControllerWithTitle:@"版本更新" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *setAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"马上更新", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        NSURL *appleURL = [NSURL URLWithString:[NSString stringWithFormat: @"itms-apps://itunes.apple.com/app/id%@",shiguangyushipingAPPID]];
+        if([[UIApplication sharedApplication] canOpenURL:appleURL]) {
+            [[UIApplication sharedApplication] openURL:appleURL options:@{} completionHandler:nil];
+        }
+    }];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [alertCtrl addAction:okAction];
+    [alertCtrl addAction:setAction];
+    
+    [self presentViewController:alertCtrl animated:YES completion:nil];
 }
 
 #pragma mark - 点击右上角加号方法扫描二维码

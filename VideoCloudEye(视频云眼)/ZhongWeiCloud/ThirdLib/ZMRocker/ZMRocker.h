@@ -11,7 +11,8 @@
 typedef NS_ENUM(NSInteger, RockStyle)
 {
     RockStyleOpaque = 0,
-    RockStyleTranslucent
+    RockStyleTranslucent,
+    RockStyleBig,
 };
 
 typedef NS_ENUM(NSInteger, RockDirection)
@@ -30,7 +31,7 @@ typedef NS_ENUM(NSInteger, RockDirection)
 @property (weak ,nonatomic) id <ZMRockerDelegate> delegate;
 @property (nonatomic, readonly) RockDirection direction;
 
-- (void)setRockerStyle:(RockStyle)style;
+@property (nonatomic, assign) RockStyle style;
 
 @end
 
