@@ -17,7 +17,7 @@ typedef enum electronicControlBtnType {
 
 - (void)electronicControlVCAction:(UIButton*)btn;
 
-- (void)electronicControlVCStopAction:(UIButton*)btn;
+- (void)electronicControlVCStopAction;
 
 @end
 

@@ -20,6 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) void (^hitTestPostBlock)(BOOL enable);
 
+@property (nonatomic, copy) void (^electronicControlSubtraceBlock)(void);
+@property (nonatomic, copy) void (^electronicControlPlusBlock)(void);
+@property (nonatomic, copy) void (^electronicControlVCStopBlock)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END

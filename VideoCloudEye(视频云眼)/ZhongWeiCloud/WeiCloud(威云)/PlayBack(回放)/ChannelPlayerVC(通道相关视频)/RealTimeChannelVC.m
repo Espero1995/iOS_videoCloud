@@ -496,6 +496,16 @@ static const CGFloat MinimumPressDuration = 0.3;
         make.bottom.equalTo(self.view.mas_bottom).offset(-(safeAreaHeight));
         make.height.mas_equalTo(10);
     }];
+    // 加减按钮
+    self.cloudContrlView.electronicControlPlusBlock = ^{
+        [weakSelf electronicControlWithControlNum:30];
+    };
+    self.cloudContrlView.electronicControlSubtraceBlock = ^{
+        [weakSelf electronicControlWithControlNum:31];
+    };
+    self.cloudContrlView.electronicControlVCStopBlock = ^{
+        [weakSelf electronicControlVCStopAction];
+    };
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -1961,8 +1971,12 @@ static void extracted(NSMutableDictionary *changeDic) {
         control_num = 30;
        // NSLog(@"开始电子放大缩小成功【+】");
     }
+    [self electronicControlWithControlNum:control_num];
+}
+
+- (void)electronicControlWithControlNum:(NSInteger)controlNum {
     NSNumber * chan_num = [NSNumber numberWithInteger:[self.channelModel.chanId intValue]];
-    NSNumber * cmd_num = [NSNumber numberWithInteger:control_num];
+    NSNumber * cmd_num = [NSNumber numberWithInteger:controlNum];
     NSMutableDictionary * changeDic = [NSMutableDictionary dictionary];
     [changeDic setObject:self.channelModel.deviceId forKey:@"dev_id"];
     [changeDic setObject:self.channelModel.chanCode forKey:@"chan_code"];
@@ -1983,7 +1997,7 @@ static void extracted(NSMutableDictionary *changeDic) {
     }];
 }
 
-- (void)electronicControlVCStopAction:(UIButton*)btn
+- (void)electronicControlVCStopAction
 {
     NSNumber * chan_num = [NSNumber numberWithInteger:[self.channelModel.chanId intValue]];
     NSMutableDictionary * changeDic = [NSMutableDictionary dictionary];

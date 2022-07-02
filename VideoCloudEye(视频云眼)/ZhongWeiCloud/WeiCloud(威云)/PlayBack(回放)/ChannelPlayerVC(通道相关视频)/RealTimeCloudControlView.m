@@ -8,6 +8,13 @@
 
 #import "RealTimeCloudControlView.h"
 
+@interface RealTimeCloudControlView ()
+
+@property (nonatomic, strong) UIButton* subtractBtn;/**< 焦距减 */
+@property (nonatomic, strong) UIButton* plusBtn;/**< 焦距加 */
+
+@end
+
 @implementation RealTimeCloudControlView
 
 - (instancetype)initWithTargetVC:(UIViewController *)targetVC {
@@ -30,6 +37,19 @@
             make.centerX.equalTo(self);
             make.size.mas_equalTo(CGSizeMake(140, 140));
         }];
+        
+        [self addSubview:self.subtractBtn];
+        [self addSubview:self.plusBtn];
+        [self.subtractBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.offset(25);
+            make.centerY.mas_equalTo(self.normalZMRocker);
+            make.size.mas_equalTo(CGSizeMake(50, 30));
+        }];
+        [self.plusBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.mas_right).offset(-25);
+            make.centerY.mas_equalTo(self.normalZMRocker);
+            make.size.mas_equalTo(CGSizeMake(50, 30));
+        }];
     }
     return self;
 }
@@ -51,6 +71,54 @@
             self.hitTestPostBlock(YES);
         }
         return [super hitTest:point withEvent:event];
+    }
+}
+
+- (UIButton *)subtractBtn
+{
+    if (!_subtractBtn) {
+        _subtractBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_subtractBtn setImage:[UIImage imageNamed:@"subStrct_h"] forState:UIControlStateNormal];
+        [_subtractBtn setImage:[UIImage imageNamed:@"subStrct"] forState:UIControlStateHighlighted];
+        [_subtractBtn addTarget:self action:@selector(electronicControlSubtrace) forControlEvents:UIControlEventTouchDown];
+        [_subtractBtn addTarget:self action:@selector(electronicControlVCStopAction) forControlEvents:UIControlEventTouchUpInside];
+        _subtractBtn.layer.masksToBounds = YES;
+        _subtractBtn.layer.cornerRadius = 4;
+        [_subtractBtn setBackgroundColor:[UIColor colorWithHexString:@"#e6e6e6"]];
+    }
+    return _subtractBtn;
+}
+
+- (UIButton *)plusBtn
+{
+    if (!_plusBtn) {
+        _plusBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_plusBtn setImage:[UIImage imageNamed:@"plusBtn_h"] forState:UIControlStateNormal];
+        [_plusBtn setImage:[UIImage imageNamed:@"plusBtn"] forState:UIControlStateHighlighted];
+        [_plusBtn addTarget:self action:@selector(electronicControlPlus) forControlEvents:UIControlEventTouchDown];
+        [_plusBtn addTarget:self action:@selector(electronicControlVCStopAction) forControlEvents:UIControlEventTouchUpInside];
+        _plusBtn.layer.masksToBounds = YES;
+        _plusBtn.layer.cornerRadius = 4;
+        [_plusBtn setBackgroundColor:[UIColor colorWithHexString:@"#e6e6e6"]];
+    }
+    return _plusBtn;
+}
+
+- (void)electronicControlSubtrace {
+    if (self.electronicControlSubtraceBlock) {
+        self.electronicControlSubtraceBlock();
+    }
+}
+
+- (void)electronicControlPlus {
+    if (self.electronicControlPlusBlock) {
+        self.electronicControlPlusBlock();
+    }
+}
+
+- (void)electronicControlVCStopAction {
+    if (self.electronicControlVCStopBlock) {
+        self.electronicControlVCStopBlock();
     }
 }
 

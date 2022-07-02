@@ -64,8 +64,8 @@
 
 - (void)electronicControlVCStopAction:(UIButton*)btn
 {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(electronicControlVCStopAction:)]) {
-        [self.delegate electronicControlVCStopAction:btn];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(electronicControlVCStopAction)]) {
+        [self.delegate electronicControlVCStopAction];
     }
 }
 
