@@ -44,8 +44,7 @@
 #import "groupModel.h"//临时使用下而已
 #import "GroupSettingVC.h"//分组设置VC
 #import "SwitchModeView.h"
-/*有赞登录model*/
-#import "yzLoginUserModel.h"
+#import "AppUpdateManager.h"
 
 @interface WeiCloudVC ()
 <
@@ -95,11 +94,10 @@
     //设置添加子视图
     [self setupAllChildViewController];
     //版本信息
-   // [self getVersion];
+//    [self getVersion];
+    [self checkAppUpdate];
     //向服务器上传当前语言环境
     [self setLanguageType:isSimplifiedChinese];
-    //有赞登录
-//    [self loginYouZan];todo
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -547,6 +545,30 @@
         NSLog(@"查询分组 网络正在开小差...");
     }];
 }
+// 检查APP版本更新
+- (void)checkAppUpdate {
+    [AppUpdateManager checkAppUpdateComplete:^{
+        [self showUpdateAlert];
+    }];
+}
+
+// 升级框提示
+- (void)showUpdateAlert {
+    NSString *message = NSLocalizedString(@"检测到新版本", nil);
+    UIAlertController *alertCtrl = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"版本更新", nil) message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *setAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"马上更新", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        NSURL *appleURL = [NSURL URLWithString:[NSString stringWithFormat: @"itms-apps://itunes.apple.com/app/id%@",shiguangyushipingAPPID]];
+        if([[UIApplication sharedApplication] canOpenURL:appleURL]) {
+            [[UIApplication sharedApplication] openURL:appleURL options:@{} completionHandler:nil];
+        }
+    }];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [alertCtrl addAction:okAction];
+    [alertCtrl addAction:setAction];
+    
+    [self presentViewController:alertCtrl animated:YES completion:nil];
+}
 
 
 - (void)getVersion{
@@ -593,48 +615,6 @@
         NSLog(@"网络正在开小差...");
     }];
 }
-
-#pragma mark - 有赞登录
-- (void)loginYouZan
-{
-    //有赞商城接入
-    NSMutableDictionary * youzanDic = [NSMutableDictionary dictionary];
-    
-    if ([[NSUserDefaults standardUserDefaults]objectForKey:USERMODEL]) {
-        NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:USERMODEL];
-        UserModel *userModel = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        [youzanDic setValue:userModel.access_token forKey:@"access_token"];
-        [youzanDic setValue:userModel.user_id forKey:@"user_id"];
-    }
-    [[HDNetworking sharedHDNetworking]POST:@"v1/youzan/open/login" parameters:youzanDic IsToken:NO success:^(id  _Nonnull responseObject) {
-        NSString *JSONString = responseObject[@"body"];
-        yzLoginUserModel * yzModel = [[yzLoginUserModel alloc]init];
-        NSInteger ret = [responseObject[@"ret"] integerValue];
-        if (ret == 0 ) {
-            // 将流转换为字典
-            NSDictionary *dataDict = [unitl JSONStringToDictionary:JSONString];
-            NSLog(@"有赞商城接入【成功】：%@==%@",dataDict,responseObject[@"body"]);
-            if(dataDict)
-            {
-                if (dataDict[@"data"]) {
-                    yzModel.access_token = dataDict[@"data"][@"access_token"];
-                    yzModel.cookie_key = dataDict[@"data"][@"cookie_key"];
-                    yzModel.cookie_value = dataDict[@"data"][@"cookie_value"];
-                    NSString * userID = [unitl get_User_id];
-                    NSString * yzlonginKey = [unitl getKeyWithSuffix:userID Key:youzanLoginModel];
-                    [unitl saveNeedArchiverDataWithKey:yzlonginKey Data:yzModel];
-                }
-            }
-        }else
-        {
-            NSLog(@"有赞商城接入ret !=0【失败】：");
-        }
-    } failure:^(NSError * _Nonnull error) {
-        NSLog(@"有赞商城接入【失败】：");
-    }];
-}
-
-
 
 - (void)Update_View_LeftBtnClick:(Update_View *)view{
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:shiguangyushipingAPPStroeURL] options:@{} completionHandler:^(BOOL success) {

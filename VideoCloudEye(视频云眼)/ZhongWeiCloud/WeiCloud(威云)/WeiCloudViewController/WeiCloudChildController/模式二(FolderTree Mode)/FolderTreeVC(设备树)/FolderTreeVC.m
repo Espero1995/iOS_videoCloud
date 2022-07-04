@@ -91,8 +91,8 @@
 
 // 升级框提示
 - (void)showUpdateAlert {
-    NSString *message = @"检测到新版本";
-    UIAlertController *alertCtrl = [UIAlertController alertControllerWithTitle:@"版本更新" message:message preferredStyle:UIAlertControllerStyleAlert];
+    NSString *message = NSLocalizedString(@"检测到新版本", nil);
+    UIAlertController *alertCtrl = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"版本更新", nil) message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *setAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"马上更新", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         NSURL *appleURL = [NSURL URLWithString:[NSString stringWithFormat: @"itms-apps://itunes.apple.com/app/id%@",shiguangyushipingAPPID]];
         if([[UIApplication sharedApplication] canOpenURL:appleURL]) {

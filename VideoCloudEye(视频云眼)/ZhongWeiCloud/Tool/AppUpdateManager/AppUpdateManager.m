@@ -17,7 +17,8 @@
     [dic setObject:APPVERSION forKey:@"app_ver"];
     [[HDNetworking sharedHDNetworking]GET:@"v1/app/checkversion" parameters:dic IsToken:YES success:^(id  _Nonnull responseObject) {
         NSDictionary *updataBody = responseObject[@"body"];
-
+        NSLog(@"获取新版本：%@",responseObject);
+//        complete();
         if (updataBody && [updataBody isKindOfClass:NSDictionary.class]) {
             NSString *version = updataBody[@"version"];
             if (![version isEmpty]) {

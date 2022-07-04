@@ -979,6 +979,13 @@
 "当前已经是第一页" = "It's already the first page";
 "请输入数字" = "please enter the number";
 "页码" = "Page No";
+"根目录" = "Root Node";
+"设备列表" = "Device List";
+"获取列表失败，请稍候再试" = "Failed to get device list, please try again later";
+"获取列表失败，请检查您当前的网络" = "Failed to get device list, please check your current network";
+"检测到新版本" = "new version detected";
+"版本更新" = "New Version Update";
+"马上更新" = "Update Now";
 
 //****************图片
 "banner1" = "Ebanner1";

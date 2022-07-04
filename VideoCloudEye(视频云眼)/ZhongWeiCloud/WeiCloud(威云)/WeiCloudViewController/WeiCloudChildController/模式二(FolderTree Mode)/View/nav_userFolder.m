@@ -70,7 +70,6 @@
 
 - (void)setTitleStr:(NSString *)titleStr
 {
-    NSLog(@"titleStr:%@",titleStr);
     _titleStr = titleStr;
     if ([titleStr containsString:@"("] && [titleStr containsString:@"/"]) {
         NSRange startRange = [titleStr rangeOfString:@"("];

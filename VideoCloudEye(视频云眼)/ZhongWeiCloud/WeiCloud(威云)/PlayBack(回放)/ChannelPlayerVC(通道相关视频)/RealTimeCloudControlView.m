@@ -21,7 +21,7 @@
     self = [super init];
     if (self) {
         UILabel *titleLabel = [UILabel new];
-        titleLabel.text = @"云台控制";
+        titleLabel.text = NSLocalizedString(@"云台控制", nil);
         titleLabel.font = [UIFont systemFontOfSize:14];
         [self addSubview:titleLabel];
         self.normalZMRocker =[[ZMRocker alloc] initWithFrame:CGRectMake(0, 0, 140, 140)];

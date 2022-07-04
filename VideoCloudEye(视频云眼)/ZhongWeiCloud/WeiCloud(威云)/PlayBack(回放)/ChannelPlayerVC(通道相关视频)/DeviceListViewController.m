@@ -47,7 +47,7 @@
     UILabel *titleLabel = [UILabel new];
     titleLabel.font = [UIFont systemFontOfSize:14];
     titleLabel.textColor = [UIColor colorWithHexString:@"#282828"];
-    titleLabel.text = @"设备列表";
+    titleLabel.text = NSLocalizedString(@"设备列表", nil);
     [self.view addSubview:titleLabel];
     [leftChangeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.offset(25.f);

@@ -57,7 +57,7 @@
     treeIndex = 1;//默认从第一层开始作为根节点
     self.currentNodeId = @"";
     [self addSubview:self.tv_list];
-    [self.fatherNameArr addObject:@"根目录"];
+    [self.fatherNameArr addObject:NSLocalizedString(@"根目录", nil)];
     //下拉刷新
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getNextNodeTreeList)];
     [header beginRefreshing];
@@ -86,9 +86,9 @@
             if (self.treeArr.count !=0) {
                 if (self.treeArr.count == 1) {
                     FolderTreeModel *model = self.treeArr[0];
-                    if (!model.hasChildren) {
+                    if (model.hasChildren) {
                         if (treeIndex == 1) {
-                            [self getleafRootTitle:@"根目录" andisOnlyRoot:NO];
+                            [self getleafRootTitle:NSLocalizedString(@"根目录", nil) andisOnlyRoot:NO];
                         }
                         self.previousNodeId = ((FolderTreeModel *)(self.treeArr[0])).parentId;
                     }else{
@@ -97,28 +97,22 @@
                         [self getleafRootTitle:model.nodeName andisOnlyRoot:YES];
                         [self getleafNodeDeviceList];
                     }
-                    
                 }else{
                     if (treeIndex == 1) {
-                        [self getleafRootTitle:@"根目录" andisOnlyRoot:NO];
+                        [self getleafRootTitle:NSLocalizedString(@"根目录", nil) andisOnlyRoot:NO];
                     }
                     self.previousNodeId = ((FolderTreeModel *)(self.treeArr[0])).parentId;
                 }
-                
             }
-            
-            
             [self.tv_list reloadData];
             [self.tv_list.mj_header endRefreshing];
         }else{
-            
-            [XHToast showCenterWithText:@"获取列表失败，稍候再试"];
+            [XHToast showCenterWithText:NSLocalizedString(@"获取列表失败，请稍候再试", nil)];
             [self.tv_list reloadData];
             [self.tv_list.mj_header endRefreshing];
         }
-        
     } failure:^(NSError * _Nonnull error) {
-        [XHToast showCenterWithText:@"获取列表失败，请检查您当前的网络"];
+        [XHToast showCenterWithText:NSLocalizedString(@"获取列表失败，请检查您当前的网络", nil)];
         [self.tv_list reloadData];
         [self.tv_list.mj_header endRefreshing];
     }];
