@@ -259,6 +259,7 @@
 "未查询到相册，请检查您的网络" = "No albums found, please check your network";
 "云存开通后无法立即为您展示时光相册" = "After the cloud storage is purchase, it cannot immediately show you the time album";
 "当前设备不在线" = "The current device is offline";
+"该设备不在线，无法进行查看" = "The device is not online, to look at it";
 "稍后再试" = "Try again later";
 "立即开通" = "Purchase";
 "年" = ".";

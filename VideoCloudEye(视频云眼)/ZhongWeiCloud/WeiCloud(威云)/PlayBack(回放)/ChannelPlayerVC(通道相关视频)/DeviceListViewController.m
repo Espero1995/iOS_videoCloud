@@ -126,9 +126,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    ChannelCodeListModel *model = self.dataArray[indexPath.row];
+    if (model.chanStatus == 0) {
+        [XHToast showCenterWithText:NSLocalizedString(@"该设备不在线，无法进行查看", nil)];
+        return;
+    }
     self.selectIndex = indexPath;
     [self.tableView reloadData];
-    ChannelCodeListModel *model = self.dataArray[indexPath.row];
     if (self.changeDeviceBlock) {
         self.changeDeviceBlock(model, indexPath);
     }
@@ -143,6 +147,8 @@
 
 @property (nonatomic, strong) UIImageView *logoImgView;
 @property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIView *statusBgView;
+@property (nonatomic, strong) UILabel *statusLabel;
 
 @end
 
@@ -159,6 +165,9 @@
 - (void)setupUI {
     [self.contentView addSubview:self.logoImgView];
     [self.contentView addSubview:self.titleLabel];
+    [self.logoImgView addSubview:self.statusBgView];
+    [self.statusBgView addSubview:self.statusLabel];
+    
     [self.logoImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.offset(25.f);
         make.centerY.equalTo(self.contentView);
@@ -168,6 +177,12 @@
         make.left.equalTo(self.logoImgView.mas_right).offset(8.f);
         make.centerY.equalTo(self.contentView);
         make.right.lessThanOrEqualTo(self.contentView.mas_right).offset(-25);
+    }];
+    [self.statusBgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.offset(0);
+    }];
+    [self.statusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.statusBgView);
     }];
 }
 
@@ -179,6 +194,8 @@
         self.logoImgView.image = [UIImage imageNamed:@"img2"];
     }
     self.titleLabel.text = model.chanName;
+    // 设备在线状态
+    self.statusBgView.hidden = (model.chanStatus != 0);
 }
 
 // cell选中状态
@@ -200,6 +217,25 @@
         _titleLabel.textColor = [UIColor colorWithHexString:@"#2773f2"];
     }
     return _titleLabel;
+}
+
+- (UIView *)statusBgView {
+    if (!_statusBgView) {
+        _statusBgView = [UIView new];
+        _statusBgView.backgroundColor = UIColor.blackColor;
+        _statusBgView.alpha = 0.7;
+    }
+    return _statusBgView;
+}
+
+- (UILabel *)statusLabel {
+    if (!_statusLabel) {
+        _statusLabel = [UILabel new];
+        _statusLabel.font = [UIFont systemFontOfSize:14];
+        _statusLabel.textColor = [UIColor colorWithHexString:@"#ffffff"];
+        _statusLabel.text = @"不在线";
+    }
+    return _statusLabel;
 }
 
 - (UIImage*)getSmallImageWithUrl:(NSString*)imageUrl AtDirectory:(NSString*)directory ImaNameStr:(NSString *)nameStr {
