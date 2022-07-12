@@ -138,9 +138,11 @@ static NSString * const APPVERSION = @"1.3.2";
 //static NSString *const CloudPushAppKey = @"23639306";
 //static NSString *const CloudPushAppSecret = @"0445529f89a89611b3419c1f2cfbd67d";
 
-static NSString *const CloudPushAppKey = @"24720803";
-static NSString *const CloudPushAppSecret = @"91abf6665743c16472cc4409ccf34f6a";
-
+//// 之前用
+//static NSString *const CloudPushAppKey = @"24720803";
+//static NSString *const CloudPushAppSecret = @"91abf6665743c16472cc4409ccf34f6a";
+static NSString *const CloudPushAppKey = @"28338118";
+static NSString *const CloudPushAppSecret = @"81699e727aa3c362dc1e0c6d63212387";
 
 //测试用，看是否能推送
 //static NSString *const CloudPushAppKey = @"LTAI4PCmZ1tfKLUn";

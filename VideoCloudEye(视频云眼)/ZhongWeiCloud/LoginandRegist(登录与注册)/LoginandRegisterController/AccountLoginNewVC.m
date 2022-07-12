@@ -47,6 +47,8 @@
 #import "AppDelegate.h"
 #import "ZCTabBarController.h"
 #import "BaseNavigationViewController.h"
+#import <CloudPushSDK/CloudPushSDK.h>
+
 
 //警告框类型
 typedef NS_ENUM(NSInteger,AlertAction){
@@ -418,6 +420,7 @@ typedef NS_ENUM(NSInteger,AlertAction){
             //用户手机号/邮箱保存本地=====================
             
             [CloudPushSDK bindAccount:userModel.user_id withCallback:^(CloudPushCallbackResult *res) {
+                NSLog(@"res:%@", res);
                 if (res.success) {
                     NSLog(@"【阿里云推送】绑定成功");
                 }else
