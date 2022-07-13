@@ -800,6 +800,8 @@
                                });
             }
         }];
+    } else {
+        cell.pictureImage.image = [UIImage imageNamed:@"img2"];
     }
 
     if (isEditable == NO) {
