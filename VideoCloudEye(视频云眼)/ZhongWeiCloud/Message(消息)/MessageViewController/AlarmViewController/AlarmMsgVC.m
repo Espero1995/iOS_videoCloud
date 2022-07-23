@@ -81,6 +81,7 @@
 @property (nonatomic, strong) ProgressBarView *progressView;//进度条View
 @property (nonatomic, assign) BOOL isPop;//是否已经弹出,默认为NO
 @property (nonatomic, strong) FilerView *filerView;//筛选View
+
 @end
 
 @implementation AlarmMsgVC
@@ -138,7 +139,7 @@
 - (void)setUpUI
 {
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.view.backgroundColor = BG_COLOR;
+    self.view.backgroundColor = RGB(245, 245, 245);
     [self.view addSubview:self.tv_list];
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(pullDownMethod)];
     [header beginRefreshing];
@@ -600,14 +601,14 @@
 //head高度
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 30;
+    return 40;
 }
 
 //head的内容
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *headView = [[UIView alloc]init];
-    headView.backgroundColor = BG_COLOR;
+    headView.backgroundColor = RGB(245, 245, 245);
     //根据已读未读显示红点
     PushMsgModel *model = self.resultDateArr[section][0]; //self.resultDateArr
     NSString *timeStr = [NSString stringWithFormat:@"%d", model.alarmTime];
@@ -623,9 +624,9 @@
     NSString *currentDateStr = [timeDate stringFromDate:detaildate];
 
     UILabel *dateTipLb1 = [[UILabel alloc]init];
-    dateTipLb1.frame = CGRectMake(10, 0, self.view.frame.size.width, 30);
+    dateTipLb1.frame = CGRectMake(16, 0, self.view.frame.size.width, 40);
     dateTipLb1.font = FONT(15);
-    dateTipLb1.textColor = RGB(150, 150, 150);
+    dateTipLb1.textColor = RGB(30, 30, 30);
     dateTipLb1.text =  [NSString stringWithFormat:@"%@ %@", currentDateStr, [self getWeekDay:currentWeekStr]];
     [headView addSubview:dateTipLb1];
 
@@ -661,161 +662,30 @@
     if (cell == nil) {
         cell = [[AlarmNewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AlarmNewCell_Identifier];
     }
-    cell.delegete = self;
-
     NSMutableArray *tempDateArr = [NSMutableArray arrayWithCapacity:0];
     [tempDateArr addObjectsFromArray:self.resultDateArr[section]];//resultDateArr
-
-    //根据已读未读显示红点
     PushMsgModel *model = tempDateArr[row];
-    NSString *timeStr = [NSString stringWithFormat:@"%d", model.alarmTime];
-    NSTimeInterval time = [timeStr doubleValue];//因为时差问题要加8小时 == 28800 sec
-    NSDate *detaildate = [NSDate dateWithTimeIntervalSince1970:time];
-    //实例化一个NSDateFormatter对象
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    NSDateFormatter *timeDate = [[NSDateFormatter alloc]init];
-    NSDateFormatter *timeWeek = [[NSDateFormatter alloc]init];
-    //设定时间格式,这里可以设置成自己需要的格式
-    [dateFormatter setDateFormat:@"HH:mm:ss"];//yyyy-MM-dd HH:mm:ss
-    [timeDate setDateFormat:@"MM.dd"];
-    [timeWeek setDateFormat:@"yyyy-MM-dd"];
-    NSString *currentTimeStr = [dateFormatter stringFromDate:detaildate];
-    //设置了时间
-    cell.timeLabel.text = currentTimeStr;
-
-    if (model.markread == NO) {
-        cell.attentionView.alpha = 1;
-    } else {
-        cell.attentionView.alpha = 0;
-    }
-    cell.typeLabel.text = [NSString stringWithFormat:@"%@%@", model.deviceName, NSLocalizedString(@"警报", nil)];
-
-    switch (model.alarmType) {
-        case AlarmType_artificialVideo:
-            cell.messageLabel.text = NSLocalizedString(@"触发移动侦测报警", nil);
-            break;
-        case AlarmType_motion:
-            cell.messageLabel.text = NSLocalizedString(@"运动目标检测报警", nil);
-            break;
-        case AlarmType_remnant:
-            cell.messageLabel.text = NSLocalizedString(@"遗留物检测报警", nil);
-            break;
-        case AlarmType_objectRemoved:
-            cell.messageLabel.text = NSLocalizedString(@"物体移除检测报警", nil);
-            break;
-        case AlarmType_tripwire:
-            cell.messageLabel.text = NSLocalizedString(@"绊线检测报警", nil);
-            break;
-        case AlarmType_intrusion:
-            cell.messageLabel.text = NSLocalizedString(@"入侵检测报警", nil);
-            break;
-        case AlarmType_retrograde:
-            cell.messageLabel.text = NSLocalizedString(@"逆行检测报警", nil);
-            break;
-        case AlarmType_hover:
-            cell.messageLabel.text = NSLocalizedString(@"徘徊检测报警", nil);
-            break;
-        case AlarmType_traffic:
-            cell.messageLabel.text = NSLocalizedString(@"流量统计报警", nil);
-            break;
-        case AlarmType_density:
-            cell.messageLabel.text = NSLocalizedString(@"密度检测报警", nil);
-            break;
-        case AlarmType_abnormalVideo:
-            cell.messageLabel.text = NSLocalizedString(@"视频异常检测报警", nil);
-            break;
-        case AlarmType_fastMoving:
-            cell.messageLabel.text = NSLocalizedString(@"快速移动报警", nil);
-            break;
-        case AlarmType_FIRE_EXIT:
-            cell.messageLabel.text = NSLocalizedString(@"消防通道占用检测报警", nil);
-            break;
-        case AlarmType_SMOKE_AND_FIRE:
-            cell.messageLabel.text = NSLocalizedString(@"烟火检测报警", nil);
-            break;
-        case AlarmType_TRAFFIC_LANE_PARK:
-            cell.messageLabel.text = NSLocalizedString(@"异常停车检测报警", nil);
-            break;
-        case AlarmType_abnormalTemperature:
-            cell.messageLabel.text = NSLocalizedString(@"体温异常报警", nil);
-            break;
-        default:
-            break;
-    }
-
-    /*
-    if (section == _selectSection && row == _selectRow) {
-        cell.mainbodyView.backgroundColor = RGB(238, 241, 246);
-    }else{
-        cell.mainbodyView.backgroundColor = [UIColor clearColor];
-    }
-    */
-
-    if (![NSString isNull:model.alarmPic]) {
-        NSURL *imaUrl = [NSURL URLWithString:model.alarmPic];
-        NSURLRequest *request = [NSURLRequest requestWithURL:imaUrl];
-        __block UIImage *image;
-        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *_Nullable response, NSData *_Nullable data, NSError *_Nullable connectionError) {
-            //设备图片展示时所需解密的东西
-            dev_list *devModel;
-            NSMutableArray *devArr = (NSMutableArray *)[unitl getAllDeviceCameraModel];
-            for (int i = 0; i < devArr.count; i++) {
-                if ([((dev_list *)(devArr[i])).ID isEqualToString:model.deviceId]) {
-                    devModel = ((dev_list *)(devArr[i]));
-                    break;
-                }
-            }
-
-            self.key = devModel.dev_p_code;
-            self.bIsEncrypt = devModel.enable_sec;
-
-            const unsigned char *imageCharData = (const unsigned char *)[data bytes];
-            size_t len = [data length];
-
-            unsigned char outImageCharData[len];
-            size_t outLen = len;
-            //        NSLog(@"收到图片的data：%@---长度：%zd",response,[data length]);
-            if (len % 16 == 0 && [((NSHTTPURLResponse *)response) statusCode] == 200 && self.key.length > 0 && self.bIsEncrypt) {
-                int decrptImageSucceed = jw_cipher_decrypt(self.cipher, imageCharData, len, outImageCharData, &outLen);
-                //            NSLog(@"报警界面，收到加密图片数据正确，进行解密:%d",decrptImageSucceed);
-                if (decrptImageSucceed == 1) {
-                    NSData *imageData = [[NSData alloc]initWithBytes:outImageCharData length:outLen];
-                    image = [UIImage imageWithData:imageData];
-
-                    if (image) {
-                        cell.pictureImage.image = image;
-                    } else {
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                                           [cell.pictureImage sd_setImageWithURL:imaUrl placeholderImage:[UIImage imageNamed:@"img2"]];
-                                       });
-                    }
-                } else {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                                       [cell.pictureImage sd_setImageWithURL:imaUrl placeholderImage:[UIImage imageNamed:@"img2"]];
-                                   });
-                }
-            } else {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                                   [cell.pictureImage sd_setImageWithURL:imaUrl placeholderImage:[UIImage imageNamed:@"img2"]];
-                               });
-            }
-        }];
-    } else {
-        cell.pictureImage.image = [UIImage imageNamed:@"img2"];
-    }
+    
+    cell.indexPath = indexPath;
+    cell.delegete = self;
+    cell.alermModel = model;
 
     if (isEditable == NO) {
         cell.isEdit = NO;
-        cell.chooseBtn.alpha = 0;
+//        cell.chooseBtn.hidden = YES;
+        [cell configChooseBtnHidden:YES];
     } else {
         cell.isEdit = YES;
-        cell.chooseBtn.alpha = 1;
+//        cell.chooseBtn.hidden = NO;
+        [cell configChooseBtnHidden:NO];
 
         //全选的判断
         if (self.allChooseBtn.selected == YES) {
-            cell.chooseBtn.selected = YES;
+//            cell.chooseBtn.selected = YES;
+            [cell configChooseBtnSeleted:YES];
         } else {
-            cell.chooseBtn.selected = NO;
+//            cell.chooseBtn.selected = NO;
+            [cell configChooseBtnSeleted:NO];
         }
 
         //判断当前选择第几个
@@ -826,9 +696,11 @@
         tempCount = tempCount + indexPath.row + 1;
         //NSLog(@"我self.btnArr的状态：%@",self.btnArr);
         if ([self.btnArr[tempCount - 1] isEqualToString:@"yes"]) {
-            cell.chooseBtn.selected = YES;
+//            cell.chooseBtn.selected = YES;
+            [cell configChooseBtnSeleted:YES];
         } else {
-            cell.chooseBtn.selected = NO;
+//            cell.chooseBtn.selected = NO;
+            [cell configChooseBtnSeleted:NO];
         }
     }
 
@@ -870,17 +742,6 @@
             [self.deleteBtn setTitle:title forState:UIControlStateNormal];
         }
     } else {
-//        [self removeMarkReadClick:cell];
-        /* 放大图片
-        [self.view addSubview:self.enlarge];
-        self.enlarge.enlargeImage = cell.pictureImage.image;
-        [self.enlarge enlargeImageClick];
-        */
-
-//        _selectSection = indexPath.section;
-//        _selectRow = indexPath.row;
-//        [self.tv_list reloadData];
-
         NSMutableArray *tempDateArr = [NSMutableArray arrayWithCapacity:0];
         [tempDateArr addObjectsFromArray:self.resultDateArr[indexPath.section]];//resultDateArr
         //根据已读未读显示红点
@@ -894,9 +755,10 @@
                     [self alarmVideoPlayMethodTitle:model.deviceName videoURL:model.alarmVideo];//http://220.249.115.46:18080/wav/day_by_day.mp4
                 } else {
                     //若alarmViedo字段为空，则只是放大图片而已
-                    [self.view addSubview:self.enlarge];
-                    self.enlarge.enlargeImage = cell.pictureImage.image;
-                    [self.enlarge enlargeImageClick];
+//                    [self.view addSubview:self.enlarge];
+//                    self.enlarge.enlargeImage = cell.pictureImage.image;
+//                    [self.enlarge enlargeImageClick];
+                    [self enlargeImageWithCell:cell atIndexPath:indexPath];
                 }
 
                 break;
@@ -947,11 +809,75 @@
 }
 
 #pragma mark - 放大告警消息图片代理方法
-- (void)Alarmcell_tPictureImageClick:(AlarmNewCell *)cell
-{
+- (void)Alarmcell_tPictureImageClick:(AlarmNewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     [self removeMarkReadClick:cell];
+    [self enlargeImageWithCell:cell atIndexPath:indexPath];
+}
+
+- (void)enlargeImageWithCell:(AlarmNewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     [self.view addSubview:self.enlarge];
-    self.enlarge.enlargeImage = cell.pictureImage.image;
+    
+    NSMutableArray *tempDateArr = [NSMutableArray arrayWithCapacity:0];
+    [tempDateArr addObjectsFromArray:self.resultDateArr[indexPath.section]];//resultDateArr
+    //根据已读未读显示红点
+    PushMsgModel *model = tempDateArr[indexPath.row];
+    model.alarmPic = @"https://t7.baidu.com/it/u=2942499027,2479446682&fm=193&f=GIF";
+    if (![NSString isNull:model.alarmPic]) {
+        NSURL *imaUrl = [NSURL URLWithString:model.alarmPic];
+        NSURLRequest *request = [NSURLRequest requestWithURL:imaUrl];
+        __block UIImage *image;
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *_Nullable response, NSData *_Nullable data, NSError *_Nullable connectionError) {
+            //设备图片展示时所需解密的东西
+            dev_list *devModel;
+            NSMutableArray *devArr = (NSMutableArray *)[unitl getAllDeviceCameraModel];
+            for (int i = 0; i < devArr.count; i++) {
+                if ([((dev_list *)(devArr[i])).ID isEqualToString:model.deviceId]) {
+                    devModel = ((dev_list *)(devArr[i]));
+                    break;
+                }
+            }
+
+            self.key = devModel.dev_p_code;
+            self.bIsEncrypt = devModel.enable_sec;
+
+            const unsigned char *imageCharData = (const unsigned char *)[data bytes];
+            size_t len = [data length];
+
+            unsigned char outImageCharData[len];
+            size_t outLen = len;
+            //        NSLog(@"收到图片的data：%@---长度：%zd",response,[data length]);
+            if (len % 16 == 0 && [((NSHTTPURLResponse *)response) statusCode] == 200 && self.key.length > 0 && self.bIsEncrypt) {
+                int decrptImageSucceed = jw_cipher_decrypt(self.cipher, imageCharData, len, outImageCharData, &outLen);
+                //            NSLog(@"报警界面，收到加密图片数据正确，进行解密:%d",decrptImageSucceed);
+                if (decrptImageSucceed == 1) {
+                    NSData *imageData = [[NSData alloc]initWithBytes:outImageCharData length:outLen];
+                    image = [UIImage imageWithData:imageData];
+
+                    if (image) {
+//                        cell.pictureImage.image = image;
+                        self.enlarge.enlargeImage = image;
+                    } else {
+//                        dispatch_async(dispatch_get_main_queue(), ^{
+//                                           [cell.pictureImage sd_setImageWithURL:imaUrl placeholderImage:[UIImage imageNamed:@"img2"]];
+//                                       });
+                        self.enlarge.imageUrl = model.alarmPic;
+                    }
+                } else {
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                                       [cell.pictureImage sd_setImageWithURL:imaUrl placeholderImage:[UIImage imageNamed:@"img2"]];
+//                                   });
+                    self.enlarge.imageUrl = model.alarmPic;
+                }
+            } else {
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                                   [cell.pictureImage sd_setImageWithURL:imaUrl placeholderImage:[UIImage imageNamed:@"img2"]];
+//                               });
+                self.enlarge.imageUrl = model.alarmPic;
+            }
+        }];
+    } else {
+        self.enlarge.enlargeImage = [UIImage imageNamed:@"alerm"];
+    }
     [self.enlarge enlargeImageClick];
 }
 
@@ -960,9 +886,10 @@
 {
     NSIndexPath *IndexPath = [self.tv_list indexPathForCell:cell];
     PushMsgModel *model = self.resultDateArr[IndexPath.section][IndexPath.row];
-    if (model.markread == NO) {
+    if (!model.markread) {
         model.markread = YES;
-        cell.attentionView.alpha = 0;
+//        cell.attentionView.hidden = YES;
+        [cell configRedPointHidden:YES];
         /*
          * description : POST v1/alarm/markread(告警消息已读)
          * param：access_token=<令牌> & user_id=<用户ID> & alarm_id=<设备ID>
@@ -1007,9 +934,10 @@
         _tv_list = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, iPhoneWidth, iPhoneHeight - iPhoneNav_StatusHeight) style:UITableViewStyleGrouped];
         _tv_list.delegate = self;
         _tv_list.dataSource = self;
-        _tv_list.backgroundColor = BG_COLOR;
+        _tv_list.backgroundColor = RGB(245, 245, 245);
         _tv_list.separatorStyle = UITableViewCellSelectionStyleNone;
         _tv_list.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+        _tv_list.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, 12)];
     }
     return _tv_list;
 }

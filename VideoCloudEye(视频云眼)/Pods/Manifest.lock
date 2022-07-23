@@ -19,7 +19,7 @@ PODS:
   - HUPhotoBrowser (1.2.0)
   - IQKeyboardManager (4.0.5)
   - LookinServer (1.0.0)
-  - Masonry (1.0.1)
+  - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
@@ -34,7 +34,7 @@ DEPENDENCIES:
   - HUPhotoBrowser (~> 1.2.0)
   - IQKeyboardManager
   - LookinServer
-  - Masonry
+  - Masonry (= 1.1.0)
   - MBProgressHUD (~> 1.0.0)
   - MJExtension
   - MJRefresh
@@ -46,7 +46,6 @@ SPEC REPOS:
     - Bugly
     - HUPhotoBrowser
     - IQKeyboardManager
-    - Masonry
     - MBProgressHUD
     - MJExtension
     - MJRefresh
@@ -54,6 +53,7 @@ SPEC REPOS:
   trunk:
     - ACActionSheet
     - LookinServer
+    - Masonry
 
 SPEC CHECKSUMS:
   ACActionSheet: 41a448af27671f7819d03662a204cebdfa9b5a1c
@@ -62,12 +62,12 @@ SPEC CHECKSUMS:
   HUPhotoBrowser: 0dd14753cd43f0de5111a7f8d8aad74df790c641
   IQKeyboardManager: 50b62c0603308968256f8208886e206c1dcce607
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
-  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
 
-PODFILE CHECKSUM: b602f5b55ccf5225c4c98bd8fc74efab0b047dc2
+PODFILE CHECKSUM: ec10717e3da9b714b9d0e384918519d904e393ae
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.11.3

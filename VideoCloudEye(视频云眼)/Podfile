@@ -2,7 +2,7 @@ platform :ios, '8.0'
 target 'ZhongWeiCloud' do
 pod 'AFNetworking'
 pod 'SDWebImage', '~> 3.7.5'
-pod 'Masonry'
+pod 'Masonry', '1.1.0'
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'IQKeyboardManager'
 pod 'MJRefresh'

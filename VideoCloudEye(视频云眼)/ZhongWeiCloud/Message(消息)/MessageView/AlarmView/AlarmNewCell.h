@@ -14,26 +14,12 @@
 @optional
 - (void)AlarmCell_tChooseBtnClick:(AlarmNewCell *)cell;
 @optional
-- (void)Alarmcell_tPictureImageClick:(AlarmNewCell *)cell;
+- (void)Alarmcell_tPictureImageClick:(AlarmNewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @interface AlarmNewCell : UITableViewCell
-/*正文视图*/
-@property (nonatomic,strong) UIView * mainbodyView;
-/*几号+星期*/
-@property (nonatomic,strong) UILabel * weekLabel;
-/*时间*/
-@property (nonatomic,strong) UILabel * timeLabel;
-/*选择按钮*/
-@property (nonatomic,strong) UIButton * chooseBtn;
-/*红点*/
-@property (nonatomic,strong) UIImageView * attentionView;
-/*类型*/
-@property (nonatomic,strong) UILabel * typeLabel;
-/*来源*/
-@property (nonatomic,strong) UILabel * messageLabel;
-/*图片*/
-@property (nonatomic,strong) UIImageView * pictureImage;
+
+@property (nonatomic, strong) PushMsgModel *alermModel;
 
 @property (nonatomic,assign) BOOL isEdit;
 
@@ -41,5 +27,13 @@
 
 @property (nonatomic,assign) BOOL isDefaultSelect;
 
+@property (nonatomic,strong) NSIndexPath *indexPath;
+
+// 红点显示控制
+- (void)configRedPointHidden:(BOOL)hidden;
+// 选择按钮显示控制
+- (void)configChooseBtnHidden:(BOOL)hidden;
+// 全选控制
+- (void)configChooseBtnSeleted:(BOOL)selected;
 
 @end

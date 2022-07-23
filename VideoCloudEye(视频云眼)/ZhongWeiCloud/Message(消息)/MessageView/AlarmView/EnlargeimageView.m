@@ -53,7 +53,11 @@
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
     imageView.userInteractionEnabled = YES;
     [self.enlargeImageView addSubview:imageView];
-    imageView.image = self.enlargeImage;
+    if (self.enlargeImage) {
+        imageView.image = self.enlargeImage;
+    } else {
+        [imageView sd_setImageWithURL:[NSURL URLWithString:self.imageUrl] placeholderImage:[UIImage imageNamed:@"alerm"]];
+    }
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.enlargeImageView.mas_centerX);
         make.centerY.equalTo(self.enlargeImageView.mas_centerY);

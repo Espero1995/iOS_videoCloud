@@ -17,7 +17,9 @@
  @return 返回这个View
  */
 - (instancetype)initWithframe:(CGRect) frame;
-@property (nonatomic,strong) UIImage *enlargeImage;
+@property (nonatomic, strong) UIImage *enlargeImage;
+@property (nonatomic, copy) NSString *imageUrl;
 
 - (void)enlargeImageClick;
+
 @end
