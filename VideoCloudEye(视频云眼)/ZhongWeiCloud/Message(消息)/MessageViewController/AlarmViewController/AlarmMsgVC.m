@@ -821,7 +821,6 @@
     [tempDateArr addObjectsFromArray:self.resultDateArr[indexPath.section]];//resultDateArr
     //根据已读未读显示红点
     PushMsgModel *model = tempDateArr[indexPath.row];
-    model.alarmPic = @"https://t7.baidu.com/it/u=2942499027,2479446682&fm=193&f=GIF";
     if (![NSString isNull:model.alarmPic]) {
         NSURL *imaUrl = [NSURL URLWithString:model.alarmPic];
         NSURLRequest *request = [NSURLRequest requestWithURL:imaUrl];
