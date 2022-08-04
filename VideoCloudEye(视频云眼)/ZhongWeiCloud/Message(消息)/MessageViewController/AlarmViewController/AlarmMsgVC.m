@@ -1087,14 +1087,14 @@
 {
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
-    if (section == 0) {
-        FilerDeviceVC *filerDeviceVC = [[FilerDeviceVC alloc]init];
-        filerDeviceVC.myResultDeviceArr = self.myResultDeviceArr;
-        [self.navigationController pushViewController:filerDeviceVC animated:YES];
-    } else {
+//    if (section == 0) {
+//        FilerDeviceVC *filerDeviceVC = [[FilerDeviceVC alloc]init];
+//        filerDeviceVC.myResultDeviceArr = self.myResultDeviceArr;
+//        [self.navigationController pushViewController:filerDeviceVC animated:YES];
+//    } else {
         //        NSLog(@"我选择了第%ld组第%ld行",(long)section,(long)row);
         dateRow = row;
-    }
+//    }
 }
 
 #pragma mark - 重置按钮的代理方法

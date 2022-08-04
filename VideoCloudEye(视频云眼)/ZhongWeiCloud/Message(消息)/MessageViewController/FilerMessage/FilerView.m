@@ -156,16 +156,16 @@ UITableViewDataSource
 //分区数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 //行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return 1;
-    }else{
+//    if (section == 0) {
+//        return 1;
+//    }else{
         return 7;
-    }
+//    }
 }
 //行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -178,22 +178,22 @@ UITableViewDataSource
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     
-    if (section == 0) {
-        static NSString* filerDeviceCell_Identifier = @"filerDeviceCell_Identifier";
-        FilerDeviceCell* filerDeviceCell = [tableView dequeueReusableCellWithIdentifier:filerDeviceCell_Identifier];
-        if(!filerDeviceCell){
-            filerDeviceCell = [[FilerDeviceCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:filerDeviceCell_Identifier];
-        }
-        if (self.deviceNameArr.count == 0) {
-            filerDeviceCell.textLabel.text = NSLocalizedString(@"全部设备", nil);
-            filerDeviceCell.textLabel.textColor = [UIColor blackColor];
-        }else{
-            filerDeviceCell.textLabel.text = [self.deviceNameArr componentsJoinedByString:@"、"];
-            filerDeviceCell.textLabel.textColor = [UIColor redColor];
-        }
-        
-       return filerDeviceCell;
-    }else{
+//    if (section == 0) {
+//        static NSString* filerDeviceCell_Identifier = @"filerDeviceCell_Identifier";
+//        FilerDeviceCell* filerDeviceCell = [tableView dequeueReusableCellWithIdentifier:filerDeviceCell_Identifier];
+//        if(!filerDeviceCell){
+//            filerDeviceCell = [[FilerDeviceCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:filerDeviceCell_Identifier];
+//        }
+//        if (self.deviceNameArr.count == 0) {
+//            filerDeviceCell.textLabel.text = NSLocalizedString(@"全部设备", nil);
+//            filerDeviceCell.textLabel.textColor = [UIColor blackColor];
+//        }else{
+//            filerDeviceCell.textLabel.text = [self.deviceNameArr componentsJoinedByString:@"、"];
+//            filerDeviceCell.textLabel.textColor = [UIColor redColor];
+//        }
+//
+//       return filerDeviceCell;
+//    }else{
         static NSString* filerDateCell_Identifier = @"filerDateCell_Identifier";
         FilerDateCell* filerDateCell = [tableView dequeueReusableCellWithIdentifier:filerDateCell_Identifier];
         if(!filerDateCell){
@@ -211,14 +211,14 @@ UITableViewDataSource
         }
         /////
         return filerDateCell;
-    }
+//    }
     
 }
 //cell点击
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSIndexPath *newIndexPath;
-    if (indexPath.section == 1) {
+//    if (indexPath.section == 1) {
         NSInteger newRow = [indexPath row];
         NSInteger oldRow = (self .lastPath !=nil)?[self .lastPath row]:-1;
         if (newRow != oldRow) {
@@ -234,7 +234,7 @@ UITableViewDataSource
             newIndexPath = [NSIndexPath indexPathForRow:-1 inSection:1];
             oldCell.accessoryType = UITableViewCellAccessoryNone;
         }
-    }
+//    }
     
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -253,13 +253,13 @@ UITableViewDataSource
 {
     UIView *headView = [[UIView alloc]init];
     headView.backgroundColor = BG_COLOR;
-    if (section == 0) {
-        UILabel* deviceTipLb = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, iPhoneWidth, 35)];
-        deviceTipLb.text = NSLocalizedString(@"设备选择", nil);
-        deviceTipLb.textColor = RGB(95, 95, 95);
-        deviceTipLb.font = FONT(16);
-        [headView addSubview:deviceTipLb];
-    }else{
+//    if (section == 0) {
+//        UILabel* deviceTipLb = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, iPhoneWidth, 35)];
+//        deviceTipLb.text = NSLocalizedString(@"设备选择", nil);
+//        deviceTipLb.textColor = RGB(95, 95, 95);
+//        deviceTipLb.font = FONT(16);
+//        [headView addSubview:deviceTipLb];
+//    }else{
         UILabel* dateTipLb = [[UILabel alloc]init];
         [headView addSubview:dateTipLb];
         [dateTipLb mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -280,7 +280,7 @@ UITableViewDataSource
         detailTipLb.textColor = RGB(95, 95, 95);
         detailTipLb.font = FONT(12);
         
-    }
+//    }
     return headView;
 }
 
