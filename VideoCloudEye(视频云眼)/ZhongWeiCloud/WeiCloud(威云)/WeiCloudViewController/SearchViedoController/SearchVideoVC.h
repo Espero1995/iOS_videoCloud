@@ -7,7 +7,7 @@
 //
 
 
-@interface searchVideoVC : BaseViewController
+@interface SearchVideoVC : BaseViewController
 @end
 
 

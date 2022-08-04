@@ -400,7 +400,7 @@
 		3065165420CE6088000173C4 /* MyAllCloudStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3065165220CE6088000173C4 /* MyAllCloudStorageVC.m */; };
 		3065165520CE6088000173C4 /* MyAllCloudStorageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3065165320CE6088000173C4 /* MyAllCloudStorageVC.xib */; };
 		3066372C20B26CED00986558 /* SetScopeTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3066372B20B26CED00986558 /* SetScopeTimeCell.m */; };
-		306640212029A8D700F8C715 /* searchVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 306640202029A8D700F8C715 /* searchVideoVC.m */; };
+		306640212029A8D700F8C715 /* SearchVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 306640202029A8D700F8C715 /* SearchVideoVC.m */; };
 		30690DE92134DFC8008D0B66 /* GroupDeleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30690DE82134DFC8008D0B66 /* GroupDeleteCell.m */; };
 		30690DEC2134ECDD008D0B66 /* GroupCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30690DEB2134ECDD008D0B66 /* GroupCommonCell.m */; };
 		30690DEF2134FB30008D0B66 /* ModifyGroupNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30690DEE2134FB30008D0B66 /* ModifyGroupNameVC.m */; };
@@ -1555,8 +1555,8 @@
 		3065165320CE6088000173C4 /* MyAllCloudStorageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAllCloudStorageVC.xib; sourceTree = "<group>"; };
 		3066372A20B26CED00986558 /* SetScopeTimeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetScopeTimeCell.h; sourceTree = "<group>"; };
 		3066372B20B26CED00986558 /* SetScopeTimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetScopeTimeCell.m; sourceTree = "<group>"; };
-		3066401F2029A8D700F8C715 /* searchVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = searchVideoVC.h; sourceTree = "<group>"; };
-		306640202029A8D700F8C715 /* searchVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searchVideoVC.m; sourceTree = "<group>"; };
+		3066401F2029A8D700F8C715 /* SearchVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchVideoVC.h; sourceTree = "<group>"; };
+		306640202029A8D700F8C715 /* SearchVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchVideoVC.m; sourceTree = "<group>"; };
 		30690DE72134DFC8008D0B66 /* GroupDeleteCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupDeleteCell.h; sourceTree = "<group>"; };
 		30690DE82134DFC8008D0B66 /* GroupDeleteCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupDeleteCell.m; sourceTree = "<group>"; };
 		30690DEA2134ECDD008D0B66 /* GroupCommonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupCommonCell.h; sourceTree = "<group>"; };
@@ -4340,8 +4340,8 @@
 		3066401E2029A8B900F8C715 /* SearchViedoController */ = {
 			isa = PBXGroup;
 			children = (
-				3066401F2029A8D700F8C715 /* searchVideoVC.h */,
-				306640202029A8D700F8C715 /* searchVideoVC.m */,
+				3066401F2029A8D700F8C715 /* SearchVideoVC.h */,
+				306640202029A8D700F8C715 /* SearchVideoVC.m */,
 			);
 			path = SearchViedoController;
 			sourceTree = "<group>";
@@ -6512,7 +6512,7 @@
 				30B7B00B21D5F6E100B93271 /* TimeZoneSetVC.m in Sources */,
 				9044C3F42100871D0003AD1F /* UIButton+JKImagePosition.m in Sources */,
 				30B20DCD20F3450700D60A44 /* SpecialDeviceSettingVC.m in Sources */,
-				306640212029A8D700F8C715 /* searchVideoVC.m in Sources */,
+				306640212029A8D700F8C715 /* SearchVideoVC.m in Sources */,
 				1A94459A1E2E0FAD0094A671 /* Foundation+HDLog.m in Sources */,
 				1ABF07401EB2E77200333462 /* JWDeviceInfo.m in Sources */,
 				30485D8C21338D3B00DDC051 /* GroupDevCell.m in Sources */,

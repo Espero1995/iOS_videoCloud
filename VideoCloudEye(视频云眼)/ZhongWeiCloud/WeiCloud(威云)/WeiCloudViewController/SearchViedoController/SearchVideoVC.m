@@ -6,7 +6,7 @@
 //  Copyright © 2018年 张策. All rights reserved.
 //
 
-#import "searchVideoVC.h"
+#import "SearchVideoVC.h"
 #import "ZCTabBarController.h"
 /*自定义搜索框*/
 #import "customSearchBar.h"
@@ -18,7 +18,7 @@
 #import "MonitoringVCnew.h"
 #define WEIClOUDCELLT @"DeviceSearchCell"
 
-@interface searchVideoVC ()
+@interface SearchVideoVC ()
 <
     UISearchBarDelegate,
     UITableViewDelegate,
@@ -51,7 +51,7 @@
 @property (nonatomic,assign)JW_CIPHER_CTX cipher;
 @end
 
-@implementation searchVideoVC
+@implementation SearchVideoVC
 //==========================system==========================
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -173,7 +173,6 @@
 //=========================method=========================
 #pragma mark ----- 返回按钮
 - (void)backClick{
-    [self.navigationController popViewControllerAnimated:YES];
     //第一时间响应到搜索框中
     UITextField *searchTextField;
     //拿到searchBar的输入框
@@ -183,20 +182,21 @@
         for(int i = 0; i < numViews; i++) {
             if([[self.searchBar.subviews objectAtIndex:i] isKindOfClass:[UITextField class]]) {
                 searchTextField = [self.searchBar.subviews objectAtIndex:i];
-                }
+            }
         }
-            if (searchTextField) {
+        if (searchTextField) {
             //这里设置相关属性
-            }else{}
-                
-            } else {
-                  // 针对 13.0 以下的iOS系统进行处理
-                searchTextField = [self.searchBar valueForKey:@"_searchField"];
-                if(searchTextField) {
-                   //这里设置相关属性
-                }else{}
+        }
+            
+    } else {
+        // 针对 13.0 以下的iOS系统进行处理
+        searchTextField = [self.searchBar valueForKey:@"_searchField"];
+        if(searchTextField) {
+           //这里设置相关属性
+        }
     }
     [searchTextField resignFirstResponder];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 //=========================delegate=========================

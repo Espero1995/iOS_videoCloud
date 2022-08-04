@@ -14,7 +14,7 @@
 #import "SGScanningQRCodeVC.h"
 #import <AVFoundation/AVFoundation.h>
 /*搜索页面*/
-#import "searchVideoVC.h"
+#import "SearchVideoVC.h"
 /*设备展示的VC*/
 #import "smallScreenFolderVC.h"//小屏设备VC
 #import "smallScreenChannelVC.h"//小屏通道VC
@@ -421,7 +421,10 @@
 #pragma mark - 添加设备按钮点击事件
 - (void)rightItemBtnClick
 {
-    [self showQrcode];
+//    [self showQrcode];
+    SearchVideoVC *searchVC = [[SearchVideoVC alloc]init];
+    [self.navigationController pushViewController:searchVC animated:YES];
+    
 //    if (isChannelMode) {
 //        searchVideoVC *searchVC = [[searchVideoVC alloc]init];
 //        [self.navigationController pushViewController:searchVC animated:YES];

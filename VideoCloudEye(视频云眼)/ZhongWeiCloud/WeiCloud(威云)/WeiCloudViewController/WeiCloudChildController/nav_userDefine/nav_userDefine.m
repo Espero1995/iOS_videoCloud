@@ -187,7 +187,7 @@
 {
     if (!_rightItemBtn) {
         _rightItemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_rightItemBtn setImage:[UIImage imageNamed:@"deviceAdd"] forState:UIControlStateNormal];
+        [_rightItemBtn setImage:[UIImage imageNamed:@"search_icon"] forState:UIControlStateNormal];
         [_rightItemBtn addTarget:self action:@selector(rightItemBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _rightItemBtn;
