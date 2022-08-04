@@ -7,16 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import "RealTimePlayEnum.h"
+
 @class dev_list;
 @class PushMsgModel;
 
-/**
- * 播放类型
- */
-typedef NS_ENUM(NSUInteger, VideoMode) {
-    VideoMode_AP = 1,
-    VideoMode_Normal,
-};
 
 @interface RealTimeVideoVC : BaseViewController
 /*设备列表模型*/

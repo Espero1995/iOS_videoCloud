@@ -1926,6 +1926,7 @@
 		30FF6BF624E3F50200B938D6 /* tempVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tempVC.h; sourceTree = "<group>"; };
 		30FF6BF724E3F50200B938D6 /* tempVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tempVC.m; sourceTree = "<group>"; };
 		33E16F54A80106B101A0F485 /* Pods-ZhongWeiCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWeiCloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWeiCloud/Pods-ZhongWeiCloud.debug.xcconfig"; sourceTree = "<group>"; };
+		37251CC9289C13E9006585D9 /* RealTimePlayEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealTimePlayEnum.h; sourceTree = "<group>"; };
 		3782CF8F286DD2FF00F4D8A9 /* DeviceListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceListViewController.h; sourceTree = "<group>"; };
 		3782CF90286DD2FF00F4D8A9 /* DeviceListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceListViewController.m; sourceTree = "<group>"; };
 		3782CF92286DF33100F4D8A9 /* rockerBigBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rockerBigBg@2x.png"; sourceTree = "<group>"; };
@@ -2462,6 +2463,7 @@
 			children = (
 				1A3E0A431E63CA2300524A2E /* TimeListModel.h */,
 				1A3E0A441E63CA2300524A2E /* TimeListModel.m */,
+				37251CC9289C13E9006585D9 /* RealTimePlayEnum.h */,
 			);
 			path = PlayBackModel;
 			sourceTree = "<group>";

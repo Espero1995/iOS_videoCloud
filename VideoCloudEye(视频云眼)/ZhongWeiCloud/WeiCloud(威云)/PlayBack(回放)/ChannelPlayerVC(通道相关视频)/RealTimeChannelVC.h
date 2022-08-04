@@ -8,14 +8,8 @@
 
 #import "BaseViewController.h"
 #import "ChannelCodeListModel.h"
+#import "RealTimePlayEnum.h"
 
-/**
- * 播放类型
- */
-typedef NS_ENUM(NSUInteger, VideoMode) {
-    VideoMode_AP = 1,
-    VideoMode_Normal,
-};
 
 @interface RealTimeChannelVC : BaseViewController
 
