@@ -209,12 +209,10 @@
                 NSArray *channelCodeList = deviceGroup[0][@"channelCodeList"];
                 self.dataArr = [ChannelCodeListModel mj_objectArrayWithKeyValuesArray:channelCodeList];
             }
-            [self.dataArr addObject:ChannelCodeListModel.new];
             [self.tv_list reloadData];
             [self.tv_list.mj_header endRefreshing];
         }
         else{
-            [self.dataArr addObject:ChannelCodeListModel.new];
             [self.tv_list reloadData];
             [self.tv_list.mj_header endRefreshing];
         }
@@ -579,7 +577,7 @@
     headView.backgroundColor = BG_COLOR;
     if (section == 0) {
         //提示信息
-        self.tipTitleLb.frame = CGRectMake(15, 10, self.view.frame.size.width, 25);
+        self.tipTitleLb.frame = CGRectMake(15, 10, self.view.frame.size.width, 20);
         [headView addSubview:self.tipTitleLb];
     }
     return headView;
@@ -639,7 +637,7 @@
 //    self.isSearch = YES;
 //    [self filterBySubstring:searchBar.text];
     [self loadSearchDataWithKey:searchBar.text];
-    [searchTextField resignFirstResponder];
+    [self.searchBar resignFirstResponder];
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
@@ -751,13 +749,17 @@
 //表视图懒加载
 -(UITableView *)tv_list{
     if (!_tv_list) {
-        _tv_list = [[UITableView alloc]init];
+        _tv_list = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _tv_list.delegate=self;
         _tv_list.dataSource=self;
         _tv_list.backgroundColor = BG_COLOR;
         _tv_list.tableFooterView=[[UIView alloc]initWithFrame:CGRectZero];
         [_tv_list registerNib:[UINib nibWithNibName:@"smallScreenChannelCell" bundle:nil] forCellReuseIdentifier:WEIClOUDCELLT];
-        self.automaticallyAdjustsScrollViewInsets = NO;
+        if (@available(iOS 11.0, *)) {
+            _tv_list.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
     }
     return _tv_list;
 }
