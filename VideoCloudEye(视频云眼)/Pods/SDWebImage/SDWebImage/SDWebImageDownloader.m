@@ -136,7 +136,6 @@ static NSString *const kCompletedCallbackKey = @"completed";
                                                           options:options
                                                          progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                                                              SDWebImageDownloader *sself = wself;
-                                                             // NSLog(@"调试的222：receivedSize:%ld==expectedSize:%ld",(long)receivedSize,(long)expectedSize);
                                                              if (!sself) return;
                                                              __block NSArray *callbacksForURL;
                                                              dispatch_sync(sself.barrierQueue, ^{
@@ -150,7 +149,6 @@ static NSString *const kCompletedCallbackKey = @"completed";
                                                              }
                                                          }
                                                         completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
-                                                            // NSLog(@"调试的111：data:%@",data);
                                                             SDWebImageDownloader *sself = wself;
                                                             if (!sself) return;
                                                             __block NSArray *callbacksForURL;
@@ -162,7 +160,6 @@ static NSString *const kCompletedCallbackKey = @"completed";
                                                             });
                                                             for (NSDictionary *callbacks in callbacksForURL) {
                                                                 SDWebImageDownloaderCompletedBlock callback = callbacks[kCompletedCallbackKey];
-                                                               // NSLog(@"调试的：data:%@===长度：%lu",data,(unsigned long)data.length);
                                                                 if (callback) callback(image, data, error, finished);
                                                             }
                                                         }

@@ -174,14 +174,8 @@
             if (options & SDWebImageAllowInvalidSSLCertificates) downloaderOptions |= SDWebImageDownloaderAllowInvalidSSLCertificates;
             if (options & SDWebImageHighPriority) downloaderOptions |= SDWebImageDownloaderHighPriority;
             if (image && options & SDWebImageRefreshCached) {
-//                // force progressive off if image already cached but forced refreshing
-//                downloaderOptions &= ~SDWebImageDownloaderProgressiveDownload;
-//                // ignore image read from NSURLCache if image if cached but force refreshing
-//                downloaderOptions |= SDWebImageDownloaderIgnoreCachedResponse;
                 // force progressive off if image already cached but forced refreshing
                 downloaderOptions &= ~SDWebImageDownloaderProgressiveDownload;
-                // remove SDWebImageDownloaderUseNSURLCache flag
-                downloaderOptions &= ~SDWebImageDownloaderUseNSURLCache;
                 // ignore image read from NSURLCache if image if cached but force refreshing
                 downloaderOptions |= SDWebImageDownloaderIgnoreCachedResponse;
             }

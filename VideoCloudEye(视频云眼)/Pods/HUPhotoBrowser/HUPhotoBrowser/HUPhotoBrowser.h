@@ -10,7 +10,6 @@
 
 typedef void(^ __nullable DismissBlock)(UIImage * __nullable image, NSInteger index);
 
-
 @interface HUPhotoBrowser : UIView
 
 /*

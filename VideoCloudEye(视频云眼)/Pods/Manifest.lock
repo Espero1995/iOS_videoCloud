@@ -26,19 +26,21 @@ PODS:
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
+  - TTGTagCollectionView (2.1.0)
 
 DEPENDENCIES:
-  - ACActionSheet
-  - AFNetworking
-  - Bugly
-  - HUPhotoBrowser (~> 1.2.0)
-  - IQKeyboardManager
+  - ACActionSheet (= 1.0.5)
+  - AFNetworking (= 3.1.0)
+  - Bugly (= 2.5.0)
+  - HUPhotoBrowser (= 1.2.0)
+  - IQKeyboardManager (= 4.0.5)
   - LookinServer
   - Masonry (= 1.1.0)
-  - MBProgressHUD (~> 1.0.0)
-  - MJExtension
-  - MJRefresh
-  - SDWebImage (~> 3.7.5)
+  - MBProgressHUD (= 1.0.0)
+  - MJExtension (= 3.0.13)
+  - MJRefresh (= 3.1.12)
+  - SDWebImage (= 3.7.6)
+  - TTGTagCollectionView (= 2.1.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -54,6 +56,7 @@ SPEC REPOS:
     - ACActionSheet
     - LookinServer
     - Masonry
+    - TTGTagCollectionView
 
 SPEC CHECKSUMS:
   ACActionSheet: 41a448af27671f7819d03662a204cebdfa9b5a1c
@@ -67,7 +70,8 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  TTGTagCollectionView: a2a8668c659b39e7a6ffd6590475ea53a7ae95f7
 
-PODFILE CHECKSUM: ec10717e3da9b714b9d0e384918519d904e393ae
+PODFILE CHECKSUM: 7960d69a460b219bb4b436169be7d8a7c9939dc2
 
 COCOAPODS: 1.11.3

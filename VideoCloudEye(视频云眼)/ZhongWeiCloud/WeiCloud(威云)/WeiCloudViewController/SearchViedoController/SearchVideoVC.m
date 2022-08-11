@@ -19,6 +19,7 @@
 #import "ChannelCodeListModel.h"
 #import "smallScreenChannelCell.h"
 #import "RealTimeChannelVC.h"
+#import "TTGTextTagCollectionView.h"
 
 #define WEIClOUDCELLT @"smallScreenChannelCell"
 
@@ -27,27 +28,22 @@
     UISearchBarDelegate,
     UITableViewDelegate,
     UITableViewDataSource,
-    smallScreenChannelCellDelegate
+    smallScreenChannelCellDelegate,
+    TTGTextTagCollectionViewDelegate
 >
 
 /*搜索框*/
 @property (nonatomic,strong) customSearchBar *searchBar;
+//历史搜索
+@property (nonatomic,strong) UILabel *historTitleyLabel;
+@property (nonatomic,strong) TTGTextTagCollectionView *historyTagsView;
+@property (nonatomic, strong) NSMutableArray *historyArrray;
 /*表视图*/
 @property (nonatomic,strong) UITableView *tv_list;
 /*提示信息*/
 @property (nonatomic,strong) UILabel *tipTitleLb;
-/*所有的数据模型*/
-@property (nonatomic,strong)NSMutableArray * dataArr;
-/*用来提供搜索的名字arr*/
-@property (nonatomic,strong)NSMutableArray * nameDataArr;
 /*搜索结果arr*/
-@property (nonatomic,strong)NSMutableArray * searchResults;
-/*搜索结果arr到全部数组中找到展示的model*/
-@property (nonatomic,strong)NSMutableArray * showResultsArr;
-/*搜索结果arr到全部数组中找到展示的model   和showResultsArr一样的内容，但是show要清空，所以点击的时候，用这个。*/
-@property (nonatomic,strong)NSMutableArray * didSeleshowResultsArr;
-///*是否在搜索中*/
-//@property (nonatomic,assign)BOOL isSearch;
+@property (nonatomic,strong)NSMutableArray * dataArr;
 /*是否加密*/
 @property (nonatomic,assign)BOOL bIsEncrypt;
 /*加密的key*/
@@ -62,14 +58,12 @@
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"搜索", nil);
     self.view.backgroundColor = BG_COLOR;
+    
     //导航栏样式
     [self setNavigationUI];
     [self setUpUI];
-//    [self getAllVideoListData];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+    [self setupHistoryTagsView];
+    [self searchResultShow:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -89,6 +83,79 @@
 {
     jw_cipher_release(_cipher);
 }
+
+
+#pragma mark --- history ----
+- (void)setupHistoryTagsView {
+    self.historTitleyLabel = [UILabel new];
+    self.historTitleyLabel.textColor = [UIColor colorWithHexString:@"#666666"];
+    self.historTitleyLabel.font = [UIFont systemFontOfSize:14.f];
+    self.historTitleyLabel.text = @"历史搜索";
+    [self.view addSubview:self.historTitleyLabel];
+    [self.historTitleyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.inset(20);
+        make.top.offset(16);
+    }];
+    
+    self.historyTagsView = [TTGTextTagCollectionView new];
+    self.historyTagsView.delegate = self;
+    self.historyTagsView.verticalSpacing = 10;
+    self.historyTagsView.horizontalSpacing = 8;
+//    _tagView.alignment = TTGTagCollectionAlignmentFillByExpandingWidth;
+//    _tagView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.historyTagsView];
+    [self.historyTagsView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.inset(20);
+        make.top.equalTo(self.historTitleyLabel.mas_bottom).offset(10);
+    }];
+}
+
+- (void)loadHistoryData {
+    [self.historyArrray removeAllObjects];
+    NSArray * savedArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"searchHistory"];
+    NSArray *searchHistoryArray = (savedArray.count > 5) ? [savedArray subarrayWithRange:NSMakeRange(0, 5)] : savedArray;
+    [self.historyArrray addObjectsFromArray:searchHistoryArray];
+    
+    [self.historyTagsView removeAllTags];
+    NSMutableArray *textTags = [NSMutableArray new];
+    [self.historyArrray enumerateObjectsUsingBlock:^(NSString *text, NSUInteger idx, BOOL * _Nonnull stop) {
+        TTGTextTagStringContent *textTagContent = [[TTGTextTagStringContent alloc] initWithText:text textFont:[UIFont systemFontOfSize:14] textColor:[UIColor colorWithHexString:@"666666"]];
+        TTGTextTagStyle *tagStyle = [[TTGTextTagStyle alloc] init];
+        tagStyle.extraSpace  = CGSizeMake(30, 12);
+        tagStyle.borderWidth = 0;
+        tagStyle.shadowColor = UIColor.whiteColor;
+        tagStyle.backgroundColor = [UIColor whiteColor];
+        TTGTextTag *textTag = [[TTGTextTag alloc] initWithContent:textTagContent style:tagStyle];
+        [textTags addObject:textTag];
+    }];
+    [self.historyTagsView addTags:textTags];
+}
+
+// 保存搜索历史标签
+- (void)saveSearchHistoryWithString:(NSString *)string {
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray * searchHistoryArray = [NSMutableArray arrayWithArray:[userDefaults stringArrayForKey:@"searchHistory"]];
+    
+    NSString * searchKeyword = [NSString stringWithFormat:@"%@",string];
+    // 如果该搜索关键字已存在，先删除，再插入在第一个 ，不存在 直接插入第一个
+    if ([searchHistoryArray containsObject:searchKeyword]) {
+        [searchHistoryArray removeObject:searchKeyword];
+    }
+    [searchHistoryArray insertObject:string atIndex:0];
+    // 最多保存5个数据
+    NSArray *saveArray = (searchHistoryArray.count > 5) ? [searchHistoryArray subarrayWithRange:NSMakeRange(0, 5)] : searchHistoryArray;
+    // 保存历史搜索标签数据
+    [userDefaults setObject:saveArray forKey:@"searchHistory"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)textTagCollectionView:(TTGTextTagCollectionView *)textTagCollectionView didTapTag:(TTGTextTag *)tag atIndex:(NSUInteger)index {
+    TTGTextTagStringContent *textContent = (TTGTextTagStringContent *)tag.content;
+    [self loadSearchDataWithKey:textContent.text];
+    [self searchResultShow:YES];
+    [self saveSearchHistoryWithString:textContent.text];
+}
+
 
 //=========================init=========================
 //导航栏样式
@@ -220,44 +287,15 @@
         [self.tv_list reloadData];
         [self.tv_list.mj_header endRefreshing];
     }];
-    
-    
-    
-//    self.dataArr = [unitl getAllDeviceCameraModel];
-//    for (dev_list *model in self.dataArr) {
-//        [self.nameDataArr addObject:model.name];
-//    }
 }
 
 //=========================delegate=========================
 #pragma mark -----tableViewDelegate
-//组数
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArr.count;
 }
-//行数
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-//    if (self.isSearch) {
-//        if (self.showResultsArr.count == 0){
-//            return 0;
-//        }else{
-//            return self.showResultsArr.count;
-//        }
-//    }else{
-        return self.dataArr.count;
-//    }
-    
-    /*
-    if (self.showResultsArr.count == 0) {
-        return self.dataArr.count;
-    }else{
-        return self.showResultsArr.count;
-    }*/
-    //self.dataArr.count / self.showResultsArr.count
-}
-//每行的高度
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (iPhoneWidth <=375) {
@@ -267,196 +305,7 @@
     }
 }
 
-//每行的内容
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  
-//    if (self.isSearch) {//搜索时的数据源
-//        DeviceSearchCell *cell = [tableView dequeueReusableCellWithIdentifier:WEIClOUDCELLT];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        if (self.showResultsArr.count != 0 && self.showResultsArr.count > indexPath.row) {
-//            dev_list *listModel = self.showResultsArr[indexPath.row];
-//            cell.model = listModel;
-//            self.bIsEncrypt = listModel.enable_sec;
-//            self.key = listModel.dev_p_code;
-//
-//            NSMutableDictionary * changeDic = [NSMutableDictionary dictionary];
-//            [changeDic setObject:listModel.ID forKey:@"dev_id"];
-//            [changeDic setObject:@"1" forKey:@"chan_id"];
-//            /*
-//            if (listModel.status == 1) {
-//                [[HDNetworking sharedHDNetworking]POST:@"v1/device/capture" parameters:changeDic IsToken:YES success:^(id  _Nonnull responseObject) {
-//                    int ret = [responseObject[@"ret"]intValue];
-//                    if (ret == 0) {
-//                        [cell.ima_photo setImage:[self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID]];
-//                        NSDictionary * dic = responseObject[@"body"];
-//                        NSString * urlStr = [dic objectForKey:@"pic_url"];
-//                        NSURL * picUrl = [NSURL URLWithString:urlStr];
-//                        //                    NSLog(@"图片的URL：%@",dic);
-//                        if (self.bIsEncrypt) {
-//                            NSURLRequest *request = [NSURLRequest requestWithURL:picUrl];
-//                            __block UIImage * image;
-//
-//                            [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-//                                const unsigned char *imageCharData=(const unsigned char*)[data bytes];
-//                                size_t len = [data length];
-//
-//                                unsigned char outImageCharData[len];
-//                                size_t outLen = len;
-//
-//                                if (len %16 == 0 && [((NSHTTPURLResponse *)response) statusCode] == 200) {
-//                                    int decrptImageSucceed = jw_cipher_decrypt(self.cipher,imageCharData,len,outImageCharData, &outLen);
-//                                    if (decrptImageSucceed == 1) {
-//                                        NSData *imageData = [[NSData alloc]initWithBytes:outImageCharData length:outLen];
-//                                        image  = [UIImage imageWithData:imageData];
-//                                        if (image) {
-//                                            cell.ima_photo.image = image;
-//                                        }else{
-//                                            dispatch_async(dispatch_get_main_queue(),^{
-//                                                UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                                                cell.ima_photo.image = cutIma?cutIma:[UIImage imageNamed:@"img2"];
-//                                            });
-//                                        }
-//                                    }else{
-//                                        dispatch_async(dispatch_get_main_queue(),^{
-//                                            UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                                            cell.ima_photo.image = cutIma?cutIma:[UIImage imageNamed:@"img2"];
-//                                        });
-//                                    }
-//                                }else{
-//                                    dispatch_async(dispatch_get_main_queue(),^{
-//                                        UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                                        cell.ima_photo.image = cutIma?cutIma:[UIImage imageNamed:@"img2"];
-//                                    });
-//                                }
-//                            }];
-//                        }else{
-//                            UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//
-//
-//                            if (cutIma) {
-//                                [cell.ima_photo sd_setImageWithURL:picUrl placeholderImage:cutIma];
-//                            }else{
-//                                [cell.ima_photo sd_setImageWithURL:picUrl placeholderImage:[UIImage imageNamed:@"img2"]];
-//                            }
-//                        }
-//
-//                    }else{
-//                        dispatch_async(dispatch_get_main_queue(), ^{
-//                            UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                            if (cutIma) {
-//                                cell.ima_photo.image = cutIma;
-//                            }else{
-//                                cell.ima_photo.image = [UIImage imageNamed:@"img2"];
-//                            }
-//                        });
-//                    }
-//                } failure:^(NSError * _Nonnull error) {
-//                    dispatch_async(dispatch_get_main_queue(), ^{
-//                        UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                        if (cutIma) {
-//                            cell.ima_photo.image = cutIma;
-//                        }else{
-//                            cell.ima_photo.image = [UIImage imageNamed:@"img2"];
-//                        }
-//                    });
-//                }];
-//            }
-//            */
-//        }
-//
-//        return cell;
-//
-//    }else{//未搜索时的数据源
-//        DeviceSearchCell *cell = [tableView dequeueReusableCellWithIdentifier:WEIClOUDCELLT];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        dev_list *listModel = self.dataArr[indexPath.row];
-//        cell.model = listModel;
-//        self.bIsEncrypt = listModel.enable_sec;
-//        self.key = listModel.dev_p_code;
-//        NSMutableDictionary * changeDic = [NSMutableDictionary dictionary];
-//        [changeDic setObject:listModel.ID forKey:@"dev_id"];
-//        [changeDic setObject:@"1" forKey:@"chan_id"];
-//        /*
-//        if (listModel.status == 1) {
-//            [[HDNetworking sharedHDNetworking]POST:@"v1/device/capture" parameters:changeDic IsToken:YES success:^(id  _Nonnull responseObject) {
-//                int ret = [responseObject[@"ret"]intValue];
-//                if (ret == 0) {
-//                    [cell.ima_photo setImage:[self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID]];
-//                    NSDictionary * dic = responseObject[@"body"];
-//                    NSString * urlStr = [dic objectForKey:@"pic_url"];
-//                    NSURL * picUrl = [NSURL URLWithString:urlStr];
-//                    if (self.bIsEncrypt) {
-//                        NSURLRequest *request = [NSURLRequest requestWithURL:picUrl];
-//                        __block UIImage * image;
-//
-//                        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-//                            const unsigned char *imageCharData=(const unsigned char*)[data bytes];
-//                            size_t len = [data length];
-//
-//                            unsigned char outImageCharData[len];
-//                            size_t outLen = len;
-//
-//                            if (len %16 == 0 && [((NSHTTPURLResponse *)response) statusCode] == 200) {
-//                                int decrptImageSucceed = jw_cipher_decrypt(self.cipher,imageCharData,len,outImageCharData, &outLen);
-//                                if (decrptImageSucceed == 1) {
-//                                    NSData *imageData = [[NSData alloc]initWithBytes:outImageCharData length:outLen];
-//                                    image  = [UIImage imageWithData:imageData];
-//                                    if (image) {
-//                                        cell.ima_photo.image = image;
-//                                    }else{
-//                                        dispatch_async(dispatch_get_main_queue(),^{
-//                                            UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                                            cell.ima_photo.image = cutIma?cutIma:[UIImage imageNamed:@"img2"];
-//                                        });
-//                                    }
-//                                }else{
-//                                    dispatch_async(dispatch_get_main_queue(),^{
-//                                        UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                                        cell.ima_photo.image = cutIma?cutIma:[UIImage imageNamed:@"img2"];
-//                                    });
-//                                }
-//                            }else{
-//                                dispatch_async(dispatch_get_main_queue(),^{
-//                                    UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                                    cell.ima_photo.image = cutIma?cutIma:[UIImage imageNamed:@"img2"];
-//                                });
-//                            }
-//                        }];
-//                    }else{
-//                        UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//
-//                        if (cutIma) {
-//                            [cell.ima_photo sd_setImageWithURL:picUrl placeholderImage:cutIma];
-//                        }else{
-//                            [cell.ima_photo sd_setImageWithURL:picUrl placeholderImage:[UIImage imageNamed:@"img2"]];
-//                        }
-//                    }
-//
-//                }else{
-//                    dispatch_async(dispatch_get_main_queue(), ^{
-//                        UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                        if (cutIma) {
-//                            cell.ima_photo.image = cutIma;
-//                        }else{
-//                            cell.ima_photo.image = [UIImage imageNamed:@"img2"];
-//                        }
-//                    });
-//                }
-//            } failure:^(NSError * _Nonnull error) {
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    UIImage *cutIma = [self getSmallImageWithUrl:@"" AtDirectory:getCutImageBaseURLDirectory ImaNameStr:listModel.ID];
-//                    if (cutIma) {
-//                        cell.ima_photo.image = cutIma;
-//                    }else{
-//                        cell.ima_photo.image = [UIImage imageNamed:@"img2"];
-//                    }
-//                });
-//            }];
-//        }
-//        */
-//        return cell;
-//    }
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     smallScreenChannelCell *cell = [tableView dequeueReusableCellWithIdentifier:WEIClOUDCELLT];
     cell.cellDelegate = self;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -476,91 +325,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-//    if (self.isSearch){//搜索时的数据源
-//        dev_list *listModel = self.didSeleshowResultsArr[indexPath.row];
-//
-//        self.tabBarController.tabBar.hidden=YES;
-//        RealTimeVideoVC * realTimeVC = [[RealTimeVideoVC alloc]init];
-//        realTimeVC.listModel = listModel;
-//        realTimeVC.chan_size = listModel.chan_size;
-//        realTimeVC.chan_alias = listModel.chan_alias;
-//        realTimeVC.bIsEncrypt = listModel.enable_sec;
-//        realTimeVC.key = listModel.dev_p_code;
-//        realTimeVC.selectedIndex = indexPath;
-//        realTimeVC.dev_id = listModel.ID;
-//        DeviceSearchCell *cell = [self.tv_list cellForRowAtIndexPath:indexPath];
-//        realTimeVC.titleName = cell.lab_name.text;
-//        //通过通道数目来判别是否是多通道【注：=0的判断是为了防止后台在搭建新的环境时，未设置通道数目字段】
-//        //此外还需判断listModel的chans属性的count来兼容老版本的多通道
-//        if (listModel.chans.count<=1 && listModel.chanCount <= 1) {
-//            realTimeVC.isMultiChannel = NO;
-//        }else{
-//            realTimeVC.isMultiChannel = YES;
-//        }
-//
-//        [unitl saveDataWithKey:SCREENSTATUS Data:SHU_PING];
-//        [self.navigationController pushViewController:realTimeVC animated:YES];
-//
-//
-//
-//        /*
-//        if (listModel.chan_size==1) {
-//
-//            //单屏
-//            self.tabBarController.tabBar.hidden=YES;
-//            RealTimeVideoVC * realTimeVC = [[RealTimeVideoVC alloc]init];
-//            realTimeVC.listModel = listModel;
-//            realTimeVC.chan_size = listModel.chan_size;
-//            realTimeVC.chan_alias = listModel.chan_alias;
-//            realTimeVC.bIsEncrypt = listModel.enable_sec;
-//            realTimeVC.key = listModel.dev_p_code;
-//            realTimeVC.selectedIndex = indexPath;
-//            DeviceSearchCell *cell = [self.tv_list cellForRowAtIndexPath:indexPath];
-//            realTimeVC.titleName = cell.lab_name.text;
-//            [self.navigationController pushViewController:realTimeVC animated:YES];
-//
-//        }else{
-//            //四分屏
-//            self.tabBarController.tabBar.hidden=YES;
-//            MonitoringVCnew * monitorVC = [[MonitoringVCnew alloc]init];
-//            monitorVC.listModel = listModel;
-//            monitorVC.chan_size = listModel.chan_size;
-//            monitorVC.chan_alias = listModel.chan_alias;
-//            monitorVC.bIsEncrypt = listModel.enable_sec;
-//            monitorVC.key = listModel.dev_p_code;
-//            monitorVC.selectedIndex = indexPath;
-//            DeviceSearchCell *cell = [self.tv_list cellForRowAtIndexPath:indexPath];
-//            monitorVC.titleName = cell.lab_name.text;
-//            [self.navigationController pushViewController:monitorVC animated:YES];
-//        }
-//        */
-//    }else{//未搜索时的数据源
-//        dev_list *listModel = self.dataArr[indexPath.row];
-//        self.tabBarController.tabBar.hidden=YES;
-//        RealTimeVideoVC * realTimeVC = [[RealTimeVideoVC alloc]init];
-//        realTimeVC.listModel = listModel;
-//        realTimeVC.chan_size = listModel.chan_size;
-//        realTimeVC.chan_alias = listModel.chan_alias;
-//        realTimeVC.bIsEncrypt = listModel.enable_sec;
-//        realTimeVC.key = listModel.dev_p_code;
-//        realTimeVC.selectedIndex = indexPath;
-//        realTimeVC.dev_id = listModel.ID;
-//        DeviceSearchCell *cell = [self.tv_list cellForRowAtIndexPath:indexPath];
-//        realTimeVC.titleName = cell.lab_name.text;
-//        //通过通道数目来判别是否是多通道【注：=0的判断是为了防止后台在搭建新的环境时，未设置通道数目字段】
-//        //此外还需判断listModel的chans属性的count来兼容老版本的多通道
-//        if (listModel.chans.count<=1 && listModel.chanCount <= 1) {
-//            realTimeVC.isMultiChannel = NO;
-//        }else{
-//            realTimeVC.isMultiChannel = YES;
-//        }
-//
-//        [unitl saveDataWithKey:SCREENSTATUS Data:SHU_PING];
-//        [self.navigationController pushViewController:realTimeVC animated:YES];
-//
-//
-//    }
     ChannelCodeListModel *channelModel = self.dataArr[indexPath.row];
     RealTimeChannelVC *realTimeVC = [[RealTimeChannelVC alloc]init];
     realTimeVC.channelModel = channelModel;
@@ -636,8 +400,22 @@
     //搜索完后，清空文本框内容
 //    self.isSearch = YES;
 //    [self filterBySubstring:searchBar.text];
-    [self loadSearchDataWithKey:searchBar.text];
-    [self.searchBar resignFirstResponder];
+    
+    if (![NSString isNull:searchBar.text]) {
+        [self loadSearchDataWithKey:searchBar.text];
+        [self.searchBar resignFirstResponder];
+        
+        [self saveSearchHistoryWithString:searchBar.text];
+        [self searchResultShow:YES];
+    }
+}
+
+- (void)searchResultShow:(BOOL)show {
+    self.historyTagsView.hidden = self.historTitleyLabel.hidden = show;
+    self.tv_list.hidden = !show;
+    if (!show) {
+        [self loadHistoryData];
+    }
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
@@ -660,68 +438,13 @@
 {
 //    self.isSearch = YES;
 //    [self filterBySubstring:searchBar.text];
-    [self loadSearchDataWithKey:searchBar.text];
+//    [self loadSearchDataWithKey:searchBar.text];
+    
+    if ([NSString isNull:searchText]) {
+        // 输入为空时，显示历史数据
+        [self searchResultShow:NO];
+    }
 }
-
-//- (void)filterBySubstring:(NSString*) subStr
-//{
-//
-//    [self.showResultsArr removeAllObjects];//每次搜索时需要清空该数组
-//
-//    if (self.searchBar.text.length>0&&![ChineseInclude isIncludeChineseInString:self.searchBar.text]) {
-//
-//        for (int i=0; i<self.nameDataArr.count; i++) {
-//            if ([ChineseInclude isIncludeChineseInString:self.nameDataArr[i]]) {
-//                NSString *tempPinYinStr = [PinYinForObjc chineseConvertToPinYin:self.nameDataArr[i]];
-//                NSRange titleResult=[tempPinYinStr rangeOfString:self.searchBar.text options:NSCaseInsensitiveSearch];
-//                if (titleResult.length>0) {
-//                    [self.searchResults addObject:self.nameDataArr[i]];
-//                    [self.showResultsArr addObject:self.dataArr[i]];//新加
-//                }
-//
-//            }
-//            else {
-//                NSRange titleResult=[self.nameDataArr[i] rangeOfString:self.searchBar.text options:NSCaseInsensitiveSearch];
-//                if (titleResult.length>0) {
-//                    [self.searchResults addObject:self.nameDataArr[i]];
-//                    [self.showResultsArr addObject:self.dataArr[i]];//新加
-//                }
-//            }
-//        }
-//
-//
-//    } else if (self.searchBar.text.length>0&&[ChineseInclude isIncludeChineseInString:self.searchBar.text]) {
-//
-//        for (int i = 0; i < self.nameDataArr.count; i++) {
-//            NSString *tempStr = self.nameDataArr[i];
-//            NSRange titleResult=[tempStr rangeOfString:self.searchBar.text options:NSCaseInsensitiveSearch];
-//            if (titleResult.length>0) {
-//                [self.searchResults addObject:tempStr];
-//                 [self.showResultsArr addObject:self.dataArr[i]];//新加
-//            }
-//        }
-//
-//    }
-//
-//    NSLog(@"搜索结果self.searchResults:%@",self.searchResults);
-//    if (self.searchResults.count >0) {
-//
-//        [self.searchResults removeAllObjects];
-//
-//        self.didSeleshowResultsArr = [self.showResultsArr mutableCopy];
-//        NSLog(@"显示结果showResultsArr:%@",self.showResultsArr);
-//        [self.tv_list reloadData];
-//    }else{
-//        if (subStr.length == 0) {
-//            self.isSearch = NO;
-//            [self.showResultsArr removeAllObjects];
-//            [self.tv_list reloadData];
-//        }else{
-//             [self.tv_list reloadData];
-//        }
-//
-//    }
-//}
 
 - (UIImage*)getSmallImageWithUrl:(NSString*)imageUrl AtDirectory:(NSString*)directory ImaNameStr:(NSString *)nameStr
 {
@@ -780,33 +503,12 @@
     }
     return _dataArr;
 }
-- (NSMutableArray *)nameDataArr
+- (NSMutableArray *)historyArrray
 {
-    if (!_nameDataArr) {
-        _nameDataArr = [NSMutableArray arrayWithCapacity:0];
+    if (!_historyArrray) {
+        _historyArrray = [NSMutableArray arrayWithCapacity:5];
     }
-    return _nameDataArr;
-}
-- (NSMutableArray *)searchResults
-{
-    if (!_searchResults) {
-        _searchResults = [NSMutableArray arrayWithCapacity:0];
-    }
-    return _searchResults;
-}
-- (NSMutableArray *)showResultsArr
-{
-    if (!_showResultsArr) {
-        _showResultsArr = [NSMutableArray arrayWithCapacity:0];
-    }
-    return _showResultsArr;
-}
-- (NSMutableArray *)didSeleshowResultsArr
-{
-    if (!_didSeleshowResultsArr) {
-        _didSeleshowResultsArr = [NSMutableArray arrayWithCapacity:0];
-    }
-    return _didSeleshowResultsArr;
+    return _historyArrray;
 }
 
 /*解码器*/
