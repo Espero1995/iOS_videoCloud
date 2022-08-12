@@ -154,6 +154,7 @@
     [self loadSearchDataWithKey:textContent.text];
     [self searchResultShow:YES];
     [self saveSearchHistoryWithString:textContent.text];
+    self.searchBar.text = textContent.text;
 }
 
 
