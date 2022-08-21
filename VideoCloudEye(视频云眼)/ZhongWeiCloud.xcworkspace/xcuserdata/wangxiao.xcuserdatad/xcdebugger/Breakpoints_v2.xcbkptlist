@@ -16,5 +16,101 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFEA8174-508A-4938-8BAA-96457733B970"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhongWeiCloud/WeiCloud(&#x5a01;&#x4e91;)/PlayBack(&#x56de;&#x653e;)/ChannelPlayerVC(&#x901a;&#x9053;&#x76f8;&#x5173;&#x89c6;&#x9891;)/ChannelPlayBackVC.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1224"
+            endingLineNumber = "1224"
+            landmarkName = "-autoSearchAndPlayVideoIsDeviceVideo:TimeStr:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02989D23-8AAD-4446-B942-13B32E405A2A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhongWeiCloud/Tool/cag/unitl.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "689"
+            endingLineNumber = "689"
+            landmarkName = "+timeStampSwitchTime:andFormatter:IsTenBit:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8EF15EA-45CE-4F85-ACFD-9C175D58C26E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhongWeiCloud/WeiCloud(&#x5a01;&#x4e91;)/PlayBack(&#x56de;&#x653e;)/ChannelPlayerVC(&#x901a;&#x9053;&#x76f8;&#x5173;&#x89c6;&#x9891;)/ChannelPlayBackVC.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2838"
+            endingLineNumber = "2838"
+            landmarkName = "-timestampTransformAxisDistance"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0C10310-CE8D-4F67-A25F-3C28FDA14744"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhongWeiCloud/WeiCloud(&#x5a01;&#x4e91;)/PlayBack(&#x56de;&#x653e;)/ChannelPlayerVC(&#x901a;&#x9053;&#x76f8;&#x5173;&#x89c6;&#x9891;)/ChannelPlayBackVC.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2879"
+            endingLineNumber = "2879"
+            landmarkName = "-timeShaftRulerViewScrollOffSet:untilEnd:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7DC3D4B2-39EB-412E-8563-56E7592A9B6A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhongWeiCloud/WeiCloud(&#x5a01;&#x4e91;)/PlayBack(&#x56de;&#x653e;)/ChannelPlayerVC(&#x901a;&#x9053;&#x76f8;&#x5173;&#x89c6;&#x9891;)/ChannelPlayBackVC.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2887"
+            endingLineNumber = "2887"
+            landmarkName = "-timeShaftRulerViewScrollOffSet:untilEnd:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1170A10B-367E-495B-8D57-85438748A061"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhongWeiCloud/WeiCloud(&#x5a01;&#x4e91;)/WeiCloudViewController/WeiCloudChildController/&#x6a21;&#x5f0f;&#x4e8c;(FolderTree Mode)/View/FolderTreeView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-getNextNodeTreeList"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

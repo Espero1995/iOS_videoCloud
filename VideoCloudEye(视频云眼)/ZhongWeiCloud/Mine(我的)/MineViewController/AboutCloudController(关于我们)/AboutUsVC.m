@@ -368,6 +368,7 @@
         _tv_list.backgroundColor = [UIColor clearColor];
         _tv_list.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
         _tv_list.scrollEnabled = NO;
+        _tv_list.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tv_list;
 }

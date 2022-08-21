@@ -21,6 +21,9 @@
 #import "RealTimeChannelVC.h"
 #import "TTGTextTagCollectionView.h"
 
+/*通道录像回放*/
+#import "ChannelPlayBackVC.h"
+
 #define WEIClOUDCELLT @"smallScreenChannelCell"
 
 @interface SearchVideoVC ()
@@ -370,7 +373,30 @@
     return YES;
 }
 
+//=========================delegate=========================
+#pragma mark - sd卡录像点击事件代理方法
+- (void)smallChannelCellSDVideoClick:(smallScreenChannelCell *)cell
+{
+    if (cell.channelModel) {
+        ChannelPlayBackVC * playbackVC = [[ChannelPlayBackVC alloc]init];
+        playbackVC.channelModel = cell.channelModel;
+        playbackVC.key = cell.channelModel.dev_p_code;
+        playbackVC.isDeviceVideo = YES;
+        [self.navigationController pushViewController:playbackVC animated:YES];
+    }
+}
 
+#pragma mark - 云端录像点击事件代理方法
+- (void)smallChannelCellCloudVideoClick:(smallScreenChannelCell *)cell
+{
+   if (cell.channelModel) {
+        ChannelPlayBackVC * playbackVC = [[ChannelPlayBackVC alloc]init];
+        playbackVC.channelModel = cell.channelModel;
+        playbackVC.key = cell.channelModel.dev_p_code;
+        playbackVC.isDeviceVideo = NO;
+        [self.navigationController pushViewController:playbackVC animated:YES];
+    }
+}
 
 //选择==============================
 #pragma  mark ----- searchBarDelegate

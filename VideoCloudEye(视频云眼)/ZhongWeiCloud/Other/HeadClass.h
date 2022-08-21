@@ -121,7 +121,7 @@ static NSString * const test_Environment_key = @"测试环境";
 /*********************************************************************************************************/
 
 //当前app的版本号【上线修改版本号】
-static NSString * const APPVERSION = @"1.3.5";
+static NSString * const APPVERSION = @"1.3.6";
 
 #define App_Name      ([[[NSBundle mainBundle] infoDictionary] safeObjectForKey:@"CFBundleDisplayName"])
 

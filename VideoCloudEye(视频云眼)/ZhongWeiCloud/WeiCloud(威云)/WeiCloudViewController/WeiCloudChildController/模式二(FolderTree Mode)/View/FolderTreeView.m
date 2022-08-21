@@ -28,14 +28,14 @@
 @property (nonatomic, strong) NSMutableArray *treeArr;
 
 /**
- * @brief 父节点
- */
-@property (nonatomic, copy) NSString *previousNodeId;
-
-/**
  * @brief 父节点名称数组
  */
 @property (nonatomic, strong) NSMutableArray *fatherNameArr;
+
+/**
+ * @brief 记录父节点数组
+ */
+@property (nonatomic, strong) NSMutableArray *fatherNodeIdArr;
 
  
 @end
@@ -58,6 +58,7 @@
     self.currentNodeId = @"";
     [self addSubview:self.tv_list];
     [self.fatherNameArr addObject:NSLocalizedString(@"根目录", nil)];
+    [self.fatherNodeIdArr addObject:@""];//默认父节点为空节点
     //下拉刷新
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getNextNodeTreeList)];
     [header beginRefreshing];
@@ -86,11 +87,10 @@
             if (self.treeArr.count !=0) {
                 if (self.treeArr.count == 1) {
                     FolderTreeModel *model = self.treeArr[0];
-                    if (model.hasChildren) {
+                    if (!model.hasChildren) {
                         if (treeIndex == 1) {
                             [self getleafRootTitle:NSLocalizedString(@"根目录", nil) andisOnlyRoot:NO];
                         }
-                        self.previousNodeId = ((FolderTreeModel *)(self.treeArr[0])).parentId;
                     }else{
                         //进入设备列表界面
                         self.currentNodeId = model.nodeId;
@@ -101,7 +101,6 @@
                     if (treeIndex == 1) {
                         [self getleafRootTitle:NSLocalizedString(@"根目录", nil) andisOnlyRoot:NO];
                     }
-                    self.previousNodeId = ((FolderTreeModel *)(self.treeArr[0])).parentId;
                 }
             }
             [self.tv_list reloadData];
@@ -133,13 +132,8 @@
 {
     treeIndex --;
     [self.fatherNameArr removeObjectAtIndex:treeIndex];
-    
-    if (treeIndex == 1) {
-        self.currentNodeId = @"";
-    }else{
-        self.currentNodeId = self.previousNodeId;
-    }
-    
+    [self.fatherNodeIdArr removeObjectAtIndex:treeIndex];
+    self.currentNodeId = self.fatherNodeIdArr[treeIndex-1];
     [self getNextNodeTreeList];
     [self getTreeIndex:treeIndex andNodeName:self.fatherNameArr[treeIndex-1]];
 }
@@ -218,6 +212,7 @@
         self.currentNodeId = model.nodeId;
         treeIndex++;
         [self.fatherNameArr addObject:model.nodeName];
+        [self.fatherNodeIdArr addObject:model.nodeId];
         //进入设备列表界面
         NSString *title = [NSString stringWithFormat:@"%@(%@/%@)",model.nodeName,model.channelOnlineCount,model.channelCount];
         [self getTreeIndex:treeIndex andNodeName:title];
@@ -275,6 +270,15 @@
     }
     return _fatherNameArr;
 }
+- (NSMutableArray *)fatherNodeIdArr
+{
+    if (!_fatherNodeIdArr) {
+        _fatherNodeIdArr = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _fatherNodeIdArr;
+}
+
+
 
 #pragma mark - TableView 占位图
 - (UIImage *)xy_noDataViewImage {
